@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/26/Come-back/</loc>
+    <lastmod>2018-06-26T07:50:57.464Z</lastmod>
+    <data>
+        <display>
+        <title>Come back</title>
+        <pubTime>2018-06-26T07:50:57.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/26/hello-world/</loc>
+    <lastmod>2018-06-26T07:27:59.267Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-06-26T07:27:59.267Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
