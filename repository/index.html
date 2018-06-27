@@ -17,15 +17,15 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>Repositories | 文藝学生</title>
+  <title>项目 | 文藝学生</title>
   <meta property="og:type" content="website">
-<meta property="og:title" content="Repositories">
+<meta property="og:title" content="项目">
 <meta property="og:url" content="https://student9128.github.io/repository/index.html">
 <meta property="og:site_name" content="文藝学生">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-26T09:10:21.665Z">
+<meta property="og:updated_time" content="2018-06-27T06:09:39.493Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Repositories">
+<meta name="twitter:title" content="项目">
   <!-- Canonical links -->
   <link rel="canonical" href="https://student9128.github.io/repository/index.html">
   
@@ -140,17 +140,6 @@
         
         
         
-        <li class="menu-item menu-item-repository">
-          <a href="/repository">
-            
-            <i class="icon icon-project"></i>
-            
-            <span class="menu-title">项目</span>
-          </a>
-        </li>
-        
-        
-        
         <li class="menu-item menu-item-links">
           <a href="/links">
             
@@ -177,6 +166,8 @@
     <ul class="social-links">
     	
         <li><a href="https://github.com/student9128" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://blog.csdn.net/student9128" target="_blank" title="CSDN" data-toggle=tooltip data-placement=top><i class="icon icon-CSDN"></i></a></li>
         
         <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
         
@@ -269,7 +260,7 @@
   <main class="main" role="main">
   <article class="article article-repository article-type-list" itemscope="">
   <header class="article-header">
-    <h1 itemprop="title">Repositories</h1>
+    <h1 itemprop="title">项目</h1>
     <p class="text-muted">I have <span id="repo-count">0</span> projects on Github</p>
   </header>
   <div class="article-body">
@@ -315,6 +306,8 @@
     	
         <li><a href="https://github.com/student9128" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
         
+        <li><a href="https://blog.csdn.net/student9128" target="_blank" title="CSDN" data-toggle=tooltip data-placement=top><i class="icon icon-CSDN"></i></a></li>
+        
         <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
         
     </ul>
@@ -324,7 +317,8 @@
         &copy; 2018 Kevin
         
         <div class="publishby">
-        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+            <!-- Theme by <a href="https://github.com/student9128" target="_blank"> Kevin </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>. -->
+            Hexo Blog Theme base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
         </div>
     </div>
 </footer>
@@ -349,7 +343,7 @@ var open = function() {
     var errorContainer = repoContainer.find(".blankslate");
     var countContainer = $("#repo-count");
 
-    $.get("https://api.github.com/users/cofess/repos", function(result) {
+    $.get("https://api.github.com/users/student9128/repos", function(result) {
       if (result) {
         errorContainer.remove();
         countContainer.text(result.length); //设置项目个数

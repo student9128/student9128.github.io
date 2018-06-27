@@ -43,6 +43,8 @@
   
     
     
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    
 
 </head>
 
@@ -143,17 +145,6 @@
         
         
         
-        <li class="menu-item menu-item-repository">
-          <a href="/repository">
-            
-            <i class="icon icon-project"></i>
-            
-            <span class="menu-title">项目</span>
-          </a>
-        </li>
-        
-        
-        
         <li class="menu-item menu-item-links">
           <a href="/links">
             
@@ -180,6 +171,8 @@
     <ul class="social-links">
     	
         <li><a href="https://github.com/student9128" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="https://blog.csdn.net/student9128" target="_blank" title="CSDN" data-toggle=tooltip data-placement=top><i class="icon icon-CSDN"></i></a></li>
         
         <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
         
@@ -360,8 +353,9 @@
   <section id="comments">
   	
        
-    <div id="uyan_frame"></div>
 
+
+    
     
   </section>
 
@@ -451,6 +445,8 @@
     	
         <li><a href="https://github.com/student9128" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
         
+        <li><a href="https://blog.csdn.net/student9128" target="_blank" title="CSDN" data-toggle=tooltip data-placement=top><i class="icon icon-CSDN"></i></a></li>
+        
         <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
         
     </ul>
@@ -460,7 +456,8 @@
         &copy; 2018 Kevin
         
         <div class="publishby">
-        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+            <!-- Theme by <a href="https://github.com/student9128" target="_blank"> Kevin </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>. -->
+            Hexo Blog Theme base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
         </div>
     </div>
 </footer>
@@ -503,8 +500,24 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     
         
     
-    <script defer type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=[object Object]"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
+  // https://github.com/imsun/gitment/issues/55
+  // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
+  id: 'Come back', 
+  owner: 'student9128', // 可以是你的GitHub用户名，也可以是github id
+  repo: 'student9128.github.io',
+  oauth: {
+    client_id: 'eb96d9ca20a1e76eca57',
+    client_secret: 'ee291a906972386b33a0a7f90f169d5aa469d478',
+  }
+})
+gitment.render('comments')
+</script>
 
+    
 
     
     
