@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://student9128.github.io/2016/12/19/hello-world/</loc>
+    <lastmod>2018-07-06T15:58:14.307Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-12-18T16:00:00.000Z</pubTime>
+        
+        <tag>Test</tag>
+         
+         
+           
+             
+              <breadCrumb title="Test" url="https://student9128.github.io/categories/Test/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://student9128.github.io/2018/06/29/AndroidStudio%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/</loc>
     <lastmod>2018-07-06T14:00:52.477Z</lastmod>
     <data>
@@ -35,26 +55,6 @@
          
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://student9128.github.io/2018/06/26/hello-world/</loc>
-    <lastmod>2018-07-06T14:00:04.869Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2018-06-26T07:27:59.267Z</pubTime>
-        
-        <tag>test</tag>
-         
-         
-           
-             
-              <breadCrumb title="Test" url="https://student9128.github.io/categories/Test/"/>
-          
         </display>
     </data>
     </url>
