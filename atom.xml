@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://student9128.github.io/"/>
-  <updated>2018-06-29T08:04:15.488Z</updated>
+  <updated>2018-07-06T14:00:52.477Z</updated>
   <id>https://student9128.github.io/</id>
   
   <author>
@@ -21,11 +21,19 @@
     <link href="https://student9128.github.io/2018/06/29/AndroidStudio%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/"/>
     <id>https://student9128.github.io/2018/06/29/AndroidStudio导入第三方库/</id>
     <published>2018-06-29T08:03:01.000Z</published>
-    <updated>2018-06-29T08:04:15.488Z</updated>
+    <updated>2018-07-06T14:00:52.477Z</updated>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;Hellos&lt;/p&gt;
+
+      
+    
     </summary>
+    
+      <category term="Android" scheme="https://student9128.github.io/categories/Android/"/>
     
     
       <category term="AndroidStudio" scheme="https://student9128.github.io/tags/AndroidStudio/"/>
@@ -37,7 +45,7 @@
     <link href="https://student9128.github.io/2018/06/26/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%E7%9A%84%E8%AF%9D/"/>
     <id>https://student9128.github.io/2018/06/26/写在前面的话/</id>
     <published>2018-06-26T07:50:57.000Z</published>
-    <updated>2018-06-28T06:16:06.821Z</updated>
+    <updated>2018-07-06T14:00:41.935Z</updated>
     
     <summary type="html">
     
@@ -50,6 +58,8 @@
     </summary>
     
     
+      <category term="Test" scheme="https://student9128.github.io/tags/Test/"/>
+    
   </entry>
   
   <entry>
@@ -57,7 +67,7 @@
     <link href="https://student9128.github.io/2018/06/26/hello-world/"/>
     <id>https://student9128.github.io/2018/06/26/hello-world/</id>
     <published>2018-06-26T07:27:59.267Z</published>
-    <updated>2018-06-26T07:27:59.267Z</updated>
+    <updated>2018-07-06T14:00:04.869Z</updated>
     
     <summary type="html">
     
@@ -68,6 +78,10 @@
     
     </summary>
     
+      <category term="Test" scheme="https://student9128.github.io/categories/Test/"/>
+    
+    
+      <category term="test" scheme="https://student9128.github.io/tags/test/"/>
     
   </entry>
   

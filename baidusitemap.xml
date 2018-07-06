@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://student9128.github.io/2018/06/29/AndroidStudio%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/</loc>
-    <lastmod>2018-06-29T08:04:15.488Z</lastmod>
+    <lastmod>2018-07-06T14:00:52.477Z</lastmod>
     <data>
         <display>
         <title>AndroidStudio导入第三方库</title>
@@ -15,6 +15,9 @@
          
          
            
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
         </display>
     </data>
     </url>
@@ -22,12 +25,14 @@
     
   <url>
     <loc>https://student9128.github.io/2018/06/26/%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2%E7%9A%84%E8%AF%9D/</loc>
-    <lastmod>2018-06-28T06:16:06.821Z</lastmod>
+    <lastmod>2018-07-06T14:00:41.935Z</lastmod>
     <data>
         <display>
         <title>写在前面的话</title>
         <pubTime>2018-06-26T07:50:57.000Z</pubTime>
         
+        <tag>Test</tag>
+         
          
            
         </display>
@@ -35,24 +40,26 @@
     </url>
 
     
-    
-    
-    
-    
-    
-    
   <url>
     <loc>https://student9128.github.io/2018/06/26/hello-world/</loc>
-    <lastmod>2018-06-26T07:27:59.267Z</lastmod>
+    <lastmod>2018-07-06T14:00:04.869Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
         <pubTime>2018-06-26T07:27:59.267Z</pubTime>
         
+        <tag>test</tag>
+         
          
            
+             
+              <breadCrumb title="Test" url="https://student9128.github.io/categories/Test/"/>
+          
         </display>
     </data>
     </url>
 
+    
+    
+    
 </urlset>

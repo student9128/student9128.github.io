@@ -45,7 +45,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6 {/*标题*/
   font-weight: 400;
   color: #303030;
 }
@@ -69,11 +69,11 @@ h6 {
 }
 a {
   /* color: #e75151; */
-  color:#e75151
+  color:#e75151;
   outline: none;
 }
 a:hover {
-  color: #e75151;
+  color: #a13939;
 }
 a:active {
   outline: none;
@@ -213,6 +213,7 @@ pre {
   overflow: hidden;
   white-space: nowrap;
 }
+/*进度条*/
 #process {
   position: fixed;
   width: 0;
@@ -236,13 +237,13 @@ pre {
 /*====================================================
     header
 ====================================================*/
-.main-header {//头部颜色
+.main-header {
   position: relative;
   text-align: center;
   line-height: 0;
   height: 180px;
   width: 100%;
-  background: #393e46;
+  background: #363636;
   background-repeat: repeat;
   overflow: hidden;
 }
@@ -277,7 +278,7 @@ pre {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  background-image: -webkit-linear-gradient(left, #000, #000 25%, #000 50%, #000 75%, #000) !important;
+  background-image: -webkit-linear-gradient(left, #e7eff3, #e7eff3 25%, #e7eff3 50%, #e7eff3 75%, #e7eff3) !important;
   -webkit-text-fill-color: transparent!important;
   -webkit-background-clip: text!important;
   background-size: 200% 100%!important;
@@ -424,6 +425,7 @@ pre {
   line-height: 1.35em;
   margin: 0;
 }
+/*文章标题*/
 .post .post-head .post-title a {
   color: #303030;
 }
@@ -488,10 +490,10 @@ pre {
 .post .post-footer {
   margin-top: 15px;
   padding-top: 15px;
-  border-top: 1px solid #393e46;
+  border-top: 1px solid #ebebeb;
 }
 .post .post-footer .tag-list {
-  color: #393e46;
+  color: #959595;
   line-height: 28px;
 }
 .post .post-footer .tag-list .post-meta {
@@ -504,7 +506,7 @@ pre {
   margin-left: 4px;
 }
 .post .post-footer .tag-list a {
-  color: #393e46;
+  color: #959595;
 }
 .post .post-footer .tag-list a:hover {
   color: #e75151;
@@ -517,41 +519,41 @@ pre {
 ====================================================*/
 .post-content {
   font: 400 16px/1.62 "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
-  color: #333333;
+  color: #333;
 }
 .post-content h1 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-  color: #333333;
+  color: #333;
   font-size: 1.8em;
   margin: 0.67em 0;
 }
 .post-content h2 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-  color: #333333;
+  color: #333;
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 .post-content h3 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-  color: #333333;
+  color: #333;
   font-size: 1.17em;
   margin: 1em 0;
 }
 .post-content h4 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-  color: #333333;
+  color: #333;
   font-size: 1em;
   margin: 1.6em 0 1em 0;
 }
 .post-content h5 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-  color: #333333;
+  color: #333;
   font-size: 1em;
   margin: 1.6em 0 1em 0;
 }
 .post-content h6 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
-  color: #333333;
+  color: #333;
   font-size: 1em;
   margin: 1.6em 0 1em 0;
   font-weight: 500;
@@ -571,19 +573,19 @@ pre {
 }
 .post-content strong {
   font-weight: 700;
-  color: #333333;
+  color: #333;
 }
 .post-content b {
   font-weight: 700;
-  color: #333333;
+  color: #333;
 }
 .post-content em {
   font-style: italic;
-  color: #333333;
+  color: #333;
 }
 .post-content i {
   font-style: italic;
-  color: #333333;
+  color: #333;
 }
 .post-content img {
   max-width: 100%;
@@ -671,7 +673,7 @@ pre {
 .post-content code {
   color: #808080;
   font-size: 0.96em;
-  background-color: #2196f3;
+  background-color: #f9f9f9;
   padding: 1px 2px;
   border: 1px solid #dadada;
   -webkit-border-radius: 2px;
@@ -845,8 +847,8 @@ pre {
   padding: 0 25px 16px;
 }
 .main-footer {
-  background: #393e46;
-  color: #393e46;
+  background: #fff;
+  color: #fff;
 }
 /*====================================================
     sidebar
@@ -873,7 +875,7 @@ pre {
 .widget .tag-cloud a {
   border: 1px solid #ebebeb;
   padding: 2px 7px;
-  color: #959595;
+  color: #808080;
   font-size: 1em!important;
   line-height: 1.5em;
   display: inline-block;
@@ -944,7 +946,7 @@ pre {
   z-index: 6;
   width: 120%;
   padding: 20px;
-  color: #333333;
+  color: #333;
   background: #fff;
   border-radius: 4px;
   box-shadow: 1px 2px 2px #ccc;
@@ -997,7 +999,7 @@ pre {
   overflow: hidden;
   white-space: nowrap;
   margin-bottom: 0px;
-  color: #333333;
+  color: #333;
   border: 0;
 }
 .widget #search-form #result-wrap #search-result .item .title:hover {
@@ -1021,7 +1023,7 @@ pre {
    copyright
 ====================================================*/
 .copyright {
-  background: #111;
+  background: #363636;/*修改底部背景颜色*/
   font-size: 13px;
   text-align: center;
   color: #666666;
@@ -1053,7 +1055,7 @@ pre {
 }
 #article-toc .toc .toc-item .toc-link {
   display: block;
-  color: #333333;
+  color: #333;
   text-decoration: none;
   padding: 3px 0;
   line-height: 1.25em;
@@ -1109,18 +1111,18 @@ pre {
   width: 100%;
   padding: 0 20px;
   margin: 20px auto;
-  background: url(../img/timeline.gif) repeat-y 207px 0;
+  background: url(../img/line.svg) repeat-y 200px 0;
   overflow: hidden;
 }
 .timeline h2 {
-  height: 60px;
-  line-height: 60px;
+  height: 40px;
+  line-height: 40px;
   font-size: 30px;
   color: #666666;
   font-weight: bold;
   padding-left: 65px;
   margin-bottom: 30px;
-  background: url(../img/timeline-clock.gif) #fff no-repeat 158px 0;
+  background: url(../img/time.svg) #fff no-repeat 170px 0;
 }
 .timeline h2 img {
   vertical-align: -5px;
@@ -1131,7 +1133,7 @@ pre {
   padding: 0;
 }
 .timeline ul li {
-  background: url(../img/timeline-dot.gif) no-repeat 180px 5px;
+  background: url(../img/time-dot.svg) no-repeat 180px 5px;
   padding-bottom: 20px;
   zoom: 1;
   text-overflow: ellipsis;
@@ -1149,14 +1151,14 @@ pre {
   float: left;
   width: 168px;
   font-size: 20px;
-  color: #333333;
+  color: #333;
   text-align: right;
   padding-right: 15px;
   margin: 0;
 }
 .timeline ul li h3 span {
   color: #666666;
-  font-size: 12px;
+  font-size: 14px;
   margin-left: 2px;
 }
 .timeline ul li a {
@@ -1195,7 +1197,8 @@ pre,
   padding: 0;
   color: #c5c8c6;
   font-size: 13px;
-  background: #1d1f21;
+  /* background: #1d1f21;代码区域的颜色 */
+  background: #F8F8F8;
   line-height: 1.6;
 }
 code {
@@ -1258,13 +1261,14 @@ pre .comment {
   padding-right: 10px;
   color: #888f96;
   text-align: right;
-  background-color: #000;
+  border-radius: 0px;
+  background-color: #eeeeee;/*代码行号颜色*/
 }
 .highlight .code pre {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #1d1f21;
+  background-color: #F8F8F8;/*代码区域背景颜色*/
 }
 .highlight .line {
   height: 20px;
