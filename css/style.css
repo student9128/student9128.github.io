@@ -1122,7 +1122,8 @@ pre {
   font-weight: bold;
   padding-left: 65px;
   margin-bottom: 30px;
-  background: url(../img/time.svg) #fff no-repeat 170px 0;
+  margin-left: 16px;
+  background: url(../img/time.svg) #fff no-repeat 152px 0;
 }
 .timeline h2 img {
   vertical-align: -5px;
@@ -1133,8 +1134,9 @@ pre {
   padding: 0;
 }
 .timeline ul li {
-  background: url(../img/time-dot.svg) no-repeat 180px 5px;
+  background: url(../img/time-dot.svg) no-repeat 173px 5px;
   padding-bottom: 20px;
+  margin-left: 6px;
   zoom: 1;
   text-overflow: ellipsis;
   overflow: hidden;
