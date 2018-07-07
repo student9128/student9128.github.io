@@ -3,6 +3,46 @@
 
 
     
+  <url>
+    <loc>https://student9128.github.io/2018/07/07/AndroidStudio-3-1-2%E6%B7%BB%E5%8A%A0Module%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2018-07-07T07:14:13.456Z</lastmod>
+    <data>
+        <display>
+        <title>Android Studio 3.1.2添加Module的问题</title>
+        <pubTime>2018-07-07T07:05:54.000Z</pubTime>
+        
+        <tag>AndroidStudio issues</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/07/14/AndroidStudio%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/</loc>
+    <lastmod>2018-07-07T07:03:29.435Z</lastmod>
+    <data>
+        <display>
+        <title>AndroidStudio导入第三方库</title>
+        <pubTime>2016-07-14T09:38:18.000Z</pubTime>
+        
+        <tag>AndroidStudio</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://student9128.github.io/2016/12/19/hello-world/</loc>
@@ -18,26 +58,6 @@
            
              
               <breadCrumb title="Test" url="https://student9128.github.io/categories/Test/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://student9128.github.io/2018/06/29/AndroidStudio%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/</loc>
-    <lastmod>2018-07-06T14:00:52.477Z</lastmod>
-    <data>
-        <display>
-        <title>AndroidStudio导入第三方库</title>
-        <pubTime>2018-06-29T08:03:01.000Z</pubTime>
-        
-        <tag>AndroidStudio</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
           
         </display>
     </data>
