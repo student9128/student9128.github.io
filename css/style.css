@@ -179,8 +179,8 @@ textarea:focus {
   outline: none;
 }
 blockquote {
-  border-left: 4px solid #e75151;
-  background-color: #e75151;
+  border-left: 3px solid #bde4f4;
+  background-color: #f9f9f9;
 }
 pre {
   padding: 0;
@@ -1341,6 +1341,8 @@ pre .keyword,
 pre .javascript .function {
   color: #b294bb;
 }
+
+
 /*====================================================
     media
 ====================================================*/
@@ -1441,3 +1443,4 @@ pre .javascript .function {
     margin-bottom: 10px;
   }
 }
+
