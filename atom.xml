@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://student9128.github.io/"/>
-  <updated>2018-07-09T07:11:21.885Z</updated>
+  <updated>2018-07-09T08:10:08.858Z</updated>
   <id>https://student9128.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JAVA标识符命名规则</title>
+    <link href="https://student9128.github.io/2018/07/09/JAVA%E6%A0%87%E8%AF%86%E7%AC%A6%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/"/>
+    <id>https://student9128.github.io/2018/07/09/JAVA标识符命名规则/</id>
+    <published>2018-07-09T08:07:48.000Z</published>
+    <updated>2018-07-09T08:10:08.858Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Java语言中，对各种变量、方法和类等要素命名时使用的字符序列称为标识符。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java 标识符有如下命名规则： &lt;ul&gt;
+&lt;li&gt;由26个英文字母大小写，数字：0-9 符号：_ $ 组成&lt;/li&gt;
+&lt;li&gt;标识符应以字母、_ 、$开头。&lt;/li&gt;
+&lt;
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://student9128.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://student9128.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>FontAwesome 在Android中的使用</title>
