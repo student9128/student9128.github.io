@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>AndroidStudio导入第三方库 | 文藝学生</title>
+<title>关于document.getElementById返回null的解决方案 | 文藝学生</title>
 
 
     <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
@@ -141,9 +141,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="AndroidStudio导入第三方库">
+        <h1 id="关于document.getElementById返回null的解决方案">
             
-	            AndroidStudio导入第三方库
+	            关于document.getElementById返回null的解决方案
             
         </h1>
         <div class="post-meta">
@@ -151,8 +151,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/Android">
-            Android
+        <a href="/categories/前端">
+            前端
         </a>
     </span>
     
@@ -162,8 +162,12 @@
         <span class="tags-meta">
             
                 
-                    <a href="/tags/AndroidStudio" title='AndroidStudio'>
-                        AndroidStudio
+                    <a href="/tags/issue" title='issue'>
+                        issue
+                    </a>
+                
+                    <a href="/tags/javascript" title='javascript'>
+                        javascript
                     </a>
                 
             
@@ -175,7 +179,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2016/07/14</span>
+            <span class="date-meta">2018/02/12</span>
         </span>
     
     <span id="busuanzi_container_page_pv">
@@ -186,26 +190,13 @@
 
             
             
-            <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>724</strong>天之前发表，文中内容可能已经过时。
-            </p>
-        
     </div>
     
     <div class="post-body post-content">
-        <p>大家都知道，现在很多公司都在用Google推崇的Android Studio，不过使用的时候总会有这样那样的疑问，比如说如何导入第三方库呢，以前的Eclipse都是之间复制粘贴到libs下的。Android Studio就不能这样了。我说两种自己常用的方法，还望大家多多指点！:)</p>
-<h3 id="第一种：通过导入Module"><a href="#第一种：通过导入Module" class="headerlink" title="第一种：通过导入Module"></a>第一种：通过导入Module</h3><h4 id="1-gt-打开File——-gt-New——-gt-Import-Module路径，点击Import-Module"><a href="#1-gt-打开File——-gt-New——-gt-Import-Module路径，点击Import-Module" class="headerlink" title="1&gt;打开File——&gt;New——&gt;Import Module路径，点击Import Module;"></a>1&gt;打开File——&gt;New——&gt;Import Module路径，点击Import Module;</h4><p><img src="/../images/20160714导入第三方库/图1.png" alt="图1"></p>
-<h4 id="2-gt-点击“…”找到大三方库所在路径"><a href="#2-gt-点击“…”找到大三方库所在路径" class="headerlink" title="2&gt;点击“…”找到大三方库所在路径"></a>2&gt;点击“…”找到大三方库所在路径</h4><p><img src="/../images/20160714导入第三方库/图2.png" alt="图2"></p>
-<p>我这里使用的slidingMenu库演示，值得注意的是要将第三方库放到工程（project）所在目录，我这个是解压后正好有两个文件夹，如果你的不是那就在工程（project）所在目录新建一个文件夹，名字随意起方便你自己记就行了。然后（如下图）选择要导入的类库（看图片，要选择src所在目录的外面的一层，不然无法导入的，注意gradle文件，下面会出问题）。</p>
-<h4 id="3-gt-点击OK-出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）"><a href="#3-gt-点击OK-出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）" class="headerlink" title="3&gt;点击OK,出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）"></a>3&gt;点击OK,出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）</h4><p><img src="/../images/20160714导入第三方库/图3.png" alt=""></p>
-<h4 id="4-gt-好了，让Android-Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。"><a href="#4-gt-好了，让Android-Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。" class="headerlink" title="4&gt;好了，让Android Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。"></a>4&gt;好了，让Android Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。</h4><p><img src="/../images/20160714导入第三方库/图4.png" alt=""></p>
-<p><strong>（值得注意的是，在build的时候会出现你的android studio缺少某些sdk,如19.1.0，直接按照提示进行安装即可。相信大家都会)</strong></p>
-<h3 id="第二种：添加依赖"><a href="#第二种：添加依赖" class="headerlink" title="第二种：添加依赖"></a>第二种：添加依赖</h3><blockquote>
-<p>添加依赖更加简便</p>
-</blockquote>
-<h4 id="1-gt-打开File——-gt-Project-Structure路径："><a href="#1-gt-打开File——-gt-Project-Structure路径：" class="headerlink" title="1&gt;打开File——&gt;Project Structure路径："></a>1&gt;打开File——&gt;Project Structure路径：</h4><h4 id="2-gt-按照如上图路径：添加Library-dependency"><a href="#2-gt-按照如上图路径：添加Library-dependency" class="headerlink" title="2&gt;按照如上图路径：添加Library dependency"></a>2&gt;按照如上图路径：添加Library dependency</h4><p><img src="/../images/20160714导入第三方库/图6.png" alt=""></p>
-<h4 id="3-gt-直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android-Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）"><a href="#3-gt-直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android-Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）" class="headerlink" title="3&gt;直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）"></a>3&gt;直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）</h4><blockquote>
-<p>声明：文章是从CSDN迁过来的，这里的图片是重新做的，所以AndroidStudio是新版本的</p>
+        <p>最近在学习javascrpit，在写的时候发现document.getElementById会返回null,当然将js写到html下面就不会出现这个问题，但是我引用外部js,将其写在了head标签里面，搜索了一下，发现可以这样解决。添加<code>defer = &quot;true&quot;</code>。这里记录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;../js/xx.js&quot; type=&quot;text/javascript&quot; defer=&quot;true&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>声明：文章是从CSDN迁过来的.CSDN博客请点击<a href="https://blog.csdn.net/student9128" traget="_blank" target="_blank" rel="noopener"><i>这里</i></a></p>
 </blockquote>
 
     </div>
@@ -225,11 +216,16 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2016/12/19/hello-world/" class="pre-post btn btn-default" title='Hello World'>
+        <a href="/2018/02/14/VSCode通过git上传代码/" class="pre-post btn btn-default" title='VSCode通过git上传代码'>
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">Hello World</span>
+            <span class="hidden-xs">VSCode通过git上传代码</span>
         </a>
     
+    
+        <a href="/2016/12/19/hello-world/" class="next-post btn btn-default" title='Hello World'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Hello World</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
     
 </div>
 
@@ -264,7 +260,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一种：通过导入Module"><span class="toc-text">第一种：通过导入Module</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-gt-打开File——-gt-New——-gt-Import-Module路径，点击Import-Module"><span class="toc-text">1&gt;打开File——&gt;New——&gt;Import Module路径，点击Import Module;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-gt-点击“…”找到大三方库所在路径"><span class="toc-text">2&gt;点击“…”找到大三方库所在路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-gt-点击OK-出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）"><span class="toc-text">3&gt;点击OK,出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-gt-好了，让Android-Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。"><span class="toc-text">4&gt;好了，让Android Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二种：添加依赖"><span class="toc-text">第二种：添加依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-gt-打开File——-gt-Project-Structure路径："><span class="toc-text">1&gt;打开File——&gt;Project Structure路径：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-gt-按照如上图路径：添加Library-dependency"><span class="toc-text">2&gt;按照如上图路径：添加Library dependency</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-gt-直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android-Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）"><span class="toc-text">3&gt;直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）</span></a></li></ol></li></ol>
+            <p>暂无目录</p>
         
     </div>
 </aside>

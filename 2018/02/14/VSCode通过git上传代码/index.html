@@ -27,7 +27,7 @@
     <!--Title-->
 
 
-<title>AndroidStudio导入第三方库 | 文藝学生</title>
+<title>VSCode通过git上传代码 | 文藝学生</title>
 
 
     <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
@@ -141,9 +141,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="AndroidStudio导入第三方库">
+        <h1 id="VSCode通过git上传代码">
             
-	            AndroidStudio导入第三方库
+	            VSCode通过git上传代码
             
         </h1>
         <div class="post-meta">
@@ -151,8 +151,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/Android">
-            Android
+        <a href="/categories/ ">
+             
         </a>
     </span>
     
@@ -162,8 +162,12 @@
         <span class="tags-meta">
             
                 
-                    <a href="/tags/AndroidStudio" title='AndroidStudio'>
-                        AndroidStudio
+                    <a href="/tags/VSCode" title='VSCode'>
+                        VSCode
+                    </a>
+                
+                    <a href="/tags/git" title='git'>
+                        git
                     </a>
                 
             
@@ -175,7 +179,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2016/07/14</span>
+            <span class="date-meta">2018/02/14</span>
         </span>
     
     <span id="busuanzi_container_page_pv">
@@ -186,26 +190,30 @@
 
             
             
-            <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>724</strong>天之前发表，文中内容可能已经过时。
-            </p>
-        
     </div>
     
     <div class="post-body post-content">
-        <p>大家都知道，现在很多公司都在用Google推崇的Android Studio，不过使用的时候总会有这样那样的疑问，比如说如何导入第三方库呢，以前的Eclipse都是之间复制粘贴到libs下的。Android Studio就不能这样了。我说两种自己常用的方法，还望大家多多指点！:)</p>
-<h3 id="第一种：通过导入Module"><a href="#第一种：通过导入Module" class="headerlink" title="第一种：通过导入Module"></a>第一种：通过导入Module</h3><h4 id="1-gt-打开File——-gt-New——-gt-Import-Module路径，点击Import-Module"><a href="#1-gt-打开File——-gt-New——-gt-Import-Module路径，点击Import-Module" class="headerlink" title="1&gt;打开File——&gt;New——&gt;Import Module路径，点击Import Module;"></a>1&gt;打开File——&gt;New——&gt;Import Module路径，点击Import Module;</h4><p><img src="/../images/20160714导入第三方库/图1.png" alt="图1"></p>
-<h4 id="2-gt-点击“…”找到大三方库所在路径"><a href="#2-gt-点击“…”找到大三方库所在路径" class="headerlink" title="2&gt;点击“…”找到大三方库所在路径"></a>2&gt;点击“…”找到大三方库所在路径</h4><p><img src="/../images/20160714导入第三方库/图2.png" alt="图2"></p>
-<p>我这里使用的slidingMenu库演示，值得注意的是要将第三方库放到工程（project）所在目录，我这个是解压后正好有两个文件夹，如果你的不是那就在工程（project）所在目录新建一个文件夹，名字随意起方便你自己记就行了。然后（如下图）选择要导入的类库（看图片，要选择src所在目录的外面的一层，不然无法导入的，注意gradle文件，下面会出问题）。</p>
-<h4 id="3-gt-点击OK-出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）"><a href="#3-gt-点击OK-出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）" class="headerlink" title="3&gt;点击OK,出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）"></a>3&gt;点击OK,出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）</h4><p><img src="/../images/20160714导入第三方库/图3.png" alt=""></p>
-<h4 id="4-gt-好了，让Android-Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。"><a href="#4-gt-好了，让Android-Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。" class="headerlink" title="4&gt;好了，让Android Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。"></a>4&gt;好了，让Android Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。</h4><p><img src="/../images/20160714导入第三方库/图4.png" alt=""></p>
-<p><strong>（值得注意的是，在build的时候会出现你的android studio缺少某些sdk,如19.1.0，直接按照提示进行安装即可。相信大家都会)</strong></p>
-<h3 id="第二种：添加依赖"><a href="#第二种：添加依赖" class="headerlink" title="第二种：添加依赖"></a>第二种：添加依赖</h3><blockquote>
-<p>添加依赖更加简便</p>
+        <p>最近也是在不断学习中，接触VSCode时间不长，很多东西也是在学习，所以这里记录下VSCode通过git上传代码，以防之后忘记。</p>
+<p>我用的的VSCode版本<br><img src="http://img.blog.csdn.net/20180214162840844?" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20180214163056920?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></p>
+<blockquote>
+<p><strong>起初建立仓库的时候通过命令</strong>：<br>（这个是我网上搜的 ，应该通过图形化操作也是可用的，没有试）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">touch README.md</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;initial commit&quot;</span><br><span class="line">git remote add origin https://github.com/student9128/JSStudy.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h4 id="1-gt-打开File——-gt-Project-Structure路径："><a href="#1-gt-打开File——-gt-Project-Structure路径：" class="headerlink" title="1&gt;打开File——&gt;Project Structure路径："></a>1&gt;打开File——&gt;Project Structure路径：</h4><h4 id="2-gt-按照如上图路径：添加Library-dependency"><a href="#2-gt-按照如上图路径：添加Library-dependency" class="headerlink" title="2&gt;按照如上图路径：添加Library dependency"></a>2&gt;按照如上图路径：添加Library dependency</h4><p><img src="/../images/20160714导入第三方库/图6.png" alt=""></p>
-<h4 id="3-gt-直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android-Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）"><a href="#3-gt-直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android-Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）" class="headerlink" title="3&gt;直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）"></a>3&gt;直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）</h4><blockquote>
-<p>声明：文章是从CSDN迁过来的，这里的图片是重新做的，所以AndroidStudio是新版本的</p>
+<blockquote>
+<p>相关操作如下图所示，注意路径的分隔符不要写错，我直接在电脑上复制的，可用从截图看出来斜杠方向不同，这里手动改下即可</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20180214163846588" style="width:200px height:400px"></p>
+<blockquote>
+<p>上传完，随便在某个文件里修改下，会看到Changes里出现修改的文件</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20180214163653625"></p>
+<blockquote>
+<p>右上角的省略号可用找到相关操作命令，进行上传，注意上传的时候要写一些message,也就是描述内容，可根据提示进行操作。</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20180214163647532"></p>
+<p>我这里连接的github，由于我之前已经配置过了，没操作这步。关于git和github的连接，请参考<br><a href="http://blog.csdn.net/student9128/article/details/53099111" target="_blank" rel="noopener">Git连接github</a></p>
+<blockquote>
+<p>声明：文章是从CSDN迁过来的.CSDN博客请点击<a href="https://blog.csdn.net/student9128" traget="_blank" target="_blank" rel="noopener"><i>这里</i></a></p>
 </blockquote>
 
     </div>
@@ -225,11 +233,16 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2016/12/19/hello-world/" class="pre-post btn btn-default" title='Hello World'>
+        <a href="/2018/03/31/ReactNative遇到的问题(一)/" class="pre-post btn btn-default" title='ReactNative遇到的问题(一)'>
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">Hello World</span>
+            <span class="hidden-xs">ReactNative遇到的问题(一)</span>
         </a>
     
+    
+        <a href="/2018/02/12/关于document-getElementById返回null的解决方案/" class="next-post btn btn-default" title='关于document.getElementById返回null的解决方案'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">关于document.getElementById返回null的解决方案</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
     
 </div>
 
@@ -264,7 +277,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一种：通过导入Module"><span class="toc-text">第一种：通过导入Module</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-gt-打开File——-gt-New——-gt-Import-Module路径，点击Import-Module"><span class="toc-text">1&gt;打开File——&gt;New——&gt;Import Module路径，点击Import Module;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-gt-点击“…”找到大三方库所在路径"><span class="toc-text">2&gt;点击“…”找到大三方库所在路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-gt-点击OK-出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）"><span class="toc-text">3&gt;点击OK,出现下面图，说明选择正确，可以Finish进行导入了（library是导入的类库名称）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-gt-好了，让Android-Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。"><span class="toc-text">4&gt;好了，让Android Studio自己进行build吧，完成后如下图，会出现library文件夹，说明你导入成功了。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二种：添加依赖"><span class="toc-text">第二种：添加依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-gt-打开File——-gt-Project-Structure路径："><span class="toc-text">1&gt;打开File——&gt;Project Structure路径：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-gt-按照如上图路径：添加Library-dependency"><span class="toc-text">2&gt;按照如上图路径：添加Library dependency</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-gt-直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android-Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）"><span class="toc-text">3&gt;直接在搜索框中搜索所要添加的库名即可，选中所要添加的类库，点击OK，等待Android Studio进行build完成即添加成功（可以在gradle文件中确定一下是否存在你刚刚添加的依赖，如果存在就说明添加成功）</span></a></li></ol></li></ol>
+            <p>暂无目录</p>
         
     </div>
 </aside>
