@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="文藝学生">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://student9128.github.io">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>Android底部导航栏实现（一）之BottomNavigationBar | 文藝学生</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1531135810430&amp;di=b130d8f4876c8d768f7b1d6e858559e7&amp;imgtype=0&amp;src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fa%2F5534a03b2f3d3.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Kevin'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 文藝学生 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://student9128.github.io">文藝学生</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Android/"><i class="fa "></i>Android</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Java/"><i class="fa "></i>Java</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/ReactNative/"><i class="fa "></i>React Native</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Android底部导航栏实现（一）之BottomNavigationBar">
+            
+	            Android底部导航栏实现（一）之BottomNavigationBar
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/移动开发" title='移动开发'>
+                        移动开发
+                    </a>
+                
+                    <a href="/tags/底部导航栏" title='底部导航栏'>
+                        底部导航栏
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2016/12/05</span>
+        </span>
+    
+    <span id="busuanzi_container_page_pv">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+      </span>
+</div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>582</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>BottomNavigationBar这个控件的使用之前已经写过，这里不再赘述，详情请参考<a href="http://blog.csdn.net/student9128/article/details/53239087" target="_blank" rel="noopener">BottomNavigationBar的使用</a>。</p>
+<p><img src="http://img.blog.csdn.net/20161205133655009" alt="这里写图片描述"></p>
+<p>下面直接上代码：</p>
+<h3 id="初始化及相关设置："><a href="#初始化及相关设置：" class="headerlink" title="初始化及相关设置："></a>初始化及相关设置：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">mBottomNavigationBar = (BottomNavigationBar) view.findViewById(R.id.bottom_navigation_bar);</span><br><span class="line">  mBottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);</span><br><span class="line">  mBottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);</span><br><span class="line"></span><br><span class="line">  mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.home_fill, getString(R.string.item_home)).setInactiveIconResource(R.drawable.home).setActiveColorResource(R.color.colorPrimary).setInActiveColorResource(R.color.black_1))</span><br><span class="line">          .addItem(new BottomNavigationItem(R.drawable.location_fill, getString(R.string.item_location)).setInactiveIconResource(R.drawable.location).setActiveColorResource(R.color.colorPrimary).setInActiveColorResource(R.color.black_1))</span><br><span class="line">          .addItem(new BottomNavigationItem(R.drawable.like_fill, getString(R.string.item_like)).setInactiveIconResource(R.drawable.like).setActiveColorResource(R.color.colorPrimary).setInActiveColorResource(R.color.black_1))</span><br><span class="line">          .addItem(new BottomNavigationItem(R.drawable.person_fill, getString(R.string.item_person)).setInactiveIconResource(R.drawable.person).setActiveColorResource(R.color.colorPrimary).setInActiveColorResource(R.color.black_1))</span><br><span class="line">          .setFirstSelectedPosition(0)</span><br><span class="line">          .initialise();</span><br><span class="line"></span><br><span class="line">  mBottomNavigationBar.setTabSelectedListener(this);</span><br><span class="line"></span><br><span class="line">  setDefaultFragment();</span><br></pre></td></tr></table></figure>
+<h3 id="Tab的切换："><a href="#Tab的切换：" class="headerlink" title="Tab的切换："></a>Tab的切换：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onTabSelected(int position) &#123;</span><br><span class="line">    FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();</span><br><span class="line"></span><br><span class="line">    switch (position) &#123;</span><br><span class="line">        case 0:</span><br><span class="line">            if (mHomeFragment == null) &#123;</span><br><span class="line">                mHomeFragment = HomeFragment.newInstance(getString(R.string.item_home));</span><br><span class="line">            &#125;</span><br><span class="line">            beginTransaction.replace(R.id.sub_content, mHomeFragment);</span><br><span class="line">            break;</span><br><span class="line">        case 1:</span><br><span class="line">            if (mLocationFragment == null) &#123;</span><br><span class="line">                mLocationFragment = LocationFragment.newInstance(getString(R.string.item_location));</span><br><span class="line">            &#125;</span><br><span class="line">            beginTransaction.replace(R.id.sub_content, mLocationFragment);</span><br><span class="line">            break;</span><br><span class="line">        case 2:</span><br><span class="line">            if (mLikeFragment == null) &#123;</span><br><span class="line">                mLikeFragment = LikeFragment.newInstance(getString(R.string.item_like));</span><br><span class="line">            &#125;</span><br><span class="line">            beginTransaction.replace(R.id.sub_content, mLikeFragment);</span><br><span class="line">            break;</span><br><span class="line">        case 3:</span><br><span class="line">            if (mPersonFragment == null) &#123;</span><br><span class="line">                mPersonFragment = PersonFragment.newInstance(getString(R.string.item_person));</span><br><span class="line">            &#125;</span><br><span class="line">            beginTransaction.replace(R.id.sub_content, mPersonFragment);</span><br><span class="line">    &#125;</span><br><span class="line">    beginTransaction.commit();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>说明：这几篇文章没有过多的文字叙述，因为这些东西也不是很难，而且都是常用的，相信很多人都了如指掌了，多说亦是废话，直接上代码看的反而更清楚。</p>
+</blockquote>
+<h3 id="DownLoad-Demo"><a href="#DownLoad-Demo" class="headerlink" title="DownLoad Demo"></a><a href="http://download.csdn.net/download/student9128/9702039" target="_blank" rel="noopener">DownLoad Demo</a></h3><h3 id="DownLoad-Demo-github"><a href="#DownLoad-Demo-github" class="headerlink" title="DownLoad Demo(github)"></a><a href="https://github.com/student9128/BottomNavigationBarForAndroid" target="_blank" rel="noopener">DownLoad Demo</a>(github)</h3>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本博客主要用于学习记录，欢迎共同学习交流。转载请注明出处！
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+ 
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2016/12/05/Android底部导航栏实现（二）之RadioGroup/" class="pre-post btn btn-default" title='Android底部导航栏实现（二）之RadioGroup'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Android底部导航栏实现（二）之RadioGroup</span>
+        </a>
+    
+    
+        <a href="/2016/12/05/五种方式实现Android底部导航栏/" class="next-post btn btn-default" title='五种方式实现Android底部导航栏'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">五种方式实现Android底部导航栏</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: window.location.pathname,
+        id:'{{page.title}}',
+        owner:"student9128",
+        repo:"student9128.github.io",
+        oauth: {
+          client_id:"47e54c90da50ceb3772b",
+          client_secret:"51a51e7e8981763706796db78efe2fc930a1f05d"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化及相关设置："><span class="toc-text">初始化及相关设置：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tab的切换："><span class="toc-text">Tab的切换：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DownLoad-Demo"><span class="toc-text">DownLoad Demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DownLoad-Demo-github"><span class="toc-text">DownLoad Demo(github)</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018 Kevin
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Theme by Kevin based on <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+
+              <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              第<span id="busuanzi_value_site_uv"></span>位小伙伴你好,
+              <span id="busuanzi_container_site_pv">
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

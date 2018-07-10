@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="文藝学生">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://student9128.github.io">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>SwitchCompat与Switch简单使用 | 文藝学生</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1531135810430&amp;di=b130d8f4876c8d768f7b1d6e858559e7&amp;imgtype=0&amp;src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fa%2F5534a03b2f3d3.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Kevin'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 文藝学生 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://student9128.github.io">文藝学生</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Android/"><i class="fa "></i>Android</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Java/"><i class="fa "></i>Java</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/ReactNative/"><i class="fa "></i>React Native</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="SwitchCompat与Switch简单使用">
+            
+	            SwitchCompat与Switch简单使用
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/移动开发" title='移动开发'>
+                        移动开发
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/02/28</span>
+        </span>
+    
+    <span id="busuanzi_container_page_pv">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+      </span>
+</div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>496</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>目前很多App用的开关都是仿ios的，因为很多Android开发人员都别要求仿ios,表示有点悲哀，Android应该就自己的风格，而且原生的也很好用。</p>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="http://img.blog.csdn.net/20170228212824040?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>可以看到这里面又三个开关前两个是SwithCompat,绿色的是Switch.<br>话不多说，直接看代码</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><blockquote>
+<p>布局</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">&lt;RelativeLayout</span><br><span class="line">       android:layout_width=&quot;match_parent&quot;</span><br><span class="line">       android:layout_height=&quot;wrap_content&quot;&gt;</span><br><span class="line"></span><br><span class="line">       &lt;TextView</span><br><span class="line">           android:id=&quot;@+id/tv_switch1&quot;</span><br><span class="line">           android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">           android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">           android:layout_centerVertical=&quot;true&quot;</span><br><span class="line">           android:layout_marginLeft=&quot;25dp&quot;</span><br><span class="line">           android:text=&quot;开启夜间模式&quot;</span><br><span class="line">           android:textSize=&quot;16sp&quot;/&gt;</span><br><span class="line"></span><br><span class="line">       &lt;android.support.v7.widget.SwitchCompat</span><br><span class="line">           android:id=&quot;@+id/sc_switch_compat&quot;</span><br><span class="line">           android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">           android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">           android:layout_alignParentRight=&quot;true&quot;</span><br><span class="line">           android:layout_marginRight=&quot;25dp&quot;</span><br><span class="line">           android:longClickable=&quot;false&quot;</span><br><span class="line">           android:textColor=&quot;@color/white&quot;</span><br><span class="line">           android:textOff=&quot;Off&quot;</span><br><span class="line">           android:textOn=&quot;On&quot;</span><br><span class="line">           app:showText=&quot;true&quot;</span><br><span class="line">           app:switchPadding=&quot;5dp&quot;</span><br><span class="line">           app:switchTextAppearance=&quot;@style/SwitchCompat.Text&quot;</span><br><span class="line">           app:theme=&quot;@style/SwitchCompat.Control&quot;/&gt;</span><br><span class="line">   &lt;/RelativeLayout&gt;</span><br><span class="line"></span><br><span class="line">   &lt;RelativeLayout</span><br><span class="line">       android:layout_width=&quot;match_parent&quot;</span><br><span class="line">       android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">       android:layout_marginTop=&quot;30dp&quot;&gt;</span><br><span class="line"></span><br><span class="line">       &lt;TextView</span><br><span class="line">           android:id=&quot;@+id/tv_switch2&quot;</span><br><span class="line">           android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">           android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">           android:layout_centerVertical=&quot;true&quot;</span><br><span class="line">           android:layout_marginLeft=&quot;25dp&quot;</span><br><span class="line">           android:text=&quot;开启夜间模式&quot;</span><br><span class="line">           android:textSize=&quot;16sp&quot;/&gt;</span><br><span class="line"></span><br><span class="line">       &lt;android.support.v7.widget.SwitchCompat</span><br><span class="line">           android:id=&quot;@+id/sc_switch_compat2&quot;</span><br><span class="line">           android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">           android:layout_height=&quot;46dp&quot;</span><br><span class="line"></span><br><span class="line">           android:layout_alignParentRight=&quot;true&quot;</span><br><span class="line">           android:layout_marginRight=&quot;25dp&quot;</span><br><span class="line">           android:checked=&quot;false&quot;</span><br><span class="line">           android:longClickable=&quot;false&quot;/&gt;</span><br><span class="line">   &lt;/RelativeLayout&gt;</span><br><span class="line"></span><br><span class="line">   &lt;RelativeLayout</span><br><span class="line">       android:layout_width=&quot;match_parent&quot;</span><br><span class="line">       android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">       android:layout_marginTop=&quot;30dp&quot;&gt;</span><br><span class="line"></span><br><span class="line">       &lt;TextView</span><br><span class="line">           android:id=&quot;@+id/tv_switch3&quot;</span><br><span class="line">           android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">           android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">           android:layout_centerVertical=&quot;true&quot;</span><br><span class="line">           android:layout_marginLeft=&quot;25dp&quot;</span><br><span class="line">           android:text=&quot;开启夜间模式&quot;</span><br><span class="line">           android:textSize=&quot;16sp&quot;/&gt;</span><br><span class="line"></span><br><span class="line">       &lt;Switch</span><br><span class="line">           android:id=&quot;@+id/s_switch&quot;</span><br><span class="line">           android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">           android:layout_height=&quot;46dp&quot;</span><br><span class="line">           android:layout_alignParentRight=&quot;true&quot;</span><br><span class="line">           android:layout_marginRight=&quot;25dp&quot;</span><br><span class="line">           android:checked=&quot;false&quot;</span><br><span class="line">           android:longClickable=&quot;false&quot;</span><br><span class="line">           android:textOff=&quot;OFF&quot;</span><br><span class="line">           android:textOn=&quot;ON&quot;</span><br><span class="line">           android:theme=&quot;@style/SwitchStyle&quot;/&gt;</span><br><span class="line">   &lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Style</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;style name=&quot;SwitchCompat.Control&quot; parent=&quot;Theme.AppCompat.Light&quot;&gt;</span><br><span class="line">      &lt;!-- active thumb &amp; track color (30% transparency) --&gt;</span><br><span class="line">      &lt;item name=&quot;colorControlActivated&quot;&gt;@color/yellow&lt;/item&gt;</span><br><span class="line">      &lt;item name=&quot;colorSwitchThumbNormal&quot;&gt;@color/red&lt;/item&gt;</span><br><span class="line">      &lt;item name=&quot;android:colorForeground&quot;&gt;@color/red_500&lt;/item&gt;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line"></span><br><span class="line">  &lt;style name=&quot;SwitchCompat.Text&quot; parent=&quot;Theme.AppCompat.Light&quot;&gt;</span><br><span class="line">      &lt;item name=&quot;android:textColor&quot;&gt;@color/white&lt;/item&gt;</span><br><span class="line">      &lt;item name=&quot;android:textSize&quot;&gt;9dp&lt;/item&gt;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line"></span><br><span class="line">  &lt;style name=&quot;SwitchStyle&quot; parent=&quot;AppTheme&quot;&gt;</span><br><span class="line">      &lt;item name=&quot;colorAccent&quot;&gt;@color/green&lt;/item&gt;</span><br><span class="line">  &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>代码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"> mSwitchCompat = (SwitchCompat) findViewById(R.id.sc_switch_compat);</span><br><span class="line">        mSwitchCompat.setChecked(false);</span><br><span class="line">        mSwitchCompat.setOnCheckedChangeListener(this);</span><br><span class="line">        mSwitchCompat2 = (SwitchCompat) findViewById(R.id.sc_switch_compat2);</span><br><span class="line">        mSwitchCompat2.setChecked(false);</span><br><span class="line">        mSwitchCompat2.setOnCheckedChangeListener(this);</span><br><span class="line">        mSwitch2 = (Switch) findViewById(R.id.s_switch);</span><br><span class="line">        mSwitch2.setChecked(false);</span><br><span class="line">        mSwitch2.setOnCheckedChangeListener(this);</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onCheckedChanged(CompoundButton button, boolean checked) &#123;</span><br><span class="line">        if (checked) &#123;        </span><br><span class="line">//         做我们要实现的一些操作</span><br><span class="line">            mDayNightHelper.setMode(DayNight.NIGHT);</span><br><span class="line">            setTheme(R.style.NightTheme);</span><br><span class="line">            switchMode();</span><br><span class="line">            mText.setText(&quot;Night&quot;);</span><br><span class="line">            mSwitchCompat.setChecked(true);</span><br><span class="line">            mSwitchCompat2.setChecked(true);</span><br><span class="line">            mSwitch2.setChecked(true);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line"></span><br><span class="line">            mDayNightHelper.setMode(DayNight.DAY);</span><br><span class="line">            setTheme(R.style.DayTheme);</span><br><span class="line">            switchMode();</span><br><span class="line">            mText.setText(&quot;Day&quot;);</span><br><span class="line">            mSwitchCompat.setChecked(false);</span><br><span class="line">            mSwitchCompat2.setChecked(false);</span><br><span class="line">            mSwitch2.setChecked(false);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p><img src="http://img.blog.csdn.net/20170228213646168?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>可以看到，除了在Xml里面设置属性，Google还提供了这些方法进行设置，这里就不在写了，跟Xml的效果一样。</p>
+<blockquote>
+<p>夜间模式的实现，可以参考文章<a href="http://blog.csdn.net/student9128/article/details/58311243" target="_blank" rel="noopener">《夜间模式的实现》</a></p>
+</blockquote>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本博客主要用于学习记录，欢迎共同学习交流。转载请注明出处！
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+ 
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/03/31/Android中比较日期的大小/" class="pre-post btn btn-default" title='Android中比较日期的大小'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Android中比较日期的大小</span>
+        </a>
+    
+    
+        <a href="/2017/02/28/全屏跳转到非全屏Activity的问题/" class="next-post btn btn-default" title='全屏跳转到非全屏Activity的问题'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">全屏跳转到非全屏Activity的问题</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: window.location.pathname,
+        id:'{{page.title}}',
+        owner:"student9128",
+        repo:"student9128.github.io",
+        oauth: {
+          client_id:"47e54c90da50ceb3772b",
+          client_secret:"51a51e7e8981763706796db78efe2fc930a1f05d"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#效果图"><span class="toc-text">效果图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#说明"><span class="toc-text">说明</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018 Kevin
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Theme by Kevin based on <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+
+              <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              第<span id="busuanzi_value_site_uv"></span>位小伙伴你好,
+              <span id="busuanzi_container_site_pv">
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

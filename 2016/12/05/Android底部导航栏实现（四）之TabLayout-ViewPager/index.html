@@ -1,0 +1,341 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="文藝学生">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://student9128.github.io">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>Android底部导航栏实现（四）之TabLayout+ViewPager | 文藝学生</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1531135810430&amp;di=b130d8f4876c8d768f7b1d6e858559e7&amp;imgtype=0&amp;src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fa%2F5534a03b2f3d3.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Kevin'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 文藝学生 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://student9128.github.io">文藝学生</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Android/"><i class="fa "></i>Android</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Java/"><i class="fa "></i>Java</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/ReactNative/"><i class="fa "></i>React Native</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Android底部导航栏实现（四）之TabLayout+ViewPager">
+            
+	            Android底部导航栏实现（四）之TabLayout+ViewPager
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/移动开发" title='移动开发'>
+                        移动开发
+                    </a>
+                
+                    <a href="/tags/底部导航栏" title='底部导航栏'>
+                        底部导航栏
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2016/12/05</span>
+        </span>
+    
+    <span id="busuanzi_container_page_pv">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+      </span>
+</div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>582</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>这里简单记录一下通过TabLayout+ViewPager来实现Android底部导航栏。</p>
+<p><img src="http://img.blog.csdn.net/20161205133959915" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20161205134014056" alt="这里写图片描述"></p>
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">                xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;</span><br><span class="line">                android:layout_width=&quot;match_parent&quot;</span><br><span class="line">                android:layout_height=&quot;match_parent&quot;</span><br><span class="line">                android:orientation=&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;include layout=&quot;@layout/fragment_content&quot;/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;LinearLayout</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;match_parent&quot;</span><br><span class="line">        android:orientation=&quot;vertical&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;android.support.v4.view.ViewPager</span><br><span class="line">            android:id=&quot;@+id/view_pager&quot;</span><br><span class="line">            android:layout_width=&quot;match_parent&quot;</span><br><span class="line">            android:layout_height=&quot;0dp&quot;</span><br><span class="line">            android:layout_weight=&quot;1&quot;&gt;&lt;/android.support.v4.view.ViewPager&gt;</span><br><span class="line"></span><br><span class="line">        &lt;android.support.design.widget.TabLayout</span><br><span class="line">            android:id=&quot;@+id/tab_layout&quot;</span><br><span class="line">            android:layout_width=&quot;match_parent&quot;</span><br><span class="line">            android:layout_height=&quot;56dp&quot;</span><br><span class="line">            app:tabBackground=&quot;@color/white&quot;</span><br><span class="line">            app:tabIndicatorHeight=&quot;0dp&quot;</span><br><span class="line">            app:tabSelectedTextColor=&quot;@color/colorPrimary&quot;</span><br><span class="line">            app:tabTextAppearance=&quot;@style/tabTextSizeStyle&quot;</span><br><span class="line">            app:tabTextColor=&quot;@color/black_1&quot;&gt;&lt;/android.support.design.widget.TabLayout&gt;</span><br><span class="line">    &lt;/LinearLayout&gt;</span><br><span class="line">&lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mViewPager = (ViewPager) view.findViewById(R.id.view_pager);</span><br><span class="line">     mTabLayout = (TabLayout) view.findViewById(R.id.tab_layout);</span><br><span class="line">     initTabList();</span><br><span class="line">     mAdapter = new TabLayoutFragmentAdapter(getChildFragmentManager(), mTabList, getActivity(), mFragments, mTabImgs);</span><br><span class="line">     mViewPager.setAdapter(mAdapter);</span><br><span class="line">     mViewPager.setCurrentItem(0);</span><br><span class="line">     mTabLayout.setupWithViewPager(mViewPager);</span><br><span class="line">     mTabLayout.setTabMode(TabLayout.MODE_FIXED);//设置TabLayout的模式</span><br><span class="line">     for (int i = 0; i &lt; mTabLayout.getTabCount(); i++) &#123;</span><br><span class="line">         mTabLayout.getTabAt(i).setCustomView(mAdapter.getTabView(i));</span><br><span class="line">     &#125;</span><br><span class="line">     mTabLayout.addOnTabSelectedListener(this);//设置TabLayout的选中监听</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里需要注意的就是TabLayout的使用。TabLayou配合ViewPager使用。要用 mTabLayout.setupWithViewPager(mViewPager);使二者联系起来。<br>另外这里面使用的是customView，当然TabLayout自带方法也可实现icon+text的效果。也就是效果：TabLayout + ViewPager 2</p>
+</blockquote>
+<h4 id="根据Tab选中状态显示Tab键效果"><a href="#根据Tab选中状态显示Tab键效果" class="headerlink" title="根据Tab选中状态显示Tab键效果"></a>根据Tab选中状态显示Tab键效果</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">   @Override</span><br><span class="line">   public void onTabSelected(TabLayout.Tab tab) &#123;</span><br><span class="line">       setTabSelectedState(tab);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   @Override</span><br><span class="line">   public void onTabUnselected(TabLayout.Tab tab) &#123;</span><br><span class="line">       setTabUnSelectedState(tab);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   @Override</span><br><span class="line">   public void onTabReselected(TabLayout.Tab tab) &#123;</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">private void setTabSelectedState(TabLayout.Tab tab) &#123;</span><br><span class="line">       View customView = tab.getCustomView();</span><br><span class="line">       TextView tabText = (TextView) customView.findViewById(R.id.tv_tab_text);</span><br><span class="line">       ImageView tabIcon = (ImageView) customView.findViewById(R.id.iv_tab_icon);</span><br><span class="line">       tabText.setTextColor(ContextCompat.getColor(getActivity(), R.color.colorPrimary));</span><br><span class="line">       String s = tabText.getText().toString();</span><br><span class="line">       if (getString(R.string.item_home).equals(s)) &#123;</span><br><span class="line">           tabIcon.setImageResource(R.drawable.home_fill);</span><br><span class="line">       &#125; else if (getString(R.string.item_location).equals(s)) &#123;</span><br><span class="line">           tabIcon.setImageResource(R.drawable.location_fill);</span><br><span class="line">       &#125; else if (getString(R.string.item_like).equals(s)) &#123;</span><br><span class="line">           tabIcon.setImageResource(R.drawable.like_fill);</span><br><span class="line">       &#125; else if (getString(R.string.item_person).equals(s)) &#123;</span><br><span class="line">           tabIcon.setImageResource(R.drawable.person_fill);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   private void setTabUnSelectedState(TabLayout.Tab tab) &#123;</span><br><span class="line">       View customView = tab.getCustomView();</span><br><span class="line">       TextView tabText = (TextView) customView.findViewById(R.id.tv_tab_text);</span><br><span class="line">       ImageView tabIcon = (ImageView) customView.findViewById(R.id.iv_tab_icon);</span><br><span class="line">       tabText.setTextColor(ContextCompat.getColor(getActivity(), R.color.black_1));</span><br><span class="line">       String s = tabText.getText().toString();</span><br><span class="line">       if (getString(R.string.item_home).equals(s)) &#123;</span><br><span class="line">           tabIcon.setImageResource(R.drawable.home);</span><br><span class="line">       &#125; else if (getString(R.string.item_location).equals(s)) &#123;</span><br><span class="line">           tabIcon.setImageResource(R.drawable.location);</span><br><span class="line">       &#125; else if (getString(R.string.item_like).equals(s)) &#123;</span><br><span class="line">           tabIcon.setImageResource(R.drawable.like);</span><br><span class="line">       &#125; else if (getString(R.string.item_person).equals(s)) &#123;</span><br><span class="line">           tabIcon.setImageResource(R.drawable.person);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里面不用设置defaultFragment，TabLayout会默认显示第一个；</p>
+</blockquote>
+<p>另外，这里也贴出使用TabLayout自带方法来实现效果代码</p>
+<blockquote>
+<p>值得说的是，自带方法不能自定义icon和text的间距。用起来很方便，但是可能不是你要求的那个尺寸大小。我没有去深究这里面的源码。<br>如果有人知道这个自带方法怎么改变的，也请告知一下。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">     mViewPager = (ViewPager) view.findViewById(R.id.view_pager);</span><br><span class="line">        mTabLayout = (TabLayout) view.findViewById(R.id.tab_layout);</span><br><span class="line">        initTabList();</span><br><span class="line">        mAdapter = new TabLayoutFragment2Adapter(getChildFragmentManager(), mTabList, getActivity(), mFragments, mTabImgs);</span><br><span class="line">        mViewPager.setAdapter(mAdapter);</span><br><span class="line">        mViewPager.setCurrentItem(0);</span><br><span class="line">        mTabLayout.setupWithViewPager(mViewPager);</span><br><span class="line">        mTabLayout.setTabMode(TabLayout.MODE_FIXED);</span><br><span class="line">//        for (int i = 0; i &lt; mTabLayout.getTabCount(); i++) &#123;</span><br><span class="line">//            mTabLayout.getTabAt(i).setCustomView(mAdapter.getTabView(i));</span><br><span class="line">//        &#125;</span><br><span class="line">        mTabLayout.addOnTabSelectedListener(this);</span><br><span class="line">//        mViewPager.setCurrentItem(0);</span><br><span class="line">        mTabLayout.getTabAt(0).setIcon(R.drawable.home_fill);//自有方法添加icon</span><br><span class="line">        mTabLayout.getTabAt(1).setIcon(R.drawable.location);</span><br><span class="line">        mTabLayout.getTabAt(2).setIcon(R.drawable.like);</span><br><span class="line">        mTabLayout.getTabAt(3).setIcon(R.drawable.person);</span><br></pre></td></tr></table></figure>
+<h4 id="Tab切换"><a href="#Tab切换" class="headerlink" title="Tab切换"></a>Tab切换</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">    @Override</span><br><span class="line">    public void onTabSelected(TabLayout.Tab tab) &#123;</span><br><span class="line">//        setTabSelectedState(tab);//这个也无需使用</span><br><span class="line">        resetTabIcon();</span><br><span class="line">        int position = tab.getPosition();</span><br><span class="line">        Log.e(&quot;Kevin&quot;, &quot;position---&gt;&quot; + position);</span><br><span class="line">        switch (position) &#123;</span><br><span class="line">            case 0:</span><br><span class="line">                tab.setIcon(R.drawable.home_fill);</span><br><span class="line">                break;</span><br><span class="line">            case 1:</span><br><span class="line">                tab.setIcon(R.drawable.location_fill);</span><br><span class="line">                break;</span><br><span class="line">            case 2:</span><br><span class="line">                tab.setIcon(R.drawable.like_fill);</span><br><span class="line">                break;</span><br><span class="line">            case 3:</span><br><span class="line">                tab.setIcon(R.drawable.person_fill);</span><br><span class="line">                break;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">private void resetTabIcon() &#123;</span><br><span class="line">        mTabLayout.getTabAt(0).setIcon(R.drawable.home);</span><br><span class="line">        mTabLayout.getTabAt(1).setIcon(R.drawable.location);</span><br><span class="line">        mTabLayout.getTabAt(2).setIcon(R.drawable.like);</span><br><span class="line">        mTabLayout.getTabAt(3).setIcon(R.drawable.person);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>说明：这几篇文章没有过多的文字叙述，因为这些东西也不是很难，而且都是常用的，相信很多人都了如指掌了，多说亦是废话，直接上代码看的反而更清楚。</p>
+</blockquote>
+<h3 id="DownLoad-Demo"><a href="#DownLoad-Demo" class="headerlink" title="DownLoad Demo"></a><a href="http://download.csdn.net/download/student9128/9702039" target="_blank" rel="noopener">DownLoad Demo</a></h3><h3 id="DownLoad-Demo-github"><a href="#DownLoad-Demo-github" class="headerlink" title="DownLoad Demo(github)"></a><a href="https://github.com/student9128/BottomNavigationBarForAndroid" target="_blank" rel="noopener">DownLoad Demo</a>(github)</h3>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本博客主要用于学习记录，欢迎共同学习交流。转载请注明出处！
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+ 
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2016/12/19/hello-world/" class="pre-post btn btn-default" title='Hello World'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Hello World</span>
+        </a>
+    
+    
+        <a href="/2016/12/05/Android底部导航栏实现（三）之TextView-LinearLayout/" class="next-post btn btn-default" title='Android底部导航栏实现（三）之TextView+LinearLayout'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Android底部导航栏实现（三）之TextView+LinearLayout</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: window.location.pathname,
+        id:'{{page.title}}',
+        owner:"student9128",
+        repo:"student9128.github.io",
+        oauth: {
+          client_id:"47e54c90da50ceb3772b",
+          client_secret:"51a51e7e8981763706796db78efe2fc930a1f05d"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#布局"><span class="toc-text">布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#根据Tab选中状态显示Tab键效果"><span class="toc-text">根据Tab选中状态显示Tab键效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tab切换"><span class="toc-text">Tab切换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DownLoad-Demo"><span class="toc-text">DownLoad Demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DownLoad-Demo-github"><span class="toc-text">DownLoad Demo(github)</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018 Kevin
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Theme by Kevin based on <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+
+              <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              第<span id="busuanzi_value_site_uv"></span>位小伙伴你好,
+              <span id="busuanzi_container_site_pv">
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
