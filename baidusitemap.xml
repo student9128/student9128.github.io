@@ -4,6 +4,288 @@
 
     
   <url>
+    <loc>https://student9128.github.io/2016/11/06/%E4%BB%BF%E8%99%BE%E7%B1%B3%E9%9F%B3%E4%B9%90%E5%BC%95%E5%AF%BC%E9%A1%B5%E9%9D%A2/</loc>
+    <lastmod>2018-07-10T07:04:07.832Z</lastmod>
+    <data>
+        <display>
+        <title>仿虾米音乐引导页面</title>
+        <pubTime>2016-11-06T13:32:37.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+        <tag>引导页</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/11/05/%E4%BB%BF%E6%98%93%E4%BF%A1%E5%BC%95%E5%AF%BC%E9%A1%B5%E9%9D%A2/</loc>
+    <lastmod>2018-07-10T07:00:30.623Z</lastmod>
+    <data>
+        <display>
+        <title>仿易信引导页面</title>
+        <pubTime>2016-11-05T15:04:08.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+        <tag>引导页</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/11/06/assets%E5%92%8Craw%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    <lastmod>2018-07-10T06:59:11.206Z</lastmod>
+    <data>
+        <display>
+        <title>assets和raw的区别</title>
+        <pubTime>2016-11-05T16:02:18.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/10/22/Error-Execution-failed-for-task-app-compileDebugJavaWithJavac-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2018-07-10T06:57:32.984Z</lastmod>
+    <data>
+        <display>
+        <title>Error:Execution failed for task ':app:compileDebugJavaWithJavac'.解决方案</title>
+        <pubTime>2016-10-21T17:40:58.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>issue</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/11/03/startActivityForResult%E7%9A%84%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-07-10T06:56:21.111Z</lastmod>
+    <data>
+        <display>
+        <title>startActivityForResult的简单使用</title>
+        <pubTime>2016-11-03T09:14:14.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/11/20/BottomNavigationBar%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-07-10T06:55:09.635Z</lastmod>
+    <data>
+        <display>
+        <title>BottomNavigationBar的使用</title>
+        <pubTime>2016-11-20T01:07:50.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+        <tag>BottomNavigationBar</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/11/20/DrawerLayout%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-07-10T06:53:51.384Z</lastmod>
+    <data>
+        <display>
+        <title>DrawerLayout的使用</title>
+        <pubTime>2016-11-20T14:58:01.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+        <tag>DrawerLayout</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/11/21/Snackbar%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-07-10T06:52:28.760Z</lastmod>
+    <data>
+        <display>
+        <title>Snackbar的使用</title>
+        <pubTime>2016-11-21T15:56:43.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+        <tag>Snackbar的使用</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/11/22/CoordinatorLayout%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-07-10T06:51:20.931Z</lastmod>
+    <data>
+        <display>
+        <title>CoordinatorLayout的使用</title>
+        <pubTime>2016-11-22T07:58:01.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+        <tag>CoordinatorLayout</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/11/23/NavigationView%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-07-10T06:49:12.389Z</lastmod>
+    <data>
+        <display>
+        <title>NavigationView的使用</title>
+        <pubTime>2016-11-23T15:50:14.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+        <tag>NavigationView</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/12/02/ToolBar%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8Aoverflow%E7%9A%84%E5%AE%9A%E5%88%B6%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2018-07-10T06:47:47.781Z</lastmod>
+    <data>
+        <display>
+        <title>ToolBar的使用及overflow的定制问题</title>
+        <pubTime>2016-12-02T06:58:26.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+        <tag>ToolBar</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2016/12/05/%E4%BA%94%E7%A7%8D%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0Android%E5%BA%95%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F/</loc>
+    <lastmod>2018-07-10T06:37:39.301Z</lastmod>
+    <data>
+        <display>
+        <title>五种方式实现Android底部导航栏</title>
+        <pubTime>2016-12-05T04:05:50.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+        <tag>底部导航栏</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://student9128.github.io/2016/12/05/Android%E5%BA%95%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F%E5%AE%9E%E7%8E%B0%EF%BC%88%E4%BA%8C%EF%BC%89%E4%B9%8BRadioGroup/</loc>
     <lastmod>2018-07-10T06:33:27.492Z</lastmod>
     <data>
@@ -100,30 +382,6 @@
 
     
   <url>
-    <loc>https://student9128.github.io/2016/12/05/%E4%BA%94%E7%A7%8D%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0Android%E5%BA%95%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F/</loc>
-    <lastmod>2018-07-10T06:25:19.979Z</lastmod>
-    <data>
-        <display>
-        <title>五种方式实现Android底部导航栏</title>
-        <pubTime>2016-12-05T04:05:50.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>移动开发</tag>
-         
-        <tag>底部导航栏</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://student9128.github.io/2016/12/22/Error-SSL-peer-shut-down-incorrectly%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
     <lastmod>2018-07-10T06:24:00.630Z</lastmod>
     <data>
@@ -131,9 +389,9 @@
         <title>Error:SSL peer shut down incorrectly的解决方案</title>
         <pubTime>2016-12-22T15:28:31.000Z</pubTime>
         
-        <tag>issue</tag>
-         
         <tag>Android</tag>
+         
+        <tag>issue</tag>
          
          
            
@@ -423,9 +681,9 @@
         <title>Android Studio中的字体设置</title>
         <pubTime>2017-06-29T07:26:40.000Z</pubTime>
         
-        <tag>AndroidStudio</tag>
-         
         <tag>Android</tag>
+         
+        <tag>AndroidStudio</tag>
          
          
            
@@ -531,9 +789,9 @@
         <title>解决Sources for 'Android API 26 Platform' not found</title>
         <pubTime>2017-09-14T05:30:27.000Z</pubTime>
         
-        <tag>issue</tag>
-         
         <tag>Android</tag>
+         
+        <tag>issue</tag>
          
          
            
@@ -553,9 +811,9 @@
         <title>Android Studio 3.0去掉方法参数提示</title>
         <pubTime>2017-09-30T05:08:00.000Z</pubTime>
         
-        <tag>AndroidStudio</tag>
-         
         <tag>Android</tag>
+         
+        <tag>AndroidStudio</tag>
          
          
            
@@ -633,25 +891,6 @@
 
     
   <url>
-    <loc>https://student9128.github.io/2018/02/14/VSCode%E9%80%9A%E8%BF%87git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81/</loc>
-    <lastmod>2018-07-10T05:28:28.014Z</lastmod>
-    <data>
-        <display>
-        <title>VSCode通过git上传代码</title>
-        <pubTime>2018-02-14T08:49:22.000Z</pubTime>
-        
-        <tag>VSCode</tag>
-         
-        <tag>git</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://student9128.github.io/2018/05/21/react-native-vector-icons%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2018-07-10T05:28:28.014Z</lastmod>
     <data>
@@ -696,46 +935,19 @@
 
     
   <url>
-    <loc>https://student9128.github.io/2018/04/15/VSCode%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</loc>
-    <lastmod>2018-07-10T05:28:28.013Z</lastmod>
+    <loc>https://student9128.github.io/2018/02/14/VSCode%E9%80%9A%E8%BF%87git%E4%B8%8A%E4%BC%A0%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2018-07-10T05:28:28.014Z</lastmod>
     <data>
         <display>
-        <title>VSCode常用插件</title>
-        <pubTime>2018-04-15T14:30:23.000Z</pubTime>
+        <title>VSCode通过git上传代码</title>
+        <pubTime>2018-02-14T08:49:22.000Z</pubTime>
         
-        <tag>移动开发</tag>
-         
-        <tag>ReactNative</tag>
-         
         <tag>VSCode</tag>
          
-         
-           
-             
-              <breadCrumb title="ReactNative" url="https://student9128.github.io/categories/ReactNative/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://student9128.github.io/2018/03/31/ReactNative%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98(%E4%BA%8C)/</loc>
-    <lastmod>2018-07-10T05:28:28.013Z</lastmod>
-    <data>
-        <display>
-        <title>ReactNative遇到的问(二)</title>
-        <pubTime>2018-03-31T14:52:13.000Z</pubTime>
-        
-        <tag>移动开发</tag>
-         
-        <tag>ReactNative</tag>
+        <tag>git</tag>
          
          
            
-             
-              <breadCrumb title="ReactNative" url="https://student9128.github.io/categories/ReactNative/"/>
-          
         </display>
     </data>
     </url>
@@ -764,12 +976,58 @@
 
     
   <url>
+    <loc>https://student9128.github.io/2018/04/15/VSCode%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2018-07-10T05:28:28.013Z</lastmod>
+    <data>
+        <display>
+        <title>VSCode常用插件</title>
+        <pubTime>2018-04-15T14:30:23.000Z</pubTime>
+        
+        <tag>移动开发</tag>
+         
+        <tag>ReactNative</tag>
+         
+        <tag>VSCode</tag>
+         
+         
+           
+             
+              <breadCrumb title="ReactNative" url="https://student9128.github.io/categories/ReactNative/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://student9128.github.io/2018/03/31/ReactNative%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98(%E4%B8%89)/</loc>
     <lastmod>2018-07-10T05:28:28.013Z</lastmod>
     <data>
         <display>
         <title>ReactNative遇到的问(三)</title>
         <pubTime>2018-03-31T15:07:07.000Z</pubTime>
+        
+        <tag>移动开发</tag>
+         
+        <tag>ReactNative</tag>
+         
+         
+           
+             
+              <breadCrumb title="ReactNative" url="https://student9128.github.io/categories/ReactNative/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/2018/03/31/ReactNative%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98(%E4%BA%8C)/</loc>
+    <lastmod>2018-07-10T05:28:28.013Z</lastmod>
+    <data>
+        <display>
+        <title>ReactNative遇到的问(二)</title>
+        <pubTime>2018-03-31T14:52:13.000Z</pubTime>
         
         <tag>移动开发</tag>
          

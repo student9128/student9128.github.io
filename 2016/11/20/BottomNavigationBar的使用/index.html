@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="文藝学生">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://student9128.github.io">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>BottomNavigationBar的使用 | 文藝学生</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1531135810430&amp;di=b130d8f4876c8d768f7b1d6e858559e7&amp;imgtype=0&amp;src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fa%2F5534a03b2f3d3.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Kevin'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 文藝学生 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://student9128.github.io">文藝学生</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Android/"><i class="fa "></i>Android</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Java/"><i class="fa "></i>Java</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/ReactNative/"><i class="fa "></i>React Native</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="BottomNavigationBar的使用">
+            
+	            BottomNavigationBar的使用
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/移动开发" title='移动开发'>
+                        移动开发
+                    </a>
+                
+                    <a href="/tags/BottomNavigationBar" title='BottomNavigationBar'>
+                        BottomNavigationBar
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2016/11/20</span>
+        </span>
+    
+    <span id="busuanzi_container_page_pv">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+      </span>
+</div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>597</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>最近在写底部导航栏，平时用到的就常见了，不过Material Desigh的导航栏却用的不多。在谷歌官方文档上有这种设计，可惜却没用过。所以学习了一下，这里记录下来。</p>
+<p>那么BottomNavigationBar是什么样子呢？请看图</p>
+<p><img src="http://img.blog.csdn.net/20161120080951788" alt="这里写图片描述"></p>
+<blockquote>
+<p>这个是Google Material上面的图。可以看到有谷歌对设计的建议</p>
+</blockquote>
+<p><strong>下面看下我的效果图：</strong></p>
+<p><img src="http://img.blog.csdn.net/20161120081142508" alt="这里写图片描述"></p>
+<h3 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h3><blockquote>
+<p>首先使用BottomNavigationBar前要添加依赖。</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20161120081543994" alt="这里写图片描述"></p>
+<h3 id="布局代码："><a href="#布局代码：" class="headerlink" title="布局代码："></a>布局代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;RelativeLayout</span><br><span class="line">    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</span><br><span class="line">    android:id=&quot;@+id/activity_main&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot;</span><br><span class="line">    tools:context=&quot;com.student.kevin.bottomnavigationbar.MainActivity&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;LinearLayout</span><br><span class="line">        android:id=&quot;@+id/ll_content&quot;</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;match_parent&quot;</span><br><span class="line">        android:orientation=&quot;vertical&quot;</span><br><span class="line">        android:text=&quot;Hello World!&quot;&gt;&lt;/LinearLayout&gt;</span><br><span class="line"></span><br><span class="line">    &lt;com.ashokvarma.bottomnavigation.BottomNavigationBar</span><br><span class="line">        android:id=&quot;@+id/bottom_navigation_bar&quot;</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_alignParentBottom=&quot;true&quot;&gt;&lt;/com.ashokvarma.bottomnavigation.BottomNavigationBar&gt;</span><br><span class="line">&lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>也就是与其他布局使用方法一样，直接在布局里面添加就行了。</p>
+</blockquote>
+<h3 id="代码中的使用"><a href="#代码中的使用" class="headerlink" title="代码中的使用"></a>代码中的使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mBottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);</span><br><span class="line">mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.icon_one, R.string.tab_one).setActiveColorResource(R.color.green).setBadgeItem(badgeItem))</span><br><span class="line">               .addItem(new BottomNavigationItem(R.drawable.icon_two, R.string.tab_two).setActiveColorResource(R.color.orange))</span><br><span class="line">               .addItem(new BottomNavigationItem(R.drawable.icon_three, R.string.tab_three).setActiveColorResource(R.color.lime))</span><br><span class="line">               .addItem(new BottomNavigationItem(R.drawable.icon_four, R.string.tab_four))//依次添加item,分别icon和名称</span><br><span class="line">               .setFirstSelectedPosition(0)//设置默认选择item</span><br><span class="line">               .initialise();//初始化</span><br></pre></td></tr></table></figure>
+<p>这样底部导航栏就有了，是不是很简单。相比平时写的导航栏确实简单的很多。这样还不行，光有导航栏了，还要有监听，因为我们要根据点击导航栏的tab来切换不同的fragment。所以要添加监听事件。</p>
+<p><img src="http://img.blog.csdn.net/20161120082724748" alt="这里写图片描述"></p>
+<blockquote>
+<p>添加监听，重写方法，我们最常做的事情<br>这样在重写的方法里进行Fragment的切换即可</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onTabSelected(int position) &#123;</span><br><span class="line">    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();</span><br><span class="line">    switch (position) &#123;</span><br><span class="line">        case 0:</span><br><span class="line">            if (mFragmentOne == null) &#123;</span><br><span class="line">                mFragmentOne = FragmentOne.newInstance(&quot;First Fragment&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            transaction.replace(R.id.ll_content, mFragmentOne);</span><br><span class="line">            break;</span><br><span class="line">        case 1:</span><br><span class="line">            if (mFragmentTwo == null) &#123;</span><br><span class="line">                mFragmentTwo = FragmentTwo.newInstance(&quot;Second Fragment&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            transaction.replace(R.id.ll_content, mFragmentTwo);</span><br><span class="line">            break;</span><br><span class="line">        case 2:</span><br><span class="line">            if (mFragmentThree == null) &#123;</span><br><span class="line">                mFragmentThree = FragmentThree.newInstance(&quot;Third Fragment&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            transaction.replace(R.id.ll_content, mFragmentThree);</span><br><span class="line">            break;</span><br><span class="line">        case 3:</span><br><span class="line">            if (mFragmentFour == null) &#123;</span><br><span class="line">                mFragmentFour = FragmentFour.newInstance(&quot;Forth Fragment&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            transaction.replace(R.id.ll_content, mFragmentFour);</span><br><span class="line">            break;</span><br><span class="line">        default:</span><br><span class="line">            if (mFragmentOne == null) &#123;</span><br><span class="line">                mFragmentOne = FragmentOne.newInstance(&quot;First Fragment&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            transaction.replace(R.id.ll_content, mFragmentOne);</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    transaction.commit();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public void onTabUnselected(int position) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public void onTabReselected(int position) &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样出现的只是默认的效果，我们如果要自己需要的颜色背景呢？<br>当然有方法</p>
+<h3 id="个性化BottomNavigationBar"><a href="#个性化BottomNavigationBar" class="headerlink" title="个性化BottomNavigationBar"></a>个性化BottomNavigationBar</h3><blockquote>
+<p>BottomNavigationBar已经提供给了我们方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mBottomNavigationBar.setMode(BottomNavigationBar.MODE_SHIFTING);</span><br><span class="line">      mBottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>Mode和BackgroundStyle分别有三种，分别包含一种Default模式</p>
+<h4 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h4><p>这里截取几种效果图：</p>
+<ul>
+<li>Default默认效果</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20161120084632057" alt="这里写图片描述"></p>
+<ul>
+<li>FIXED+STATIC</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20161120084745631" alt="这里写图片描述"></p>
+<ul>
+<li>FIXED+RIPPLE</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20161120084817522" alt="这里写图片描述"></p>
+<ul>
+<li>SHIFTING+RIPPLE</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20161120084905935" alt="这里写图片描述"></p>
+<blockquote>
+<p>SHIFTING+STATIC效果这里就不传了，通过对比可以发现，默认的效果其实就是SHIFTING+STATIC效果</p>
+</blockquote>
+<h4 id="设置导航栏颜色"><a href="#设置导航栏颜色" class="headerlink" title="设置导航栏颜色"></a>设置导航栏颜色</h4><p>当然导航栏的颜色也是可以设置成固定颜色的，刚开始的效果图可以看到导航栏是蓝色。默认颜色的colorAccent<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mBottomNavigationBar.setBarBackgroundColor(R.color.blue);//set background color for navigation bar，设置底部导航栏颜色</span><br></pre></td></tr></table></figure></p>
+<h4 id="添加黄色小圆点"><a href="#添加黄色小圆点" class="headerlink" title="添加黄色小圆点"></a>添加黄色小圆点</h4><p>还上面的效果图上可以看到，第一个tab上面有一个黄色的小圆点。这跟小红点是一样的，只是我设置颜色为黄色的了。<br>这个就是添加了一个BadgeItem.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">BadgeItem badgeItem = new BadgeItem();</span><br><span class="line">        badgeItem.setHideOnSelect(false)</span><br><span class="line">                .setText(&quot;10&quot;)</span><br><span class="line">                .setBackgroundColorResource(R.color.orange)</span><br><span class="line">                .setBorderWidth(0);</span><br><span class="line"></span><br><span class="line">//导航栏中的tab添加小圆点</span><br><span class="line">mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.icon_one, R.string.tab_one).setActiveColorResource(R.color.green).setBadgeItem(badgeItem));</span><br></pre></td></tr></table></figure></p>
+<p>不知道有没有感觉这个很好用呢？我感觉还不错，有需要的可以看一下哦~</p>
+<blockquote>
+<p>有CSDN的可以下载一，没有的可以下载github。看方便喽</p>
+</blockquote>
+<p><strong>如果想用其他方法，也可以查看这篇文章：</strong></p>
+<blockquote>
+<p><strong><a href="http://blog.csdn.net/student9128/article/details/53435737" target="_blank" rel="noopener">五种方式实现Android底部导航栏</a></strong></p>
+</blockquote>
+<h3 id="Demo下载"><a href="#Demo下载" class="headerlink" title="Demo下载"></a>Demo下载</h3><h4 id="下载一"><a href="#下载一" class="headerlink" title="下载一"></a><a href="http://download.csdn.net/download/student9128/9687748" target="_blank" rel="noopener">下载一</a></h4><h4 id="下载二-github"><a href="#下载二-github" class="headerlink" title="下载二(github)"></a><a href="https://github.com/student9128/BottomNavigationBar.git" target="_blank" rel="noopener">下载二(github)</a></h4>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本博客主要用于学习记录，欢迎共同学习交流。转载请注明出处！
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+ 
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2016/11/20/DrawerLayout的使用/" class="pre-post btn btn-default" title='DrawerLayout的使用'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">DrawerLayout的使用</span>
+        </a>
+    
+    
+        <a href="/2016/11/06/仿虾米音乐引导页面/" class="next-post btn btn-default" title='仿虾米音乐引导页面'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">仿虾米音乐引导页面</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: window.location.pathname,
+        id:'{{page.title}}',
+        owner:"student9128",
+        repo:"student9128.github.io",
+        oauth: {
+          client_id:"47e54c90da50ceb3772b",
+          client_secret:"51a51e7e8981763706796db78efe2fc930a1f05d"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加依赖"><span class="toc-text">添加依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布局代码："><span class="toc-text">布局代码：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码中的使用"><span class="toc-text">代码中的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#个性化BottomNavigationBar"><span class="toc-text">个性化BottomNavigationBar</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#效果图"><span class="toc-text">效果图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置导航栏颜色"><span class="toc-text">设置导航栏颜色</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#添加黄色小圆点"><span class="toc-text">添加黄色小圆点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo下载"><span class="toc-text">Demo下载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#下载一"><span class="toc-text">下载一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#下载二-github"><span class="toc-text">下载二(github)</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018 Kevin
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Theme by Kevin based on <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+
+              <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              第<span id="busuanzi_value_site_uv"></span>位小伙伴你好,
+              <span id="busuanzi_container_site_pv">
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
