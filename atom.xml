@@ -426,40 +426,17 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://student9128.github.io/2016/12/19/hello-world/"/>
-    <id>https://student9128.github.io/2016/12/19/hello-world/</id>
-    <published>2016-12-18T16:00:00.000Z</published>
-    <updated>2018-07-06T15:58:14.307Z</updated>
+    <title>关于greenDao的配置</title>
+    <link href="https://student9128.github.io/2018/01/27/%E5%85%B3%E4%BA%8EgreenDao%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
+    <id>https://student9128.github.io/2018/01/27/关于greenDao的配置/</id>
+    <published>2018-01-27T02:53:03.000Z</published>
+    <updated>2018-07-10T03:11:51.533Z</updated>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-      <category term="Test" scheme="https://student9128.github.io/categories/Test/"/>
-    
-    
-      <category term="Test" scheme="https://student9128.github.io/tags/Test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AndroidStudio导入第三方库</title>
-    <link href="https://student9128.github.io/2016/07/14/AndroidStudio%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/"/>
-    <id>https://student9128.github.io/2016/07/14/AndroidStudio导入第三方库/</id>
-    <published>2016-07-14T09:38:18.000Z</published>
-    <updated>2018-07-07T07:03:29.435Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;大家都知道，现在很多公司都在用Google推崇的Android Studio，不过使用的时候总会有这样那样的疑问，比如说如何导入第三方库呢，以前的Eclipse都是之间复制粘贴到libs下的。Android Studio就不能这样了。我说两种自己常用的方法，还望大家多多指点
+        &lt;p&gt;greenDao是一个开源的数据库解决方案，至于其优势劣势不啰嗦，关键是能用，好用就行。&lt;br&gt;这里简单记录下其配置方法&lt;br&gt;greenDao的github地址&lt;em&gt;&lt;a href=&quot;https://github.com/greenrobot/greenDAO&quot; tar
       
     
     </summary>
@@ -467,7 +444,90 @@
       <category term="Android" scheme="https://student9128.github.io/categories/Android/"/>
     
     
-      <category term="AndroidStudio" scheme="https://student9128.github.io/tags/AndroidStudio/"/>
+      <category term="Android" scheme="https://student9128.github.io/tags/Android/"/>
+    
+      <category term="移动开发" scheme="https://student9128.github.io/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="greenDao" scheme="https://student9128.github.io/tags/greenDao/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQLitedatabase之GreenDao进行CRUD</title>
+    <link href="https://student9128.github.io/2018/01/26/SQLitedatabase%E4%B9%8BGreenDao%E8%BF%9B%E8%A1%8CCRUD/"/>
+    <id>https://student9128.github.io/2018/01/26/SQLitedatabase之GreenDao进行CRUD/</id>
+    <published>2018-01-26T08:52:05.000Z</published>
+    <updated>2018-07-10T03:15:47.792Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Android开发中使用Sqlite进行数据库开发，但是发现通过自己写SQL语句进行CRUD操作的时候有时候会出各种bug,比如用like语句的时候，偶然发生差不出来的问题。&lt;br&gt;现在数据库操作第三方也很多，这里记录写GreenDao吧.&lt;/p&gt;
+&lt;p&gt;&lt;div&gt;&lt;br&gt;
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="https://student9128.github.io/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="https://student9128.github.io/tags/Android/"/>
+    
+      <category term="移动开发" scheme="https://student9128.github.io/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="greenDao" scheme="https://student9128.github.io/tags/greenDao/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQLitedatabase之SQLiteOpenHelper进行CRUD</title>
+    <link href="https://student9128.github.io/2018/01/26/SQLitedatabase%E4%B9%8BSQLiteOpenHelper%E8%BF%9B%E8%A1%8CCRUD/"/>
+    <id>https://student9128.github.io/2018/01/26/SQLitedatabase之SQLiteOpenHelper进行CRUD/</id>
+    <published>2018-01-26T08:42:00.000Z</published>
+    <updated>2018-07-10T03:16:23.808Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;众所周知，Android开发中使用数据库Sqlite.&lt;br&gt;这里简单记录一下SQLite的使用。&lt;/p&gt;
+&lt;p&gt;&lt;div&gt;&lt;img src=&quot;http://img.blog.csdn.net/20180126161648602?&quot; width=&quot;250px&quot; height
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="https://student9128.github.io/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="https://student9128.github.io/tags/Android/"/>
+    
+      <category term="移动开发" scheme="https://student9128.github.io/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="sqlite" scheme="https://student9128.github.io/tags/sqlite/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Error:Execution failed for task &#39;:app:packageDebug&#39;解决方案</title>
+    <link href="https://student9128.github.io/2017/12/20/Error-Execution-failed-for-task-app-packageDebug-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://student9128.github.io/2017/12/20/Error-Execution-failed-for-task-app-packageDebug-解决方案/</id>
+    <published>2017-12-20T02:22:13.000Z</published>
+    <updated>2018-07-10T03:18:13.406Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="https://student9128.github.io/categories/Android/"/>
+    
+    
+      <category term="issue" scheme="https://student9128.github.io/tags/issue/"/>
     
   </entry>
   

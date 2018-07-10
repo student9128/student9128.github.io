@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="文藝学生">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://student9128.github.io">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>高德地图（二）之显示定位，比例尺和添加Marker | 文藝学生</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1531135810430&amp;di=b130d8f4876c8d768f7b1d6e858559e7&amp;imgtype=0&amp;src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2Fa%2F5534a03b2f3d3.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Kevin'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 文藝学生 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://student9128.github.io">文藝学生</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Android/"><i class="fa "></i>Android</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Java/"><i class="fa "></i>Java</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/ReactNative/"><i class="fa "></i>React Native</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="高德地图（二）之显示定位，比例尺和添加Marker">
+            
+	            高德地图（二）之显示定位，比例尺和添加Marker
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/移动开发" title='移动开发'>
+                        移动开发
+                    </a>
+                
+                    <a href="/tags/高德地图" title='高德地图'>
+                        高德地图
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/12/09</span>
+        </span>
+    
+    <span id="busuanzi_container_page_pv">
+        <i class="fa fa-eye"></i>
+        <span id="busuanzi_value_page_pv"></span>
+      </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>上一篇记录了高德地图的简单集成。只是初始化了地图，没有实现任何功能。这篇文章记录下定位功能和添加marker标记。</p>
+<blockquote>
+<p>声明：本篇文章所以代码皆来自<strong>官方文档</strong>，我只是拼接了下。</p>
+</blockquote>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><blockquote>
+<p>效果图是这样的</p>
+</blockquote>
+<p><img src="http://img.blog.csdn.net/20171209125349406?" width="250px" height="400px"></p>
+<h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><p>下面直接记录定位实现过程</p>
+<blockquote>
+<p>在onCreate里添加下面代码，这里需要实现一个接口。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> //初始化地图控制器对象</span><br><span class="line">        AMap aMap = mMapView.getMap();</span><br><span class="line">// 设置定位监听</span><br><span class="line">        aMap.setLocationSource(this);</span><br><span class="line">// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false</span><br><span class="line">        aMap.setMyLocationEnabled(true);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>实现的方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">   @Override</span><br><span class="line">   public void activate(OnLocationChangedListener onLocationChangedListener) &#123;</span><br><span class="line">       mListener = onLocationChangedListener;</span><br><span class="line">       if (mlocationClient == null) &#123;</span><br><span class="line">           //初始化定位</span><br><span class="line">           mlocationClient = new AMapLocationClient(this);</span><br><span class="line">           //初始化定位参数</span><br><span class="line">           mLocationOption = new AMapLocationClientOption();</span><br><span class="line">           //设置定位回调监听</span><br><span class="line">           mlocationClient.setLocationListener(this);</span><br><span class="line">           //设置为高精度定位模式</span><br><span class="line">           mLocationOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);</span><br><span class="line">           //设置定位参数</span><br><span class="line">           mlocationClient.setLocationOption(mLocationOption);</span><br><span class="line">           // 此方法为每隔固定时间会发起一次定位请求，为了减少电量消耗或网络流量消耗，</span><br><span class="line">           // 注意设置合适的定位时间的间隔（最小间隔支持为2000ms），并且在合适时间调用stopLocation()方法来取消定位请求</span><br><span class="line">           // 在定位结束后，在合适的生命周期调用onDestroy()方法</span><br><span class="line">           // 在单次定位情况下，定位无论成功与否，都无需调用stopLocation()方法移除请求，定位sdk内部会移除</span><br><span class="line">           mlocationClient.startLocation();//启动定位</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   @Override</span><br><span class="line">   public void deactivate() &#123;</span><br><span class="line">       mListener = null;</span><br><span class="line">       if (mlocationClient != null) &#123;</span><br><span class="line">           mlocationClient.stopLocation();</span><br><span class="line">           mlocationClient.onDestroy();</span><br><span class="line">       &#125;</span><br><span class="line">       mlocationClient = null;</span><br><span class="line">   &#125;</span><br><span class="line">@Override</span><br><span class="line">   public void onLocationChanged(AMapLocation aMapLocation) &#123;</span><br><span class="line">       if (mListener != null&amp;&amp;aMapLocation != null) &#123;</span><br><span class="line">           if (aMapLocation != null</span><br><span class="line">                   &amp;&amp;aMapLocation.getErrorCode() == 0) &#123;</span><br><span class="line">               mListener.onLocationChanged(aMapLocation);// 显示系统小蓝点</span><br><span class="line">           &#125; else &#123;</span><br><span class="line">               String errText = &quot;定位失败,&quot; + aMapLocation.getErrorCode()+ &quot;: &quot; + aMapLocation.getErrorInfo();</span><br><span class="line">               Log.e(&quot;AmapErr&quot;,errText);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>重写声明周期</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line"> protected void onDestroy() &#123;</span><br><span class="line">     super.onDestroy();</span><br><span class="line">     //在activity执行onDestroy时执行mMapView.onDestroy()，销毁地图</span><br><span class="line">     mMapView.onDestroy();</span><br><span class="line">     if(null != mlocationClient)&#123;</span><br><span class="line">         mlocationClient.onDestroy();</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> @Override</span><br><span class="line"> protected void onResume() &#123;</span><br><span class="line">     super.onResume();</span><br><span class="line">     //在activity执行onResume时执行mMapView.onResume ()，重新绘制加载地图</span><br><span class="line">     mMapView.onResume();</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> @Override</span><br><span class="line"> protected void onPause() &#123;</span><br><span class="line">     super.onPause();</span><br><span class="line">     //在activity执行onPause时执行mMapView.onPause ()，暂停地图的绘制</span><br><span class="line">     mMapView.onPause();</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> @Override</span><br><span class="line"> protected void onSaveInstanceState(Bundle outState) &#123;</span><br><span class="line">     super.onSaveInstanceState(outState);</span><br><span class="line">     //在activity执行onSaveInstanceState时执行mMapView.onSaveInstanceState (outState)，保存地图当前的状态</span><br><span class="line">     mMapView.onSaveInstanceState(outState);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>至此，定位功能已经实现。但是并没有显示定位蓝点，也就是我们常见的那个定位标记。</p>
+<blockquote>
+<p>显示定位蓝点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aMap.setMyLocationEnabled(true);// 设置为true表示启动显示定位蓝点，false表示隐藏定位蓝点并不进行定位，默认是false。</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>对定位蓝点进行自定义</p>
+</blockquote>
+<p>你会发现效果图中的精度圈跟默认的不同，就是在这里自定义的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> MyLocationStyle myLocationStyle;</span><br><span class="line"> myLocationStyle = new MyLocationStyle();//初始化定位蓝点样式类     </span><br><span class="line">// myLocationStyle.interval(2000); //设置连续定位模式下的定位间隔，只在连续定位模式下生效，单次定位模式下不会生效。单位为毫秒。     //myLocationStyle.myLocationIcon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_map_location));//定位自定义图标</span><br><span class="line">myLocationStyle.strokeColor(Color.CYAN);   //精度圈自定义    myLocationStyle.radiusFillColor(Color.argb(50,38,165,153)) ;//精度圈自定义     myLocationStyle.myLocationType(MyLocationStyle.LOCATION_TYPE_LOCATE);//只定位一次。</span><br><span class="line">aMap.setMyLocationStyle(myLocationStyle);//设置定位蓝点的Style</span><br></pre></td></tr></table></figure></p>
+<h3 id="添加Marker"><a href="#添加Marker" class="headerlink" title="添加Marker"></a>添加Marker</h3><p>地图上往往有一些标记成为marker.<br>现在很多app地图里都有好多marker，最具代表性的就是共享单车app</p>
+<blockquote>
+<p>示例代码如下：<br>你可以根据自己的需求进行自行添加，拿到经纬度即可。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aMap.addMarker(new MarkerOptions().position(new LatLng(31.238075,121.662691)).title(&quot;上海&quot;));</span><br><span class="line">  aMap.addMarker(new MarkerOptions().position(new LatLng(31.238403,121.661902)).title(&quot;上海&quot;));</span><br></pre></td></tr></table></figure>
+<h3 id="设置缩放级别"><a href="#设置缩放级别" class="headerlink" title="设置缩放级别"></a>设置缩放级别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aMap.moveCamera(CameraUpdateFactory.zoomTo(15));</span><br></pre></td></tr></table></figure>
+<h3 id="设置比例尺和定位按钮"><a href="#设置比例尺和定位按钮" class="headerlink" title="设置比例尺和定位按钮"></a>设置比例尺和定位按钮</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uiSettings = aMap.getUiSettings();</span><br><span class="line">uiSettings.setMyLocationButtonEnabled(true);//设置默认定位按钮是否显示，非必需设置。</span><br><span class="line">uiSettings.setScaleControlsEnabled(true);//控制比例尺控件是否显示</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>个人集成的时候和大家一样，也是一点点扒官网代码来的。这里把这些给贴出来。有需求的可以复制。</p>
+<p>比较推荐通过官方文档进行学习，可能有些不清楚的地方需要网上搜索。毕竟有时候真的在官方文档找不到。</p>
+<p>这里我偷懒了，都是粘贴一堆代码，还望见谅。重在实现功能吧。^_^</p>
+</blockquote>
+<h3 id="Demo下载"><a href="#Demo下载" class="headerlink" title="Demo下载"></a><a href="http://download.csdn.net/download/student9128/10152073" target="_blank" rel="noopener">Demo下载</a></h3><blockquote>
+<p>github暂时未传，回头完善了再传</p>
+</blockquote>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本博客主要用于学习记录，欢迎共同学习交流。转载请注明出处！
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+ 
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/12/20/Error-Execution-failed-for-task-app-packageDebug-解决方案/" class="pre-post btn btn-default" title='Error:Execution failed for task ':app:packageDebug'解决方案'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Error:Execution failed for task ':app:packageDebug'解决方案</span>
+        </a>
+    
+    
+        <a href="/2017/12/09/高德地图（一）之简单集成/" class="next-post btn btn-default" title='高德地图（一）之简单集成'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">高德地图（一）之简单集成</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: window.location.pathname,
+        id:'{{page.title}}',
+        owner:"student9128",
+        repo:"student9128.github.io",
+        oauth: {
+          client_id:"47e54c90da50ceb3772b",
+          client_secret:"51a51e7e8981763706796db78efe2fc930a1f05d"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#效果图"><span class="toc-text">效果图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定位"><span class="toc-text">定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加Marker"><span class="toc-text">添加Marker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置缩放级别"><span class="toc-text">设置缩放级别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置比例尺和定位按钮"><span class="toc-text">设置比例尺和定位按钮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo下载"><span class="toc-text">Demo下载</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018 Kevin
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Theme by Kevin based on <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+
+              <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              第<span id="busuanzi_value_site_uv"></span>位小伙伴你好,
+              <span id="busuanzi_container_site_pv">
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
