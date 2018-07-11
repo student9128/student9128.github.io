@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="文藝学生">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://student9128.github.io">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>TextInputLayout&amp;TextInputEditText的使用 | 文藝学生</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://p4.so.qhmsg.com/t01201861b1b1ebdcb9.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Kevin'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 文藝学生 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://student9128.github.io">文藝学生</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Android/"><i class="fa "></i>Android</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Java/"><i class="fa "></i>Java</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/ReactNative/"><i class="fa "></i>React Native</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="TextInputLayout&amp;TextInputEditText的使用">
+            
+	            TextInputLayout&amp;TextInputEditText的使用
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/移动开发" title='移动开发'>
+                        移动开发
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/01/05</span>
+        </span>
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-eye"></i>
+            <span id="busuanzi_value_page_pv"></span>
+          </span>
+    
+</div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>551</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>TextInputLayout &amp; TextInputEditText是Material Design里面的控件，相比EditText而言里面添加了动画和一些新特性，个人感觉体验更好些。非常深的研究并没有，这里记录下最常用的一些用法。</p>
+<h3 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a><strong>效果图：</strong></h3><p><img src="http://img.blog.csdn.net/20170105123747676?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="效果图"></p>
+<p>可以看到在切换不同输入框的时候User Name和Password有动画，Email无动画。动画就是TextInputLayout自带的，当然这个动画也可以关闭，Email输入框就是将动画关闭了。</p>
+<h3 id="效果解析："><a href="#效果解析：" class="headerlink" title="效果解析："></a><strong>效果解析：</strong></h3><h4 id="提示语"><a href="#提示语" class="headerlink" title="提示语"></a><strong>提示语</strong></h4><p>1.可以看到User Name下面有一个限制字符的提示标签”？/10”</p>
+<p><img src="http://img.blog.csdn.net/20170105140147389?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>要实现这个效果，只需添加如下代码即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mTextInputUserName.setCounterEnabled(true);</span><br><span class="line">mTextInputUserName.setCounterMaxLength(10);</span><br></pre></td></tr></table></figure></p>
+<p>2.可以看到Password有对字符数的提示：</p>
+<p><img src="http://img.blog.csdn.net/20170105140627388?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>这里面有两个提示，是分别对TextInputLayout和TextInputEditText进行设置的。要实现如下效果，添加如下代码即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> String passwordText = mPassword.getText().toString();</span><br><span class="line">        if (!TextUtils.isEmpty(passwordText) &amp;&amp; passwordText.length() &lt; 6) &#123;</span><br><span class="line"> </span><br><span class="line"> //下面两行使用其中一行即可           mTextInputPassword.setError(getString(R.string.password_error));</span><br><span class="line">mPassword.setError(getString(R.string.password_error));  //可以使用这个，带有Drawable的需要的API level是21，如果你兼容的版本是21以下的就不能用</span><br><span class="line">         //mPassword.setError(getString(R.string.password_error),getDrawable(R.mipmap.ic_launcher));//Call requires API level 21</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
+<p>3.对密码的显示与隐藏的切换</p>
+<p> 这个效果需要添加一个命名空间 ：<br> <code>xmlns:kevin=&quot;http://schemas.android.com/apk/res-auto&quot;</code><br> 在布局文件中为TextInputLayout添加如下代码即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kevin:passwordToggleDrawable=&quot;@drawable/eye&quot;//图标</span><br><span class="line">kevin:passwordToggleEnabled=&quot;true&quot;//密码切换开关是否可以用</span><br><span class="line">kevin:passwordToggleTint=&quot;@color/colorAccent&quot;//图标的颜色，可有可无</span><br></pre></td></tr></table></figure>
+<h4 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a><strong>颜色</strong></h4><p>说到颜色，这里值得注意的是，可以看到我将提示字符的颜色改成了紫色。但是默认颜色在6.0以下，UserName和Password是一样的。在6.0及6.0以上则不同了。</p>
+<ul>
+<li><p>7.0效果<br><img src="http://img.blog.csdn.net/20170105142302005?watermak" alt="这里写图片描述"></p>
+</li>
+<li><p>5.1效果<br><img src="http://img.blog.csdn.net/20170105142528071?watermar" alt="这里写图片描述"></p>
+</li>
+</ul>
+<p>所以这里如果要兼容6.0或者7.0的时候还是要定制化的，不然达不到统一 效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kevin:counterOverflowTextAppearance=&quot;@style/counterOverflowTextColor&quot;//UserName的TextInputLayout里添加</span><br><span class="line"></span><br><span class="line">kevin:errorTextAppearance=&quot;@style/counterOverflowTextColor&quot;//Password的TextInputLayout里添加</span><br></pre></td></tr></table></figure></p>
+<p>至于下划线的颜色，就是主题中colorAccent的颜色，所以要改下划线颜色的话，在Theme里面将colorAccent改一下即可。<br>字条颜色就是textColor属性，默认是黑色。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">android:textColor=&quot;@color/light_green_900&quot;//绿色</span><br></pre></td></tr></table></figure></p>
+<h3 id="DownLoad"><a href="#DownLoad" class="headerlink" title="DownLoad"></a><strong>DownLoad</strong></h3><h4 id="DownLoad-CSDN"><a href="#DownLoad-CSDN" class="headerlink" title="DownLoad(CSDN)"></a><strong><a href="http://download.csdn.net/download/student9128/9729559" target="_blank" rel="noopener">DownLoad(CSDN)</a></strong></h4><h4 id="DownLoad-github"><a href="#DownLoad-github" class="headerlink" title="DownLoad(github)"></a><strong><a href="https://github.com/student9128/TextInPutDemo" target="_blank" rel="noopener">DownLoad(github)</a></strong></h4>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本博客主要用于学习记录，欢迎共同学习交流。转载请注明出处！
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+ 
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/01/10/JS变量命名规范/" class="pre-post btn btn-default" title='JS变量命名规范'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">JS变量命名规范</span>
+        </a>
+    
+    
+        <a href="/2017/01/01/Android-7-0的一些变更/" class="next-post btn btn-default" title='Android 7.0的一些变更'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Android 7.0的一些变更</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: window.location.pathname,
+        id:'{{page.title}}',
+        owner:"student9128",
+        repo:"student9128.github.io",
+        oauth: {
+          client_id:"47e54c90da50ceb3772b",
+          client_secret:"51a51e7e8981763706796db78efe2fc930a1f05d"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#效果图："><span class="toc-text">效果图：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#效果解析："><span class="toc-text">效果解析：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#提示语"><span class="toc-text">提示语</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#颜色"><span class="toc-text">颜色</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DownLoad"><span class="toc-text">DownLoad</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#DownLoad-CSDN"><span class="toc-text">DownLoad(CSDN)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DownLoad-github"><span class="toc-text">DownLoad(github)</span></a></li></ol></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018 Kevin
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Theme by Kevin based on <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+
+              <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              第<span id="busuanzi_value_site_uv"></span>位小伙伴你好,
+              <span id="busuanzi_container_site_pv">
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

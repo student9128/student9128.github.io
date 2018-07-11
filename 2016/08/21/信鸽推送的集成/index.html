@@ -1,0 +1,472 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="文藝学生">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://student9128.github.io">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>信鸽推送的集成 | 文藝学生</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://p4.so.qhmsg.com/t01201861b1b1ebdcb9.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Kevin'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 文藝学生 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://student9128.github.io">文藝学生</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Android/"><i class="fa "></i>Android</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Java/"><i class="fa "></i>Java</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/ReactNative/"><i class="fa "></i>React Native</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="信鸽推送的集成">
+            
+	            信鸽推送的集成
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/移动开发" title='移动开发'>
+                        移动开发
+                    </a>
+                
+                    <a href="/tags/推送" title='推送'>
+                        推送
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2016/08/21</span>
+        </span>
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-eye"></i>
+            <span id="busuanzi_value_page_pv"></span>
+          </span>
+    
+</div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>689</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>最近在做推送，刚开始接到推送的时候，首先想到了极光推送，后来让用百度推送。程序员都知道，需求不断改，最后变成了信鸽推送。话说对信鸽推送真的是没用过。不过集成第三方的方式都大差不差。还好不负所望，集成了信鸽推送。由于最近很忙，天天1点睡觉。虽然今天同样加班到十点，还是想记录一下信鸽推送的简单集成。也希望能对要做信鸽推送的新童鞋有所帮助。（我写文字比较啰嗦，还望原谅。写的细了也防止以后自己忘记了，嘿嘿！:)）.</p>
+<p>话说官方文档真的是老了，最后看看官方Demo，不过在下认为还有很多是需要上网搜索来帮助的。</p>
+<p>废话不多说，看看我集成的结果：</p>
+<p><img src="http://img.blog.csdn.net/20160821001708565?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+<p>好吧，图片好大，就这样吧。</p>
+<p>下面说说集成过程。</p>
+<p>首先就是去找到官方文档，没做过的话，就先按照文档一步一步来，虽然文档介绍的并不深入，不过还是很通俗易懂的，各种问题后续再解决。百度一下腾讯信鸽进入官网登录下，找到开发者中心：</p>
+<p><img src="http://img.blog.csdn.net/20160821002216817?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+<p>如图根据AndroidSDK快速接入一个Demo。后续可以进行完整接入。</p>
+<p>我在这里只是简单集成一下，至于很多其他的自定义的，由于明天还要加班，今天就先不写了。</p>
+<p><img src="http://img.blog.csdn.net/20160821002510810?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+<p>接入一个应用。根据提示填写就可以了。</p>
+<p><img src="http://img.blog.csdn.net/20160821002548295?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+<p>接入应用完成后就是这样了。</p>
+<p>在应用配置里可以看到ACCESS ID和ACCESS KEY用来集成用的，要在清单文件里填写。</p>
+<p>下面就是进行AndroidManifest.xml配置和集成.so文件及jar包了，比较简单，直接复制官方Demo里的就行了。</p>
+<p><img src="http://img.blog.csdn.net/20160821003406588?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></p>
+<p>这些SDK里面都有，按照说明放入对应文件夹了即可。</p>
+  <!-- 【必须】 信鸽SDK所需权限 -->
+<pre><code>&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_WIFI_STATE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.RECEIVE_BOOT_COMPLETED&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.RESTART_PACKAGES&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.BROADCAST_STICKY&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.WRITE_SETTINGS&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.RECEIVE_USER_PRESENT&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.WAKE_LOCK&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.KILL_BACKGROUND_PROCESSES&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.GET_TASKS&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.READ_LOGS&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.VIBRATE&quot; /&gt;&lt;!-- 【可选】 信鸽SDK所需权限 --&gt;
+&lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot; /&gt;
+&lt;uses-permission android:name=&quot;android.permission.BATTERY_STATS&quot; /&gt;
+</code></pre><p>按照说明配置权限和必要的服务及广播<br><span style="font-size: 18px;"> <!-- APP项目的其它配置... --></span></p>
+<pre><code>&lt;!-- 【必须】 (2.30及以上版新增)展示通知的activity --&gt;
+&lt;activity
+    android:name=&quot;com.tencent.android.tpush.XGPushActivity&quot;
+    android:theme=&quot;@android:style/Theme.Translucent&quot;
+    android:exported=&quot;false&quot; &gt;
+    &lt;intent-filter&gt;
+        &lt;!-- 若使用AndroidStudio，请设置android:name=&quot;android.intent.action&quot;--&gt;
+       &lt;span style=&quot;background-color: rgb(0, 153, 0);&quot;&gt; &lt;action android:name=&quot;android.intent.action&quot; /&gt;&lt;/span&gt;
+    &lt;/intent-filter&gt;
+&lt;/activity&gt;
+
+&lt;!-- 【必须】 信鸽receiver广播接收 --&gt;
+&lt;receiver
+    android:name=&quot;com.tencent.android.tpush.XGPushReceiver&quot;
+    android:process=&quot;:xg_service_v2&quot; &gt;
+    &lt;intent-filter android:priority=&quot;0x7fffffff&quot; &gt;
+
+        &lt;!-- 【必须】 信鸽SDK的内部广播 --&gt;
+        &lt;action android:name=&quot;com.tencent.android.tpush.action.SDK&quot; /&gt;
+        &lt;action android:name=&quot;com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE&quot; /&gt;
+        &lt;!-- 【必须】 系统广播：网络切换 --&gt;
+        &lt;action android:name=&quot;android.net.conn.CONNECTIVITY_CHANGE&quot; /&gt;
+
+        &lt;!-- 【可选】 系统广播：开屏 --&gt;
+        &lt;action android:name=&quot;android.intent.action.USER_PRESENT&quot; /&gt;
+
+        &lt;!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service --&gt;
+        &lt;action android:name=&quot;android.bluetooth.adapter.action.STATE_CHANGED&quot; /&gt;
+        &lt;action android:name=&quot;android.intent.action.ACTION_POWER_CONNECTED&quot; /&gt;
+        &lt;action android:name=&quot;android.intent.action.ACTION_POWER_DISCONNECTED&quot; /&gt;
+    &lt;/intent-filter&gt;
+    &lt;!-- 【可选】 usb相关的系统广播，增强信鸽service的复活机会，请根据需要添加 --&gt;
+    &lt;intent-filter android:priority=&quot;0x7fffffff&quot; &gt;
+        &lt;action android:name=&quot;android.intent.action.MEDIA_UNMOUNTED&quot; /&gt;
+        &lt;action android:name=&quot;android.intent.action.MEDIA_REMOVED&quot; /&gt;
+        &lt;action android:name=&quot;android.intent.action.MEDIA_CHECKING&quot; /&gt;
+        &lt;action android:name=&quot;android.intent.action.MEDIA_EJECT&quot; /&gt;
+
+        &lt;data android:scheme=&quot;file&quot; /&gt;
+    &lt;/intent-filter&gt;
+&lt;/receiver&gt;
+&lt;!-- 【必须】 信鸽service --&gt;
+&lt;service
+    android:name=&quot;com.tencent.android.tpush.service.XGPushService&quot;
+    android:exported=&quot;true&quot;
+    android:persistent=&quot;true&quot;
+    android:process=&quot;:xg_service_v2&quot; /&gt;
+
+&lt;!-- 【必须】 通知service，其中android:name部分要改为当前包名 --&gt;
+&lt;service
+    android:name=&quot;com.tencent.android.tpush.rpc.XGRemoteService&quot;
+    android:exported=&quot;true&quot; &gt;
+    &lt;intent-filter&gt;
+        &lt;!-- 【必须】 请修改为当前APP名包.PUSH_ACTION，如demo的包名为：com.qq.xgdemo --&gt;
+        &lt;action android:name=&quot;&lt;/span&gt;&lt;span style=&quot;font-family:Microsoft YaHei;font-size:18px;color:#3366ff;&quot;&gt;com.student.kevin.xingepushdemo&lt;/span&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;.PUSH_ACTION&quot; /&gt;
+    &lt;/intent-filter&gt;
+&lt;/service&gt;
+
+&lt;!-- 已废弃，可删除之；若不删除也不会有任何副作用 --&gt;
+&lt;!--&lt;service
+    android:name=&quot;com.tencent.android.tpush.service.XGDaemonService&quot;
+    android:process=&quot;:qq_push_daemon&quot; /&gt;
+--&gt;
+&lt;!-- 【可选】信鸽拉起其他APP应用，若应用在本地找不到可以自动下载 --&gt;
+&lt;!--
+      &lt;service
+    android:name=&quot;com.tencent.android.tpush.XGDownloadService&quot;
+    android:enabled=&quot;true&quot;
+    android:exported=&quot;false&quot; /&gt;
+--&gt;
+&lt;!-- 【可选】APP实现的Receiver，用于接收消息透传和操作结果的回调，请根据需要添加 --&gt;
+&lt;!-- YOUR_PACKAGE_PATH.CustomPushReceiver需要改为自己的Receiver： --&gt;
+&lt;receiver android:name=&quot;&lt;/span&gt;&lt;span style=&quot;color:#3366ff;font-size: 18px;&quot;&gt;com.student.kevin.xingepushdemo&lt;/span&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;.MessageReceiver&quot;
+    android:exported=&quot;true&quot; &gt;
+    &lt;intent-filter&gt;
+        &lt;!-- 接收消息透传 --&gt;
+        &lt;action android:name=&quot;com.tencent.android.tpush.action.PUSH_MESSAGE&quot; /&gt;
+        &lt;!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 --&gt;
+        &lt;action android:name=&quot;com.tencent.android.tpush.action.FEEDBACK&quot; /&gt;
+    &lt;/intent-filter&gt;
+&lt;/receiver&gt;
+
+&lt;!-- 【必须】 请修改为APP的AccessId，“21”开头的10位数字，中间没空格 --&gt;
+&lt;meta-data
+    android:name=&quot;XG_V2_ACCESS_ID&quot;
+    android:value=&quot;&lt;/span&gt;&lt;span style=&quot;color:#6633ff;font-size: 18px;&quot;&gt;2100216288&lt;/span&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&quot; /&gt;
+&lt;!-- 【必须】 请修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 --&gt;
+&lt;meta-data
+    android:name=&quot;XG_V2_ACCESS_KEY&quot;
+    android:value=&quot;&lt;/span&gt;&lt;span style=&quot;color:#3366ff;font-size: 18px;&quot;&gt;AKE58N64A5JH&lt;/span&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;&quot; /&gt;&lt;/span&gt;
+</code></pre><p>好了，配置完成了，下面就是再代码中注册了，MainActivity的onCreat方法中注册：<br><span style="font-size:18px;">public class MainActivity extends AppCompatActivity {</span></p>
+<pre><code>@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    XGPushConfig.enableDebug(getApplicationContext(),true);
+    setContentView(R.layout.activity_main);
+    Context context = getApplicationContext();
+</code></pre><p>//        XGPushManager.registerPush(context);//直接注册，无法确定是否注册成功<br>        //想要知道是否注册成功就添加回调。<br>        XGPushManager.registerPush(context, new XGIOperateCallback() {<br>            @Override<br>            public void onSuccess(Object data, int flag) {<br>                Log.d(“TPush”, “注册成功，设备token为：” + data);<br>            }</p>
+<pre><code>        @Override
+        public void onFail(Object data, int errCode, String msg) {
+            Log.d(&quot;TPush&quot;, &quot;注册失败，错误码：&quot; + errCode + &quot;,错误信息：&quot; + msg);
+
+        }
+    });
+
+}&lt;/span&gt;
+</code></pre><p>到此，推送的简单集成已经完成，创建一个推送消息试试吧！</p>
+<p><img src="http://img.blog.csdn.net/20160821004419428?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""><br>关于自定义，后面有时间了再继续添加！后面我希望把所有推送都记录下来。（百度已经写好Demo）</p>
+<p>欢迎共同学习交流！点击下载信鸽推送Demo!</p>
+<p>点击下载百度推送Demo！</p>
+<p>晚安，祝程序员们以后都少加班不加班，事业有成！:)</p>
+<p>Good Night!</p>
+<blockquote>
+<p>声明：文章是从CSDN迁过来的.CSDN博客请点击<a href="https://blog.csdn.net/student9128" target="_blank"><i>这里</i></a></p>
+</blockquote>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本博客主要用于学习记录，欢迎共同学习交流。转载请注明出处！
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+ 
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2016/08/31/信鸽推送注册失败的一般情况/" class="pre-post btn btn-default" title='信鸽推送注册失败的一般情况'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">信鸽推送注册失败的一般情况</span>
+        </a>
+    
+    
+        <a href="/2016/07/14/Genymotion模拟器在Eclipse上的安装/" class="next-post btn btn-default" title='Genymotion模拟器在Eclipse上的安装'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Genymotion模拟器在Eclipse上的安装</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: window.location.pathname,
+        id:'{{page.title}}',
+        owner:"student9128",
+        repo:"student9128.github.io",
+        oauth: {
+          client_id:"47e54c90da50ceb3772b",
+          client_secret:"51a51e7e8981763706796db78efe2fc930a1f05d"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <p>暂无目录</p>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018 Kevin
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Theme by Kevin based on <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+
+              <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              第<span id="busuanzi_value_site_uv"></span>位小伙伴你好,
+              <span id="busuanzi_container_site_pv">
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
