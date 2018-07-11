@@ -195,7 +195,7 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>585</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>586</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
@@ -205,7 +205,7 @@
 <h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><blockquote>
 <p>这个是我做了些改变后的效果图</p>
 </blockquote>
-<p><img src="http://img.blog.csdn.net/20161202111238870" alt="这里写图片描述"></p>
+<p><img src="/../images/20161202/20161202111238870.png"></p>
 <h4 id="ToolBar的一般使用"><a href="#ToolBar的一般使用" class="headerlink" title="ToolBar的一般使用"></a>ToolBar的一般使用</h4><ul>
 <li><p>布局</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;android.support.v7.widget.Toolbar</span><br><span class="line">    android:id=&quot;@+id/tool_bar&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;?attr/actionBarSize&quot;</span><br><span class="line">    android:background=&quot;@color/colorPrimary&quot;                    </span><br><span class="line">    android:theme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;&gt;&lt;/android.support.v7.widget.Toolbar&gt;</span><br></pre></td></tr></table></figure>
@@ -222,8 +222,7 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style name=&quot;BaseTheme&quot; parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt;</span><br><span class="line">       &lt;!-- Customize your theme here. --&gt;</span><br><span class="line">       &lt;item name=&quot;colorPrimary&quot;&gt;@color/colorPrimary&lt;/item&gt;</span><br><span class="line">       &lt;item name=&quot;colorPrimaryDark&quot;&gt;@color/colorPrimaryDark&lt;/item&gt;</span><br><span class="line">       &lt;item name=&quot;colorAccent&quot;&gt;@color/colorAccent&lt;/item&gt;</span><br><span class="line">   &lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <p>可以看到效果是这样的：</p>
-<p><img src="http://img.blog.csdn.net/20161202120216580" alt="这里写图片描述"></p>
-<p>图标和字体显示的都是黑色的，我看着不好看，想要显示白色的，那么可以这样改变：</p>
+<p><img src="/../images/20161202/20161202120216580.png"><br>图标和字体显示的都是黑色的，我看着不好看，想要显示白色的，那么可以这样改变：</p>
 <ul>
 <li>方法一<blockquote>
 <p>为Toolbar添加theme</p>
@@ -239,19 +238,16 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;style name=&quot;BaseTheme&quot; parent=&quot;Theme.AppCompat.NoActionBar&quot;&gt;</span><br></pre></td></tr></table></figure>
 <p>这是因为默认暗色主题的话，toolbar的图标和字体会默认显示白色。亮色主题的话，toolbar的图标和字体会默认显示黑色。<br>那么问题来了，虽然图标和字体变为白色了。如下图：</p>
-<p><img src="http://img.blog.csdn.net/20161202121211432" alt="这里写图片描述"></p>
-<p>overflow menu的背景是黑色的，我也想要它是白色。<br>方法：</p>
+<p><img src="/../images/20161202/20161202121211432.png"><br>overflow menu的背景是黑色的，我也想要它是白色。<br>方法：</p>
 <blockquote>
 <p>为menu添加上白色主题即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app:popupTheme=&quot;@style/Theme.AppCompat.Light&quot;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p>效果如下：</p>
-<p><img src="http://img.blog.csdn.net/20161202121716547" alt="这里写图片描述"></p>
+<p>效果如下：<br><img src="/../images/20161202/20161202121716547.png"></p>
 <p>默认navaigationIcon是返回箭头，修改图标：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mToolBar.setNavigationIcon(R.drawable.navigation);</span><br><span class="line"></span><br><span class="line">app:navigationIcon=&quot;@drawable/navigation&quot;</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://img.blog.csdn.net/20161202135204224" alt="这里写图片描述"></p>
-<p>那么还有一个问题就是，share默认全是大写，而我写的明明是小写。那就需要改了。</p>
-<p><img src="http://img.blog.csdn.net/20161202135308831" alt="这里写图片描述"></p>
+<p><img src="/../images/20161202/20161202135204224.png"><br>那么还有一个问题就是，share默认全是大写，而我写的明明是小写。那就需要改了。</p>
+<p><img src="/../images/20161202/20161202135308831.png"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--添加设置到Theme里--&gt;</span><br><span class="line"> &lt;item name=&quot;android:actionMenuTextAppearance&quot;&gt;@style/MenuTextStyle&lt;/item&gt;</span><br><span class="line"> </span><br><span class="line">   &lt;style name=&quot;MenuTextStyle&quot;&gt;</span><br><span class="line">        &lt;item name=&quot;android:textSize&quot;&gt;14sp&lt;/item&gt;&lt;!--调整字体大小--&gt;</span><br><span class="line">        &lt;item name=&quot;android:textAllCaps&quot;&gt;false&lt;/item&gt;</span><br><span class="line">    &lt;/style&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20161202145410102" alt="这里写图片描述"></p>
+<p><img src="/../images/20161202/20161202145410102.png"></p>
 <blockquote>
 <p><strong>注意:</strong> </p>
 <p>1.这里的ToolBar主题要设置为:<br>android:theme=”@style/ThemeOverlay.AppCompat.Dark.ActionBar”</p>
@@ -261,7 +257,7 @@
 <blockquote>
 <p><strong>注意：</strong> 这些代码要写在values-v21的styles里面才生效.</p>
 </blockquote>
-<p><img src="http://img.blog.csdn.net/20161202145559269" alt="最终效果"></p>
+<p><img src="/../images/20161202/20161202145559269.png"></p>
 <h4 id="完整的布局及Theme"><a href="#完整的布局及Theme" class="headerlink" title="完整的布局及Theme"></a>完整的布局及Theme</h4><blockquote>
 <p>这里把最终的布局及Theme设置附上.</p>
 </blockquote>
