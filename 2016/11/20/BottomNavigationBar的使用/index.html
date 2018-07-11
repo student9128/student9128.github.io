@@ -203,23 +203,23 @@
     <div class="post-body post-content">
         <p>最近在写底部导航栏，平时用到的就常见了，不过Material Desigh的导航栏却用的不多。在谷歌官方文档上有这种设计，可惜却没用过。所以学习了一下，这里记录下来。</p>
 <p>那么BottomNavigationBar是什么样子呢？请看图</p>
-<p><img src="http://img.blog.csdn.net/20161120080951788" alt="这里写图片描述"></p>
+<p><img src="/../images/20161120/20161120080951788.png"></p>
 <blockquote>
 <p>这个是Google Material上面的图。可以看到有谷歌对设计的建议</p>
 </blockquote>
 <p><strong>下面看下我的效果图：</strong></p>
-<p><img src="http://img.blog.csdn.net/20161120081142508" alt="这里写图片描述"></p>
+<p><img src="/../images/20161120/20161120081142508.gif" width="300/"></p>
 <h3 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h3><blockquote>
 <p>首先使用BottomNavigationBar前要添加依赖。</p>
 </blockquote>
-<p><img src="http://img.blog.csdn.net/20161120081543994" alt="这里写图片描述"></p>
+<p><img src="/../images/20161120/20161120081543994.png"></p>
 <h3 id="布局代码："><a href="#布局代码：" class="headerlink" title="布局代码："></a>布局代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;RelativeLayout</span><br><span class="line">    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</span><br><span class="line">    android:id=&quot;@+id/activity_main&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot;</span><br><span class="line">    tools:context=&quot;com.student.kevin.bottomnavigationbar.MainActivity&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;LinearLayout</span><br><span class="line">        android:id=&quot;@+id/ll_content&quot;</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;match_parent&quot;</span><br><span class="line">        android:orientation=&quot;vertical&quot;</span><br><span class="line">        android:text=&quot;Hello World!&quot;&gt;&lt;/LinearLayout&gt;</span><br><span class="line"></span><br><span class="line">    &lt;com.ashokvarma.bottomnavigation.BottomNavigationBar</span><br><span class="line">        android:id=&quot;@+id/bottom_navigation_bar&quot;</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_alignParentBottom=&quot;true&quot;&gt;&lt;/com.ashokvarma.bottomnavigation.BottomNavigationBar&gt;</span><br><span class="line">&lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>也就是与其他布局使用方法一样，直接在布局里面添加就行了。</p>
 </blockquote>
 <h3 id="代码中的使用"><a href="#代码中的使用" class="headerlink" title="代码中的使用"></a>代码中的使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mBottomNavigationBar = (BottomNavigationBar) findViewById(R.id.bottom_navigation_bar);</span><br><span class="line">mBottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.icon_one, R.string.tab_one).setActiveColorResource(R.color.green).setBadgeItem(badgeItem))</span><br><span class="line">               .addItem(new BottomNavigationItem(R.drawable.icon_two, R.string.tab_two).setActiveColorResource(R.color.orange))</span><br><span class="line">               .addItem(new BottomNavigationItem(R.drawable.icon_three, R.string.tab_three).setActiveColorResource(R.color.lime))</span><br><span class="line">               .addItem(new BottomNavigationItem(R.drawable.icon_four, R.string.tab_four))//依次添加item,分别icon和名称</span><br><span class="line">               .setFirstSelectedPosition(0)//设置默认选择item</span><br><span class="line">               .initialise();//初始化</span><br></pre></td></tr></table></figure>
 <p>这样底部导航栏就有了，是不是很简单。相比平时写的导航栏确实简单的很多。这样还不行，光有导航栏了，还要有监听，因为我们要根据点击导航栏的tab来切换不同的fragment。所以要添加监听事件。</p>
-<p><img src="http://img.blog.csdn.net/20161120082724748" alt="这里写图片描述"></p>
+<p><img src="/../images/20161120/20161120082724748.png"></p>
 <blockquote>
 <p>添加监听，重写方法，我们最常做的事情<br>这样在重写的方法里进行Fragment的切换即可</p>
 </blockquote>
@@ -233,19 +233,19 @@
 <ul>
 <li>Default默认效果</li>
 </ul>
-<p><img src="http://img.blog.csdn.net/20161120084632057" alt="这里写图片描述"></p>
+<p><img src="/../images/20161120/20161120084632057.gif"></p>
 <ul>
 <li>FIXED+STATIC</li>
 </ul>
-<p><img src="http://img.blog.csdn.net/20161120084745631" alt="这里写图片描述"></p>
+<p><img src="/../images/20161120/20161120084745631.gif"></p>
 <ul>
 <li>FIXED+RIPPLE</li>
 </ul>
-<p><img src="http://img.blog.csdn.net/20161120084817522" alt="这里写图片描述"></p>
+<p><img src="/../images/20161120/20161120084817522.gif"></p>
 <ul>
 <li>SHIFTING+RIPPLE</li>
 </ul>
-<p><img src="http://img.blog.csdn.net/20161120084905935" alt="这里写图片描述"></p>
+<p><img src="/../images/20161120/20161120084905935.gif"></p>
 <blockquote>
 <p>SHIFTING+STATIC效果这里就不传了，通过对比可以发现，默认的效果其实就是SHIFTING+STATIC效果</p>
 </blockquote>
@@ -257,7 +257,7 @@
 </blockquote>
 <p><strong>如果想用其他方法，也可以查看这篇文章：</strong></p>
 <blockquote>
-<p><strong><a href="http://blog.csdn.net/student9128/article/details/53435737" target="_blank" rel="noopener">五种方式实现Android底部导航栏</a></strong></p>
+<p><strong><a href="http://student9128.top/tags/%E5%BA%95%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F/" target="_blank" rel="noopener">五种方式实现Android底部导航栏</a></strong></p>
 </blockquote>
 <h3 id="Demo下载"><a href="#Demo下载" class="headerlink" title="Demo下载"></a>Demo下载</h3><h4 id="下载一"><a href="#下载一" class="headerlink" title="下载一"></a><a href="http://download.csdn.net/download/student9128/9687748" target="_blank" rel="noopener">下载一</a></h4><h4 id="下载二-github"><a href="#下载二-github" class="headerlink" title="下载二(github)"></a><a href="https://github.com/student9128/BottomNavigationBar.git" target="_blank" rel="noopener">下载二(github)</a></h4>
     </div>

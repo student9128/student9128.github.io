@@ -195,14 +195,14 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>634</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>635</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
     
     <div class="post-body post-content">
-        <p>ViewPager轮播图出来指示器，无限轮播，常常也会有要求自动轮播的需求。这里记录一下轮播图的自动轮播。这篇文章在上篇<a href="http://blog.csdn.net/student9128/article/details/52814219" target="_blank" rel="noopener">viewpager自添加指示器,无限轮播</a>的基础上添加的自动轮播功能<br><strong>下面仍然展示一下效果图：</strong><br>为了展示效果，这里加快的轮播速度。可以自己修改。</p>
-<p><img src="http://img.blog.csdn.net/20161014173356819" alt="这里写图片描述"></p>
+        <p>ViewPager轮播图出来指示器，无限轮播，常常也会有要求自动轮播的需求。这里记录一下轮播图的自动轮播。这篇文章在上篇<a href="http://student9128.top/2016/10/14/viewpager%E8%87%AA%E6%B7%BB%E5%8A%A0%E6%8C%87%E7%A4%BA%E5%99%A8-%E6%97%A0%E9%99%90%E8%BD%AE%E6%92%AD/" target="_blank" rel="noopener">viewpager自添加指示器,无限轮播</a>的基础上添加的自动轮播功能<br><strong>下面仍然展示一下效果图：</strong><br>为了展示效果，这里加快的轮播速度。可以自己修改。</p>
+<p><img src="/../images/20161014/20161014173356819.gif" width="300/"></p>
 <p>下面贴出自动轮播的代码：<br>我这里用了两种方法：</p>
 <ul>
 <li><p>方法一：<br>其核心就是Handler+Timer;</p>
@@ -212,7 +212,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//开启一个线程，用于循环</span><br><span class="line">     new Thread(new Runnable() &#123;</span><br><span class="line">         @Override</span><br><span class="line">         public void run() &#123;</span><br><span class="line">             isAuto = true;</span><br><span class="line">             while (isAuto) &#123;</span><br><span class="line">                 try &#123;</span><br><span class="line">                     Thread.sleep(1000);</span><br><span class="line">                 &#125; catch (InterruptedException e) &#123;</span><br><span class="line">                     e.printStackTrace();</span><br><span class="line">                 &#125;</span><br><span class="line">                 runOnUiThread(new Runnable() &#123;</span><br><span class="line">                     @Override</span><br><span class="line">                     public void run() &#123;</span><br><span class="line">                               mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1);</span><br><span class="line">                     &#125;</span><br><span class="line">                 &#125;);</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;).start();</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>Demo请参考：<br><a href="http://blog.csdn.net/student9128/article/details/52814219" target="_blank" rel="noopener">viewpager自添加指示器,无限轮播</a><br>直接添加上面代码即可实现自动轮播</p>
+<p>Demo请参考：<br><a href="http://student9128.top/2016/10/14/viewpager%E8%87%AA%E6%B7%BB%E5%8A%A0%E6%8C%87%E7%A4%BA%E5%99%A8-%E6%97%A0%E9%99%90%E8%BD%AE%E6%92%AD/" target="_blank" rel="noopener">viewpager自添加指示器,无限轮播</a><br>直接添加上面代码即可实现自动轮播</p>
 
     </div>
 
