@@ -204,7 +204,7 @@
 <h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><blockquote>
 <p>效果图是这样的</p>
 </blockquote>
-<p><img src="http://img.blog.csdn.net/20171209125349406?" width="250px" height="400px"></p>
+<p><img src="/../images/20171209/20171209125349406.png" width="250px" height="400px"></p>
 <h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><p>下面直接记录定位实现过程</p>
 <blockquote>
 <p>在onCreate里添加下面代码，这里需要实现一个接口。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> //初始化地图控制器对象</span><br><span class="line">        AMap aMap = mMapView.getMap();</span><br><span class="line">// 设置定位监听</span><br><span class="line">        aMap.setLocationSource(this);</span><br><span class="line">// 设置为true表示显示定位层并可触发定位，false表示隐藏定位层并不可触发定位，默认是false</span><br><span class="line">        aMap.setMyLocationEnabled(true);</span><br></pre></td></tr></table></figure></p>

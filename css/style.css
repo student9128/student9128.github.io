@@ -458,7 +458,7 @@ pre {
 .post .post-media {
   position: relative;
   margin-right: 15px;
-  width: 220px;
+  width: 100px;/*目录缩略图*/
   height: 160px;
   float: left;
   overflow: hidden;

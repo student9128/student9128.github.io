@@ -191,23 +191,23 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>327</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>328</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
     
     <div class="post-body post-content">
         <p>本文实现了Android中dialog的3D翻转效果。这里通过一个简单的应用场景记录下。</p>
-<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="http://img.blog.csdn.net/20170817135448637?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="/../images/20170817/20170817135448637.gif"></p>
 <blockquote>
 <p>起初自己的思路是Activity进行界面跳转实现旋转效果，网上看了很多，写下来发现效果不对。之后又看到Google上面的Card Flid Animation效果是这样的。</p>
 </blockquote>
-<p><img src="http://img.blog.csdn.net/20170817140719317?" alt="这里写图片描述"></p>
+<p><img src="/../images/20170817/20170817140719317.gif"></p>
 <p>看着确实不错，然而拿下来demo放慢翻转速度后发现，不是我想要的。但是跟我看到的一个app里面的效果一样<br>然后想改成dialog试试效果，发现更是不行了。</p>
 <blockquote>
 <p>Card Flid Animation效果如下：<br>这个是通过Activity来切换Fragment实现的，可以看到区别是翻转时候貌似会变大，其实没用，只是翻转后的视觉问题。</p>
 </blockquote>
-<p><img src="http://img.blog.csdn.net/20170817135608519?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="/../images/20170817/20170817135608519.gif" width="300"></p>
 <blockquote>
 <p>听说openGl比较麻烦，并且没有用过。然后就搜了下Rotate3DAnimaitons。<br>搜到了这篇文章<br><a href="http://blog.csdn.net/growing_tree/article/details/50428148" target="_blank" rel="noopener">http://blog.csdn.net/growing_tree/article/details/50428148</a><br>所以这篇文章里的实现方法不是我的原创，是参考人家的。在这里感谢这位大神。<br>不过他这个是activity里的，我就想要一个dialog效果，因为电脑上TIM的打开红包这个3D效果看着不错，其实大同小异，就拿过来改成Dialog。<br>对于Rotate3DAnimaitons这篇文章已经很详细了，有需要的可以参考下。</p>
 </blockquote>
