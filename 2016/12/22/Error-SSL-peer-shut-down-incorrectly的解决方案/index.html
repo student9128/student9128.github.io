@@ -199,19 +199,17 @@
     <div class="post-body post-content">
         <p>这两天重装了系统，由于是清空了所有的东西，把Android Studio也清理了。所以要重新安装Android Studio， 安装完后打开之前的代码发现报了标题上的错。这里记录下解决方案。</p>
 <p>报错截图如下：</p>
-<p><img src="http://img.blog.csdn.net/20161222232615390?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="/../images/20161222/图1.png"></p>
 <p>首先说下peer,有道了下(之前见过这个单词，忘了)，意思如下：</p>
-<p><img src="http://img.blog.csdn.net/20161222221820737?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><img src="/../images/20161222/图2.png"></p>
 <p>感觉没啥用，百度了下，说由于国内的原因，Gradle无法下载，瞬间明白，其实不是这个原因，我的Android Studio版本是2.0，之前用的2.2.2所以对应的版本号不同。</p>
 <ul>
-<li>2.0 Android Studio：</li>
+<li><p>2.0 Android Studio：<br><img src="/../images/20161222/20161222232307729.png"></p>
+</li>
+<li><p>2.2.2 Android Studio:</p>
+</li>
 </ul>
-<p><img src="http://img.blog.csdn.net/20161222232307729?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<ul>
-<li>2.2.2 Android Studio:</li>
-</ul>
-<p><img src="http://img.blog.csdn.net/20161222232422171?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc3R1ZGVudDkxMjg=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>这才是真正原因，将2.2.2 版本的Gradle version和Android Plugin Version分别改为2.0版本的即可解决。</p>
+<p><img src="/../images/20161222/20161222232422171.png"><br>这才是真正原因，将2.2.2 版本的Gradle version和Android Plugin Version分别改为2.0版本的即可解决。</p>
 <p>如果你碰到这样的报错信息，看看是不是和我的一样的问题。</p>
 
     </div>
