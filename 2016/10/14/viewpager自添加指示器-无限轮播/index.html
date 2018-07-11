@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="文藝学生">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="https://student9128.github.io">
+    <!--SEO-->
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>viewpager自添加指示器,无限轮播 | 文藝学生</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+    <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://p4.so.qhmsg.com/t01201861b1b1ebdcb9.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title='Kevin'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 文藝学生 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://student9128.github.io">文藝学生</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Android/"><i class="fa "></i>Android</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Java/"><i class="fa "></i>Java</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/ReactNative/"><i class="fa "></i>React Native</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="viewpager自添加指示器,无限轮播">
+            
+	            viewpager自添加指示器,无限轮播
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/移动开发" title='移动开发'>
+                        移动开发
+                    </a>
+                
+                    <a href="/tags/ViewPager" title='ViewPager'>
+                        ViewPager
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2016/10/14</span>
+        </span>
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-eye"></i>
+            <span id="busuanzi_value_page_pv"></span>
+          </span>
+    
+</div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>634</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <p>viewpager在开发app过程中特别常用，做引导页，做轮播图等。很多时候需要添加指示器，引导页很多时候也为了省事会将指示器做到图片上面，轮播图则会引用第三方的指示器。于是就想自己添加一个指示器。</p>
+<p><strong>下面是效果图：</strong></p>
+<p><img src="http://img.blog.csdn.net/20161014104729998" alt="这里写图片描述"></p>
+<p>模拟器上显示效果可能不是很好。</p>
+<h4 id="布局代码："><a href="#布局代码：" class="headerlink" title="布局代码："></a>布局代码：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">    xmlns:tools=&quot;http://schemas.android.com/tools&quot;</span><br><span class="line">    android:id=&quot;@+id/activity_main&quot;</span><br><span class="line">    android:layout_width=&quot;match_parent&quot;</span><br><span class="line">    android:layout_height=&quot;match_parent&quot;</span><br><span class="line">    tools:context=&quot;com.kevin.tech.myviewpager.MainActivity&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;RelativeLayout</span><br><span class="line">        android:layout_width=&quot;match_parent&quot;</span><br><span class="line">        android:layout_height=&quot;200dp&quot;</span><br><span class="line">        android:layout_alignParentLeft=&quot;true&quot;</span><br><span class="line">        android:layout_alignParentStart=&quot;true&quot;</span><br><span class="line">        android:layout_alignParentTop=&quot;true&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;android.support.v4.view.ViewPager</span><br><span class="line">            android:id=&quot;@+id/view_pager&quot;</span><br><span class="line">            android:layout_width=&quot;match_parent&quot;</span><br><span class="line">            android:layout_height=&quot;200dp&quot;</span><br><span class="line">            android:layout_alignParentTop=&quot;true&quot;</span><br><span class="line">            android:layout_alignParentLeft=&quot;true&quot;</span><br><span class="line">            android:layout_alignParentStart=&quot;true&quot; /&gt;</span><br><span class="line">    &lt;LinearLayout</span><br><span class="line">        android:id=&quot;@+id/indicator&quot;</span><br><span class="line">        android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">        android:layout_alignParentBottom=&quot;true&quot;</span><br><span class="line">        android:layout_centerHorizontal=&quot;true&quot;</span><br><span class="line">        android:layout_marginBottom=&quot;20dp&quot;</span><br><span class="line">        android:orientation=&quot;horizontal&quot; /&gt;</span><br><span class="line">    &lt;/RelativeLayout&gt;</span><br><span class="line"></span><br><span class="line">&lt;/RelativeLayout&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="指示器的动态添加："><a href="#指示器的动态添加：" class="headerlink" title="指示器的动态添加："></a>指示器的动态添加：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">private void initIndicator() &#123;</span><br><span class="line">     mImageView = new ImageView[mImageArr.length];</span><br><span class="line">     for (int i = 0; i &lt; mImageArr.length; i++) &#123;</span><br><span class="line">         View view = LayoutInflater.from(this).inflate(R.layout.indicator_image, null);</span><br><span class="line">         view.findViewById(R.id.indicator_iamge).setBackgroundResource(R.drawable.shape_origin_point_pink);</span><br><span class="line">         mImageView[i] = new ImageView(this);</span><br><span class="line">         if (i == 0) &#123;</span><br><span class="line">             mImageView[i].setBackgroundResource(R.drawable.shape_origin_point_pink);</span><br><span class="line">         &#125; else &#123;</span><br><span class="line">             mImageView[i].setBackgroundResource(R.drawable.shape_origin_point_white);</span><br><span class="line">             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);</span><br><span class="line">             layoutParams.setMargins(20, 0, 0, 0);</span><br><span class="line">             mImageView[i].setLayoutParams(layoutParams);</span><br><span class="line">         &#125;</span><br><span class="line">         mIndicator.addView(mImageView[i]);</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="滑动时候指示器颜色的变化"><a href="#滑动时候指示器颜色的变化" class="headerlink" title="滑动时候指示器颜色的变化"></a>滑动时候指示器颜色的变化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() &#123;</span><br><span class="line">            @Override</span><br><span class="line">            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public void onPageSelected(int position) &#123;</span><br><span class="line">                setIndicator(position);</span><br><span class="line">                Log.i(&quot;kevin&quot;, position + &quot;&quot;);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            @Override</span><br><span class="line">            public void onPageScrollStateChanged(int state) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">//设置指示器</span><br><span class="line">private void setIndicator(int position) &#123;</span><br><span class="line">        position %= mImageArr.length;</span><br><span class="line">        for (int i = 0; i &lt; mImageArr.length; i++) &#123;</span><br><span class="line">            mImageView[i].setBackgroundResource(R.drawable.shape_origin_point_pink);</span><br><span class="line">            if (position != i) &#123;</span><br><span class="line">                mImageView[i].setBackgroundResource(R.drawable.shape_origin_point_white);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="设置无限轮播"><a href="#设置无限轮播" class="headerlink" title="设置无限轮播"></a>设置无限轮播</h4><p>这里我用最常用的那种方法,即在PagerAdapter里用如下代码实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">    public int getCount() &#123;</span><br><span class="line">        return Integer.MAX_VALUE;</span><br><span class="line">    &#125;</span><br><span class="line"> @Override</span><br><span class="line">    public Object instantiateItem(ViewGroup container, int position) &#123;</span><br><span class="line">        ImageView imageView = new ImageView(mContext);</span><br><span class="line">        position %= mImageArr.length;</span><br><span class="line">        if(position&lt;0)&#123;</span><br><span class="line">            position = mImageArr.length+position;</span><br><span class="line">        &#125;</span><br><span class="line">        imageView.setImageResource(mImageArr[position]);</span><br><span class="line">        container.addView(imageView);</span><br><span class="line">        return imageView;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="解决第一页不能向左滑动的问题"><a href="#解决第一页不能向左滑动的问题" class="headerlink" title="解决第一页不能向左滑动的问题"></a>解决第一页不能向左滑动的问题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mViewPager.setCurrentItem(5000*(mImageArr.length));//其中5000这个数字可以随意设置。</span><br></pre></td></tr></table></figure>
+<h3 id="Demo下载"><a href="#Demo下载" class="headerlink" title="Demo下载"></a><a href="http://download.csdn.net/detail/student9128/9653613" target="_blank" rel="noopener">Demo下载</a></h3>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本博客主要用于学习记录，欢迎共同学习交流。转载请注明出处！
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+ 
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2016/10/14/上传代码资源时代码瘦身/" class="pre-post btn btn-default" title='上传代码资源时代码瘦身'>
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">上传代码资源时代码瘦身</span>
+        </a>
+    
+    
+        <a href="/2016/10/11/带有倒计时的闪屏页面/" class="next-post btn btn-default" title='带有倒计时的闪屏页面'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">带有倒计时的闪屏页面</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	<script type="text/javascript" src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        // id: window.location.pathname,
+        id:'{{page.title}}',
+        owner:"student9128",
+        repo:"student9128.github.io",
+        oauth: {
+          client_id:"47e54c90da50ceb3772b",
+          client_secret:"51a51e7e8981763706796db78efe2fc930a1f05d"
+        },
+        perPage:"10",
+    });
+    gitment.render('comments');
+</script>
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#布局代码："><span class="toc-text">布局代码：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指示器的动态添加："><span class="toc-text">指示器的动态添加：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#滑动时候指示器颜色的变化"><span class="toc-text">滑动时候指示器颜色的变化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置无限轮播"><span class="toc-text">设置无限轮播</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决第一页不能向左滑动的问题"><span class="toc-text">解决第一页不能向左滑动的问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo下载"><span class="toc-text">Demo下载</span></a>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2018 Kevin
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Theme by Kevin based on <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+
+              <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              第<span id="busuanzi_value_site_uv"></span>位小伙伴你好,
+              <span id="busuanzi_container_site_pv">
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
