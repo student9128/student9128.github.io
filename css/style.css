@@ -243,7 +243,7 @@ pre {
   line-height: 0;
   height: 180px;
   width: 100%;
-  background: #363636;
+  background: #00b8a9;
   background-repeat: repeat;
   overflow: hidden;
 }
@@ -1023,19 +1023,19 @@ pre {
    copyright
 ====================================================*/
 .copyright {
-  background: #363636;/*修改底部背景颜色*/
+  background: #00b8a9;/*修改底部背景颜色*/
   font-size: 13px;
   text-align: center;
-  color: #666666;
+  color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid #303030;
+  border-top: 1px solid #00b8a9;
 }
 .copyright span {
   margin: 0 .5em;
 }
 .copyright a {
-  color: #666666;
+  color: #fff;
 }
 /*====================================================
    toc
@@ -1074,31 +1074,34 @@ pre {
 /*====================================================
    back-to-top and toc-btn
 ====================================================*/
+
 #back-to-top,
 #toc-btn {
   position: fixed;
   right: 30px;
-  bottom: 30px;
-  background-color: #959595;
+  bottom: 130px;
+  background-color: #00b8a9;
   color: #fff;
   text-align: center;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  z-index: 1;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  z-index: 3;
   cursor: pointer;
+  box-shadow:2px 2px 5px #888888;
 }
 #back-to-top:hover,
 #toc-btn:hover {
-  background: #00b8a9;
+  background: #46cdcf;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  color: #fff;
 }
 #back-to-top i,
 #toc-btn i {
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
 }
 #toc-btn {
   bottom: 65px;
