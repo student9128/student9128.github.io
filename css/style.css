@@ -334,6 +334,7 @@ pre {
   font-weight:bold;
   padding: 0 21px;
 }
+
 .main-navigation .menu li:hover > a {
   color: #00b8a9;
   background-color: #0d7377;
@@ -346,7 +347,6 @@ pre {
   /* position: relative;
   -webkit-animation: move 1s alternate;
   animation: move 1s alternate; */
-
 }
 .main-navigation .menu li:hover ul {
   visibility: visible;
