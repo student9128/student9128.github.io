@@ -299,7 +299,7 @@ pre {
 /* main-navigation */
 .main-navigation {
   text-align: center;
-  background: #fff;
+  background: #00b8a9;
   border-top: 1px solid #ebebeb;
   margin-bottom: 20px;
   /* border-bottom: 2px solid #f8f9fc; */
@@ -328,14 +328,25 @@ pre {
   position: relative;
 }
 .main-navigation .menu li a {
-  color: #505050;
+  color: #ffffff;
   line-height: 4em;
   display: block;
+  font-weight:bold;
   padding: 0 21px;
 }
 .main-navigation .menu li:hover > a {
   color: #00b8a9;
-  text-decoration: none;
+  background-color: #0d7377;
+  text-decoration: none; 
+  /* -webkit-animation: shake 10s infinite;
+  animation: shake 10s infinite; */
+
+  /* -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%; */
+  /* position: relative;
+  -webkit-animation: move 1s alternate;
+  animation: move 1s alternate; */
+
 }
 .main-navigation .menu li:hover ul {
   visibility: visible;
@@ -386,6 +397,27 @@ pre {
 .main-navigation .navbar-header i:hover {
   color: #00b8a9;
 }
+@-webkit-keyframes move {
+  0% {top: 30px;opacity: 1}
+  50% {top: -30px;opacity: 1}
+  75% {top: -30px ;opacity: 0}
+  100%{top:30px;opacity: 0}
+}
+@keyframes move {
+  0% {top: 30px;opacity: 1}
+  50% {top: -30px;opacity: 1}
+  75% {top: -30px ;opacity: 0}
+  100%{top:30px;opacity: 0}
+}
+
+@-webkit-keyframes shake{
+  50% { -webkit-transform: rotate(-10deg); }
+  100% { -webkit-transform: rotate(10deg); }
+}
+@keyframes shake{
+  50% { -webkit-transform: rotate(-10deg); }
+100% { -webkit-transform: rotate(10deg); }
+} 
 /*====================================================
     main post area
 ====================================================*/
