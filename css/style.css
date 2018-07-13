@@ -874,7 +874,8 @@ pre {
 }
 .widget .tag-cloud a {
   border: 1px solid #ebebeb;
-  padding: 2px 7px;
+  border-radius: 25px;
+  padding: 2px 15px;
   color: #808080;
   font-size: 1em!important;
   line-height: 1.5em;
