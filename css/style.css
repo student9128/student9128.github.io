@@ -875,6 +875,7 @@ pre {
 .prev-next-wrap .next-post {
   float: right;
 }
+
 .sidebar .widget {
   background: #fff;
   padding: 16px 25px;
@@ -1324,7 +1325,7 @@ pre .comment {
 .highlight .gutter pre {
   padding-left: 10px;
   padding-right: 10px;
-  color: #888f96;
+  color: #a02a63;
   text-align: right;
   border-radius: 0px;
   background-color: #eeeeee;/*代码行号颜色*/
@@ -1333,8 +1334,11 @@ pre .comment {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #F8F8F8;/*代码区域背景颜色*/
+  border-radius: 0;
+  color: #3c6562;
+  background-color: #f9f8ed;/*代码区域背景颜色*/
 }
+
 .highlight .line {
   height: 20px;
 }
@@ -1404,6 +1408,10 @@ pre .keyword,
 pre .javascript .function {
   color: #b294bb;
 }
+pre .java{
+  color: #2980b9
+}
+
 
 
 /*====================================================
