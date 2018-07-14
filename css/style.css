@@ -317,8 +317,11 @@ pre {
   white-space: nowrap;
   padding: 19px 0 0 0;
   font-size: 14px;
-  color: #505050;
+  color: #fff;
   display: none;
+}
+.main-navigation .sr-only{
+  color: #fff;
 }
 .main-navigation .menu {
   padding: 0;
