@@ -1420,7 +1420,7 @@ pre .javascript .function {
     float: left;
   }
   .main-navigation .menu li:hover > a {
-    color: #00b8a9;
+    color: #fff;
     text-decoration: none;
   }
   .main-navigation .menu li a {
