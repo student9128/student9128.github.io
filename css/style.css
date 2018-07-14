@@ -308,7 +308,7 @@ pre {
 }
 .main-navigation .navbar-collapse {
   /* border-top: 1px solid #ebebeb; */
-  /* border-top: 1px solid #00b8a9; */
+  border-top: 1px solid #fff;
   color: #fff;
 }
 .main-navigation .navbar-brand {
