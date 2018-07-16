@@ -1013,11 +1013,12 @@
     min-height: 5.125em;
     max-height: 15em;
     border-radius: 5px;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid #f8f8f8;
+    box-shadow: 2px 2px 2px #f6f6f6;
     font-size: 0.875em;
     word-wrap: break-word;
     resize: vertical;
-    background-color: #f6f6f6;
+    background-color: #f8f8f8;
     outline: none;
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
