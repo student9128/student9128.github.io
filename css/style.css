@@ -233,8 +233,9 @@ pre {
 }
 .carousel img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   border-color: #fff;
+  box-shadow: 1px 1px 2px #7d5e3f;
 }
 /*====================================================
     header
@@ -459,6 +460,8 @@ pre {
   margin-bottom: 15px;
   position: relative;
   overflow: hidden;
+  box-shadow: 2px 2px 5px #F4F4F7;
+  border-radius: 3px;
 }
 .post .featured {
   position: absolute;
@@ -518,9 +521,10 @@ pre {
   position: relative;
   margin-right: 15px;
   width: 100px;/*目录缩略图*/
-  height: 160px;
+  height: 150px;
   float: left;
   overflow: hidden;
+  border-radius: 5px;
 }
 .post .post-media img {
   width: 100%;
