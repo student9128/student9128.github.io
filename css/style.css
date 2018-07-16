@@ -1300,10 +1300,10 @@ pre code {
   text-shadow: none;
 }
 pre .meta {
-  color: #b294bb;
+  color: #e95280;
 }
 pre .comment {
-  color: #1A936F;
+  color: #64a36f;
 }
 .highlight {
   -webkit-border-radius: 1px;
@@ -1403,7 +1403,7 @@ pre .xml .cdata,
 pre .special,
 pre .number,
 pre .formula {
-  color: #b5bd68;
+  color: #de3c3c;
 }
 pre .title,
 pre .css .hexcolor {
@@ -1422,7 +1422,7 @@ pre .coffeescript .title {
 }
 pre .keyword,
 pre .javascript .function {
-  color: #b294bb;
+  color: #23b1a5;
 }
 
 
