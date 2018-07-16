@@ -105,7 +105,7 @@
                             </li>
                         
                             <li role="presentation" class="text-center">
-                                <a href="/archives/"><i class="far fa-clock"></i>&nbsp;时间轴</a>
+                                <a href="/archives/"><i class="fas fa-book"></i>&nbsp;归档</a>
                             </li>
                         
                             <li role="presentation" class="text-center">
@@ -178,7 +178,7 @@
     
     <div class="post-body post-content">
         <p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。 Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
-<p><strong>下面记录下Git连接github的命令：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   $ git config --global user.name &quot;你的github用户名&quot;//配置用户名</span><br><span class="line">$ git config --global user.email &quot;你的github邮箱&quot;//配置邮箱</span><br><span class="line">$ ssh-keygen -t rsa -C &quot;你的github邮箱&quot;//生成密钥</span><br><span class="line">$ ssh git@github.com//连接github</span><br></pre></td></tr></table></figure></p>
+<p><strong>下面记录下Git连接github的命令：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"你的github用户名"</span>//配置用户名</span><br><span class="line">$ git config --global user.email <span class="string">"你的github邮箱"</span>//配置邮箱</span><br><span class="line">$ ssh-keygen -t rsa -C <span class="string">"你的github邮箱"</span>//生成密钥</span><br><span class="line">$ ssh git@github.com//连接github</span><br></pre></td></tr></table></figure></p>
 <h3 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h3><p>首先安装Bit，通过Bit Bash，进入命令输入。</p>
 <h3 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h3><p>依次输入上面四行命令：<br>输入完成直接回车即可。<br>当看到下图的时候，说明你的key已经生成了。那么就到计算机此路径下去找id_rsa.pub文件。打开将其中的key全部复制。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">路径:C:\Users\Administrator\.ssh</span><br></pre></td></tr></table></figure></p>
 <p><img src="../images/20161109/20161109134334981.png"></p>
@@ -187,7 +187,7 @@
 <blockquote>
 <p>注意：必须先在github上添加完key这一步才能成功。</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh git@github.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh git@github.com</span><br></pre></td></tr></table></figure>
 <p>出现下面提示说明你连接成功了。</p>
 <p><img src="../images/20161109/20161109135123656.png"><br>再去github上看你刚才创建的key会发现前面的钥匙已经是绿色的了。</p>
 <p><strong>有需要下载git客户端的可以在这里下载。</strong></p>

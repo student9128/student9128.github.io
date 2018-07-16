@@ -306,7 +306,7 @@ pre {
   /* border-top: 1px solid #89BF64; */
   margin-bottom: 20px;
   /* border-bottom: 2px solid #f8f9fc; */
-  box-shadow: 0px 5px 1px #f7f7f8;
+  box-shadow: 0px 1px 2px #ebebeb;
 }
 .main-navigation .navbar-collapse {
   /* border-top: 1px solid #ebebeb; */
@@ -1279,7 +1279,7 @@ pre,
   color: #c5c8c6;
   font-size: 13px;
   /* background: #1d1f21;代码区域的颜色 */
-  background: #f9f8ed;
+  background: #F7F7F7;
   line-height: 1.6;
 }
 code {
@@ -1303,12 +1303,16 @@ pre .meta {
   color: #e95280;
 }
 pre .comment {
-  color: #64a36f;
+  color: #ad1457;
 }
 .highlight {
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
-  border-radius: 1px;
+  border-radius: 5px;
+  box-shadow: 5px 2px 2px #f2f4f7;
+}
+.highlight:hover{
+  box-shadow: 5px 3px 5px #ebebeb;
 }
 .highlight pre {
   border: none;
@@ -1350,8 +1354,8 @@ pre .comment {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 0;
-  color: #333;
-  background-color: #f9f8ed;/*代码区域背景颜色*/
+  color: #333333;
+  background-color: #F7F7F7;/*代码区域背景颜色*/
 }
 
 .highlight .line {
@@ -1369,9 +1373,13 @@ pre .comment {
 .gist table td {
   border: none;
 }
+pre .xml .attribute{
+  color:#00a6e7;
+}
 pre .variable,
 pre .attribute,
 pre .tag,
+pre .tag .title
 pre .regexp,
 pre .ruby .constant,
 pre .xml .tag .title,
@@ -1381,7 +1389,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #c66;
+  color: #8559a5;
 }
 pre .number,
 pre .preprocessor,
@@ -1403,11 +1411,11 @@ pre .xml .cdata,
 pre .special,
 pre .number,
 pre .formula {
-  color: #de3c3c;
+  color: #76a665;
 }
 pre .title,
 pre .css .hexcolor {
-  color: #8abeb7;
+  color: #952e4b;
 }
 pre .java,
 pre .function,
@@ -1422,10 +1430,90 @@ pre .coffeescript .title {
 }
 pre .keyword,
 pre .javascript .function {
-  color: #23b1a5;
+  color: #628CE4;
+}
+pre .deletion { color: #BA4545; }
+/* pre .symbol, */
+/* pre .symbol .string{ color: #e95280; } */
+/* pre .value, */
+/* pre .regexp { color: #e95280; } */
+
+pre .coffeescript .javascript,
+pre .javascript .xml,
+pre .tex .formula,
+pre .xml .javascript,
+pre .xml .vbscript,
+pre .xml .css,
+pre .xml .cdata { opacity: 0.5; }
+
+.highlight.html .code:after,
+.highlight.js .code:after,
+.highlight.bash .code:after,
+.highlight.css .code:after,
+.highlight.scss .code:after,
+.highlight.diff .code:after,
+.highlight.java .code:after,
+.highlight.xml .code:after,
+.highlight.python .code:after,
+.highlight.json .code:after,
+.highlight.swift .code:after,
+.highlight.ruby .code:after,
+.highlight.perl .code:after,
+.highlight.php .code:after,
+.highlight.c .code:after,
+.highlight.cpp .code:after,
+.highlight.ts .code:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 15px;
+    padding: 5px 10px 0;
+    font-size: 0.75em;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: right;
+    color: #aacfd0;
 }
 
+.highlight.html .code:after { content: "HTML"; }
 
+.highlight.js .code:after { content: "JS"; }
+
+.highlight.javascript .code:after{content: "JavaScript";}
+
+.highlight.bash .code:after { content: "BASH"; }
+
+.highlight.css .code:after { content: "CSS"; }
+
+.highlight.scss .code:after { content: "SCSS"; }
+
+.highlight.diff .code:after { content: "DIFF"; }
+
+.highlight.java .code:after { content: "Java"; }
+
+.highlight.xml .code:after { content: "XML"; }
+
+.highlight.python .code:after { content: "Python"; }
+
+.highlight.json .code:after { content: "JSON"; }
+
+.highlight.swift .code:after { content: "Swift"; }
+
+.highlight.ruby .code:after { content: "RUBY"; }
+
+.highlight.perl .code:after { content: "PERL"; }
+
+.highlight.php .code:after { content: "PHP"; }
+
+.highlight.c .code:after { content: "C"; }
+
+.highlight.java .code:after { content: "JAVA"; }
+
+.highlight.cpp .code:after { content: "CPP"; }
+
+.highlight.ts .code:after { content: "TS"; }
+
+.highlight.cpp .code:after { content: 'C++'; }
 
 /*====================================================
     media
