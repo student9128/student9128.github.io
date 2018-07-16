@@ -1359,6 +1359,7 @@ pre .comment {
   padding-right: 10px;
   border-radius: 0;
   color: #333333;
+  font-family: Monaco,Courier;
   background-color: #F7F7F7;/*代码区域背景颜色*/
 }
 
