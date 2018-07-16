@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://student9128.github.io/"/>
-  <updated>2018-07-16T06:45:47.010Z</updated>
+  <updated>2018-07-09T08:10:08.858Z</updated>
   <id>https://student9128.github.io/</id>
   
   <author>
@@ -15,31 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hello high</title>
-    <link href="https://student9128.github.io/2018/10/08/hello/"/>
-    <id>https://student9128.github.io/2018/10/08/hello/</id>
-    <published>2018-10-08T15:35:25.000Z</published>
-    <updated>2018-07-16T06:45:47.010Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="https://student9128.github.io/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="https://student9128.github.io/tags/Android/"/>
-    
-      <category term="移动开发" scheme="https://student9128.github.io/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
-  </entry>
   
   <entry>
     <title>JAVA标识符命名规则</title>
@@ -147,7 +122,7 @@
     <link href="https://student9128.github.io/2018/05/21/react-navigation%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>https://student9128.github.io/2018/05/21/react-navigation的使用/</id>
     <published>2018-05-21T06:41:07.000Z</published>
-    <updated>2018-07-11T05:25:26.573Z</updated>
+    <updated>2018-07-16T08:12:18.523Z</updated>
     
     <summary type="html">
     
@@ -527,6 +502,29 @@
       <category term="移动开发" scheme="https://student9128.github.io/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
     
       <category term="sqlite" scheme="https://student9128.github.io/tags/sqlite/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Error:Execution failed for task &#39;:app:packageDebug&#39;解决方案</title>
+    <link href="https://student9128.github.io/2017/12/20/Error-Execution-failed-for-task-app-packageDebug-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://student9128.github.io/2017/12/20/Error-Execution-failed-for-task-app-packageDebug-解决方案/</id>
+    <published>2017-12-20T02:22:13.000Z</published>
+    <updated>2018-07-11T05:41:40.096Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="https://student9128.github.io/categories/Android/"/>
+    
+    
+      <category term="issue" scheme="https://student9128.github.io/tags/issue/"/>
     
   </entry>
   

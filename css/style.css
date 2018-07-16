@@ -1296,14 +1296,14 @@ code {
 pre code {
   padding: 0;
   color: #c5c8c6;
-  background: none;
+  background: #1c819e;
   text-shadow: none;
 }
 pre .meta {
   color: #b294bb;
 }
 pre .comment {
-  color: #969896;
+  color: #1A936F;
 }
 .highlight {
   -webkit-border-radius: 1px;
@@ -1350,7 +1350,7 @@ pre .comment {
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 0;
-  color: #3c6562;
+  color: #333;
   background-color: #f9f8ed;/*代码区域背景颜色*/
 }
 
@@ -1409,6 +1409,7 @@ pre .title,
 pre .css .hexcolor {
   color: #8abeb7;
 }
+pre .java,
 pre .function,
 pre .python .decorator,
 pre .python .title,
@@ -1422,9 +1423,6 @@ pre .coffeescript .title {
 pre .keyword,
 pre .javascript .function {
   color: #b294bb;
-}
-pre .java{
-  color: #2980b9
 }
 
 
