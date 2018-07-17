@@ -177,7 +177,7 @@
     </div>
     
     <div class="post-body post-content">
-        <p>Android原生项目集成了React Native后，打包成release运行起来后会出现闪退情况。<br>原因：没有将React Native文件打包进去。<br>解决方案：需要添加bundle文件<br>在Android工程里的assets文件夹下生成bundle文件：<br>在工程目录下输入命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native bundle --platform android --dev false --entry-file index.js  --bundle-output android/app/src/main/assets/index.android.bundle  --assets-dest android/app/src/main/res/</span><br></pre></td></tr></table></figure></p>
+        <p>Android原生项目集成了React Native后，打包成release运行起来后会出现闪退情况。<br>原因：没有将React Native文件打包进去。<br>解决方案：需要添加bundle文件<br>在Android工程里的assets文件夹下生成bundle文件：<br>在工程目录下输入命令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native bundle --platform android --dev <span class="literal">false</span> --entry-file index.js  --bundle-output android/app/src/main/assets/index.android.bundle  --assets-dest android/app/src/main/res/</span><br></pre></td></tr></table></figure></p>
 <p>注意：看一下你的入口是index.android.js还是index.js，根据情况修改命令。</p>
 
     </div>

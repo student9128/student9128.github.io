@@ -173,7 +173,7 @@
     </div>
     
     <div class="post-body post-content">
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Error:Execution failed for task &apos;:app:packageDebug&apos;.</span><br><span class="line">&gt; java.io.IOException: Could not delete path &apos;E:\ADemo1\ListViewTest\app\build\intermediates\incremental\packageDebug\file-input-save-data.txt&apos;.</span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Error:Execution failed <span class="keyword">for</span> task <span class="string">':app:packageDebug'</span>.</span><br><span class="line">&gt; java.io.IOException: Could not delete path <span class="string">'E:\ADemo1\ListViewTest\app\build\intermediates\incremental\packageDebug\file-input-save-data.txt'</span>.</span><br></pre></td></tr></table></figure>
 <p><img src="/../images/20171220/20171220101927847.png"></p>
 <p>最近发现build的时候工程里总是报这类错误，这里记录下，很明显的是由于txt文件无法删除，进入相应目录进行手动删除即可。</p>
 

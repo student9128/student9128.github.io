@@ -186,13 +186,8 @@
 <p>1.MessageReceiver没有写，由于官方文档上缺这行代码，很多人集成的时候会没写这个。建议参照官方Demo。</p>
 <p>2.XGRemoteService没有修改为当前包名。</p>
 <p>3.如果使用的AndroidStudio，看一下AndroidStudio中的applicationId是否与包名相同。不同也会到致失败。</p>
-<p>4.</p>
-<p> <activity android:name="com.tencent.android.tpush.XGPushActivity" android:exported="false" android:theme="@android:style/Theme.Translucent"><br>            <intent-filter></intent-filter></activity></p>
-<pre><code>        &lt;!-- 若使用AndroidStudio，请设置android:name=&quot;android.intent.icon_notice&quot; --&gt;
-        &lt;action android:name=&quot;android.intent.action&quot; /&gt;
-    &lt;/intent-filter&gt;
-&lt;/activity&gt;
-</code></pre><p>如果使用AndroidStudio这里一定要改<br>5.最重要的当然还是ACCESS_ID，ACCESS_KEY，这个一定要正确。前面几点都是在这个正确的基础上的。</p>
+<p>4.<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">activity</span></span></span><br><span class="line"><span class="tag">           <span class="attr">android:name</span>=<span class="string">"com.tencent.android.tpush.XGPushActivity"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">android:exported</span>=<span class="string">"false"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">android:theme</span>=<span class="string">"@android:style/Theme.Translucent"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line"></span><br><span class="line">               <span class="comment">&lt;!-- 若使用AndroidStudio，请设置android:name="android.intent.icon_notice" --&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">"android.intent.action"</span> /&gt;</span></span><br><span class="line">           <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>如果使用AndroidStudio这里一定要改<br>5.最重要的当然还是ACCESS_ID，ACCESS_KEY，这个一定要正确。前面几点都是在这个正确的基础上的。</p>
 
     </div>
 

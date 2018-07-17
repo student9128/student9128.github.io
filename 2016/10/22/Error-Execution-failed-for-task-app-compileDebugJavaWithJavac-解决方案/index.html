@@ -177,7 +177,7 @@
     </div>
     
     <div class="post-body post-content">
-        <p>今天导入工程build的时候发生了一个错误；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Error:Execution failed for task &apos;:app:compileDebugJavaWithJavac&apos;.</span><br><span class="line">&gt; Could not open local jar classpath snapshot write cache.</span><br><span class="line">   &gt; Unexpected lock protocol found in lock file. Expected 3, found 0.</span><br></pre></td></tr></table></figure></p>
+        <p>今天导入工程build的时候发生了一个错误；<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Error:Execution failed <span class="keyword">for</span> task <span class="string">':app:compileDebugJavaWithJavac'</span>.</span><br><span class="line">&gt; Could not open local jar classpath snapshot write cache.</span><br><span class="line">   &gt; Unexpected lock protocol found in lock file. Expected <span class="number">3</span>, found <span class="number">0</span>.</span><br></pre></td></tr></table></figure></p>
 <p>看这意思就是跟cache有关系。之前在AndoidStudio2.2上写的，现在导入到2.1的版本上了。怀疑是Gradle的问题，于是乎改了发现还是不行。<br>最后将工程目录里的.gradle文件删除重新导入。则解决此问题。</p>
 <p><strong>解决方案：将工程目录里的.gradle文件删除重新启动AndroidStudio导入</strong></p>
 

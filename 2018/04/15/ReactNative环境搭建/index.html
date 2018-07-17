@@ -182,7 +182,7 @@
 <p>我这里不按照网上或者React Native中文网写的用命令行安装Node.js，个人不习惯，直接去Node.js官网下载</p>
 </blockquote>
 <p><img src="https://img-blog.csdn.net/20180415215658545"></p>
-<h3 id="2-安装镜像"><a href="#2-安装镜像" class="headerlink" title="2.安装镜像"></a>2.安装镜像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org --global</span><br><span class="line">npm config set disturl https://npm.taobao.org/dist --global</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装镜像"><a href="#2-安装镜像" class="headerlink" title="2.安装镜像"></a>2.安装镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org --global</span><br><span class="line">npm config <span class="built_in">set</span> disturl https://npm.taobao.org/dist --global</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>很多地方都建议镜像，这里也安装镜像</p>
 </blockquote>
@@ -190,8 +190,8 @@
 <p>根据自己需求，可安可不安，习惯用npm</p>
 <p>Yarn是Facebook提供的替代npm的工具。</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g yarn react-native-cli</span><br><span class="line"></span><br><span class="line">设置镜像源：</span><br><span class="line">yarn config set registry https://registry.npm.taobao.org --global</span><br><span class="line">yarn config set disturl https://npm.taobao.org/dist --global</span><br></pre></td></tr></table></figure>
-<h3 id="4-创建React-Native项目"><a href="#4-创建React-Native项目" class="headerlink" title="4.创建React Native项目"></a>4.创建React Native项目</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">react-native init HelloReactNative</span><br><span class="line">cd HelloReactNative</span><br><span class="line">react-native run-android/run-ios</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install -g yarn react-native-cli</span><br><span class="line"></span><br><span class="line">//设置镜像源：</span><br><span class="line">yarn config <span class="built_in">set</span> registry https://registry.npm.taobao.org --global</span><br><span class="line">yarn config <span class="built_in">set</span> disturl https://npm.taobao.org/dist --global</span><br></pre></td></tr></table></figure>
+<h3 id="4-创建React-Native项目"><a href="#4-创建React-Native项目" class="headerlink" title="4.创建React Native项目"></a>4.创建React Native项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">react-native init HelloReactNative</span><br><span class="line"><span class="built_in">cd</span> HelloReactNative</span><br><span class="line">react-native run-android/run-ios</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>声明：文章是从CSDN迁过来的.</p>
 </blockquote>

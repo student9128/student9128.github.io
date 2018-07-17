@@ -186,7 +186,8 @@
 <p>默认吐司<br>吐司位置在中间<br>吐司中带有图片<br>吐司样式自定义<br>静态吐司<br>下面请看效果</p>
 <p><img src="https://segmentfault.com/img/bVAlgP" alt=""></p>
 <p>下面仅贴出几行关键代码，有兴趣的可以下载完整demo查看详情</p>
-<p> View toastView1 = View.inflate(MainActivity.this, R.layout.toast_view1, null);//填充Toast样式<br> Toast customizeToast1 = new Toast(getApplicationContext());<br> customizeToast1.setGravity(Gravity.CENTER, 0, 0);//设置吐司位置Gravity<br> customizeToast1.setView(toastView1);<br> customizeToast1.show();<br>关于自定义Toast更深一步的进阶，请点击参考这篇文章自定义吐司Toast（二）<br>具体代码请看demo详情点击下载免积分Demo</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">View toastView1 = View.inflate(MainActivity.<span class="keyword">this</span>, R.layout.toast_view1, <span class="keyword">null</span>);<span class="comment">//填充Toast样式</span></span><br><span class="line">Toast customizeToast1 = <span class="keyword">new</span> Toast(getApplicationContext());</span><br><span class="line">customizeToast1.setGravity(Gravity.CENTER, <span class="number">0</span>, <span class="number">0</span>);<span class="comment">//设置吐司位置Gravity</span></span><br><span class="line">customizeToast1.setView(toastView1);</span><br><span class="line">customizeToast1.show();</span><br></pre></td></tr></table></figure>
+<p>关于自定义Toast更深一步的进阶，请点击参考这篇文章自定义吐司Toast（二）<br>具体代码请看demo详情点击下载免积分Demo</p>
 <p>欢迎共同学习交流！</p>
 
     </div>
