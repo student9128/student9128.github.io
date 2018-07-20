@@ -425,6 +425,9 @@ pre {
 .main-navigation .navbar-header i:hover {
   color: #fff;
 }
+.main-navigation .navbar-header i{
+  margin-right: 50px;
+}
 @-webkit-keyframes move {
   0% {top: 30px;opacity: 1}
   50% {top: -30px;opacity: 1}
