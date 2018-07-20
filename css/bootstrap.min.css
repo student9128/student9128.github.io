@@ -7758,7 +7758,8 @@ button.close {
 }
 
 .pull-right {
-    float: right !important
+    float: right !important;
+    margin-right:50px;
 }
 
 .pull-left {
