@@ -936,7 +936,7 @@ pre {
   margin-top: 0;
   padding-bottom: 3px;
   padding-top: 3px;
-  /* border-bottom: 1px solid #ebebeb; */
+  border-bottom: 1px solid #ebebeb;
   margin-bottom: 21px;
   position: relative;
   padding-left: 20px;
@@ -1009,6 +1009,13 @@ left: 0;
 .widget #search-form {
   position: relative;
   width: 100%;
+}
+.widget .location .barmap{
+  margin-top: 30px;
+}
+.widget .location .clock{
+  /* margin-bottom: 20px; */
+text-align: center;
 }
 .widget #search-form .search-form-submit {
   float: right;
