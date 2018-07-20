@@ -1608,9 +1608,15 @@ pre .xml .cdata { opacity: 0.5; }
     width: 100%;
   }
 }
+.github-corner{
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .nav-toggle-button {
     display: none;
+  }
+  .github-corner{
+    display: block;
   }
 }
 @media screen and (min-width: 1100px) {
