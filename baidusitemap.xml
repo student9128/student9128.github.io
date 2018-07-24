@@ -1073,9 +1073,9 @@
         <title>Error:Execution failed for task ':app:compileDebugJavaWithJavac'.解决方案</title>
         <pubTime>2016-10-21T17:40:58.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>issue</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -1718,11 +1718,11 @@
         <title>Android Studio连接github</title>
         <pubTime>2016-11-09T06:57:43.000Z</pubTime>
         
+        <tag>AndroidStudio</tag>
+         
         <tag>Android</tag>
          
         <tag>移动开发</tag>
-         
-        <tag>AndroidStudio</tag>
          
          
            
@@ -1759,9 +1759,9 @@
         <title>Error:SSL peer shut down incorrectly的解决方案</title>
         <pubTime>2016-12-22T15:28:31.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>issue</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -1805,9 +1805,9 @@
         <title>Android Studio中的字体设置</title>
         <pubTime>2017-06-29T07:26:40.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>AndroidStudio</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -1827,9 +1827,9 @@
         <title>解决Sources for 'Android API 26 Platform' not found</title>
         <pubTime>2017-09-14T05:30:27.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>issue</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -1849,9 +1849,9 @@
         <title>Android Studio 3.0去掉方法参数提示</title>
         <pubTime>2017-09-30T05:08:00.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>AndroidStudio</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -2026,9 +2026,9 @@
         <title>Error:Execution failed for task ':app:transformClassesWithDexForDebug'.解决方案</title>
         <pubTime>2016-11-25T01:50:46.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>issue</tag>
+         
+        <tag>Android</tag>
          
          
            
@@ -2103,18 +2103,16 @@
 
     
   <url>
-    <loc>https://student9128.github.io/2018/04/15/VSCode%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</loc>
+    <loc>https://student9128.github.io/2018/03/31/ReactNative%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98(%E5%9B%9B)/</loc>
     <lastmod>2018-07-10T05:28:28.013Z</lastmod>
     <data>
         <display>
-        <title>VSCode常用插件</title>
-        <pubTime>2018-04-15T14:30:23.000Z</pubTime>
+        <title>ReactNative遇到的问(四)</title>
+        <pubTime>2018-03-31T15:09:11.000Z</pubTime>
         
         <tag>移动开发</tag>
          
         <tag>ReactNative</tag>
-         
-        <tag>VSCode</tag>
          
          
            
@@ -2127,16 +2125,18 @@
 
     
   <url>
-    <loc>https://student9128.github.io/2018/03/31/ReactNative%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98(%E5%9B%9B)/</loc>
+    <loc>https://student9128.github.io/2018/04/15/VSCode%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</loc>
     <lastmod>2018-07-10T05:28:28.013Z</lastmod>
     <data>
         <display>
-        <title>ReactNative遇到的问(四)</title>
-        <pubTime>2018-03-31T15:09:11.000Z</pubTime>
+        <title>VSCode常用插件</title>
+        <pubTime>2018-04-15T14:30:23.000Z</pubTime>
         
         <tag>移动开发</tag>
          
         <tag>ReactNative</tag>
+         
+        <tag>VSCode</tag>
          
          
            
