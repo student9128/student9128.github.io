@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="文藝学生">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="baidu-site-verification" content="nUsa1wf8KW" />
+    <link rel="dns-prefetch" href="https://student9128.github.io">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <link rel="stylesheet" href="https://sf-static.b0.upaiyun.com/v-576b52d9/3rd/highlightjs/styles/solarized_light.css">
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+    <script >hljs.initHighlightingOnLoad();</script>
+
+    
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>高德地图（一）之简单集成 | 文藝学生</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+
+<body>
+        <!-- <a href="https://github.com/student9128" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a> -->   
+    <a href="https://github.com/student9128"target="_blank" title='fork me on github' class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff;stroke:powderblue; stroke-width: 0px; color:#89BF64; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://student9128.github.io">文藝学生</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fas fa-home"></i>&nbsp;首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Android/"><i class="fab fa-android"></i>&nbsp;Android</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Java/"><i class="fab fa-java"></i>&nbsp;Java</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/ReactNative/"><i class="fab fa-react"></i>&nbsp;React Native</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fab fa-html5"></i>&nbsp;前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fas fa-book"></i>&nbsp;归档</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fas fa-user-circle"></i>&nbsp;关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="高德地图（一）之简单集成">
+            
+	            高德地图（一）之简单集成
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/移动开发" title='移动开发'>
+                        移动开发
+                    </a>
+                
+                    <a href="/tags/高德地图" title='高德地图'>
+                        高德地图
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/12/09</span>
+        </span>
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-eye"></i>
+            <span id="busuanzi_value_page_pv"></span>
+          </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>谈集成方案，无非就是按照官方文档搞一遍。这里不多赘述，和别的博客差不多，都是直接贴过程。<br>我这里使用Android Studio，不再使用添加jar包，so文件的方案了。直接通过Gradle来集成。</p>
+<h3 id="一、申请Key"><a href="#一、申请Key" class="headerlink" title="一、申请Key"></a>一、申请Key</h3><p>声明：该部分截图来自官网<br>注册完账号，进入后台，直接按照下图进行。<br><img src="/../images/20171209/20171209121659178.png"><br><img src="/../images/20171209/20171209121724474.png"><br><img src="/../images/20171209/20171209121740319.png"></p>
+<blockquote>
+<p>关于SHA1值获取，这里只说通过CMD来获取的方式：<br>进入key文件所在路径，通过<br><code>keytool -list -v -keystore key名字</code><br>来获取<br>如下图：<br><img src="/../images/20171209/20171209122420566.png"></p>
+</blockquote>
+<h3 id="二、在Android-Studio中集成"><a href="#二、在Android-Studio中集成" class="headerlink" title="二、在Android Studio中集成"></a>二、在Android Studio中集成</h3><p>这里仅通过gradle集成。个人感觉更快速方便。</p>
+<ul>
+<li><p>app gradle文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//3D地图</span></span><br><span class="line">  compile <span class="string">'com.amap.api:3dmap:latest.integration'</span></span><br><span class="line">  <span class="comment">// 定位功能</span></span><br><span class="line">  compile <span class="string">'com.amap.api:location:latest.integration'</span></span><br><span class="line">  <span class="comment">// 搜索功能</span></span><br><span class="line">  compile <span class="string">'com.amap.api:search:latest.integration'</span></span><br><span class="line">  <span class="comment">//2D地图</span></span><br><span class="line">  compile <span class="string">'com.amap.api:map2d:latest.integration'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清单文件</p>
+</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">&lt;!--用于进行网络定位--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_COARSE_LOCATION"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于访问GPS定位--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_FINE_LOCATION"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于获取运营商信息，用于支持提供运营商信息相关的接口--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_NETWORK_STATE"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于访问wifi网络信息，wifi信息会用于进行网络定位--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_WIFI_STATE"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于获取wifi的获取权限，wifi信息会用来进行网络定位--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.CHANGE_WIFI_STATE"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于访问网络，网络定位需要上网--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.INTERNET"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于读取手机当前的状态--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_PHONE_STATE"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于写入缓存数据到扩展存储卡--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.WRITE_EXTERNAL_STORAGE"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于申请调用A-GPS模块--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--用于申请获取蓝牙信息进行室内定位--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.BLUETOOTH"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.BLUETOOTH_ADMIN"</span>&gt;</span><span class="tag">&lt;/<span class="name">uses-permission</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>application里面添加如下</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">application</span> <span class="attr">...</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--高德地图集成--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--高德地图开始--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta-data</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:name</span>=<span class="string">"com.amap.api.v2.apikey"</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:value</span>=<span class="string">"你申请的key"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">service</span> <span class="attr">android:name</span>=<span class="string">"com.amap.api.location.APSService"</span>&gt;</span><span class="tag">&lt;/<span class="name">service</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--高德地图结束--&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>代码混淆</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="number">3</span>D 地图 V5.0.0之前：</span><br><span class="line">  -keep   <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">amap</span>.<span class="title">api</span>.<span class="title">maps</span>.**</span>&#123;*;&#125; </span><br><span class="line">  -keep   <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">autonavi</span>.<span class="title">amap</span>.<span class="title">mapcore</span>.*</span>&#123;*;&#125; </span><br><span class="line">  -keep   <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">amap</span>.<span class="title">api</span>.<span class="title">trace</span>.**</span>&#123;*;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">3</span>D 地图 V5.0.0之后：</span><br><span class="line">  -keep   <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">amap</span>.<span class="title">api</span>.<span class="title">maps</span>.**</span>&#123;*;&#125; </span><br><span class="line">  -keep   <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">autonavi</span>.**</span>&#123;*;&#125; </span><br><span class="line">  -keep   <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">amap</span>.<span class="title">api</span>.<span class="title">trace</span>.**</span>&#123;*;&#125;</span><br><span class="line"></span><br><span class="line">  定位</span><br><span class="line">  -keep <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">amap</span>.<span class="title">api</span>.<span class="title">location</span>.**</span>&#123;*;&#125;</span><br><span class="line">  -keep <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">amap</span>.<span class="title">api</span>.<span class="title">fence</span>.**</span>&#123;*;&#125;</span><br><span class="line">  -keep <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">autonavi</span>.<span class="title">aps</span>.<span class="title">amapapi</span>.<span class="title">model</span>.**</span>&#123;*;&#125;</span><br><span class="line"></span><br><span class="line">  搜索</span><br><span class="line">  -keep   <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">amap</span>.<span class="title">api</span>.<span class="title">services</span>.**</span>&#123;*;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="number">2</span>D地图</span><br><span class="line">  -keep <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">amap</span>.<span class="title">api</span>.<span class="title">maps2d</span>.**</span>&#123;*;&#125;</span><br><span class="line">  -keep <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">amap</span>.<span class="title">api</span>.<span class="title">mapcore2d</span>.**</span>&#123;*;&#125;</span><br><span class="line"></span><br><span class="line">  导航</span><br><span class="line">  -keep <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">amap</span>.<span class="title">api</span>.<span class="title">navi</span>.**</span>&#123;*;&#125;</span><br><span class="line">  -keep <span class="class"><span class="keyword">class</span> <span class="title">com</span>.<span class="title">autonavi</span>.**</span>&#123;*;&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：这里要提醒一点是，申请key的时候如果只填写了发布版是SHA1值，个人建议在Gradle中添加下面的代码，可以在debug中正常使用key</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">buildTypes &#123;</span><br><span class="line">       release &#123;</span><br><span class="line">           minifyEnabled <span class="keyword">false</span></span><br><span class="line">           <span class="function">proguardFiles <span class="title">getDefaultProguardFile</span><span class="params">(<span class="string">'proguard-android.txt'</span>)</span>, 'proguard-rules.pro'</span></span><br><span class="line"><span class="function">           signingConfig signingConfigs.release</span></span><br><span class="line"><span class="function">       &#125;</span></span><br><span class="line"><span class="function">       debug </span>&#123;</span><br><span class="line">           signingConfig signingConfigs.release<span class="comment">//使用签名文件</span></span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="三、实现效果"><a href="#三、实现效果" class="headerlink" title="三、实现效果"></a>三、实现效果</h3><p>基本配置完成了，剩下的就是在app里展示地图效果了</p>
+<blockquote>
+<p>布局</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">com.amap.api.maps.MapView</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/map_view"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">com.amap.api.maps.MapView</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>代码</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line">   <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">       setContentView(R.layout.activity_main);</span><br><span class="line">       ButterKnife.bind(<span class="keyword">this</span>);</span><br><span class="line">       mapView.onCreate(savedInstanceState);</span><br><span class="line">       aMap = mapView.getMap();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>效果<br>只进行了初始化，并不能定位到你所在位置。</p>
+</blockquote>
+<p><img src="/../images/20171209/20171209123952988.png" alt="这里写图片描述"></p>
+<p>更多请查看第二篇<a href="http://student9128.top/2017/12/09/%E9%AB%98%E5%BE%B7%E5%9C%B0%E5%9B%BE%EF%BC%88%E4%BA%8C%EF%BC%89%E4%B9%8B%E6%98%BE%E7%A4%BA%E5%AE%9A%E4%BD%8D%EF%BC%8C%E6%AF%94%E4%BE%8B%E5%B0%BA%E5%92%8C%E6%B7%BB%E5%8A%A0Marker/" target="_blank" rel="noopener">高德地图（二）之显示定位，比例尺和添加Marker</a></p>
+
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本博客主要用于学习记录，欢迎共同学习交流。转载请注明出处！
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+ 
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/高德地图（二）之显示定位，比例尺和添加Marker.html" class="pre-post btn btn-default" title='高德地图（二）之显示定位，比例尺和添加Marker'>
+            <i class="fa fa-arrow-left"></i>&nbsp;<span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">高德地图（二）之显示定位，比例尺和添加Marker</span>
+        </a>
+    
+    
+        <a href="/百度地图基本功能实现.html" class="next-post btn btn-default" title='百度地图基本功能实现'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">百度地图基本功能实现</span>&nbsp;<i class="fa fa-arrow-right"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+<!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+<link rel="stylesheet" href="/css/gitalk.css">
+<div id="gitalk-container"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '47e54c90da50ceb3772b',
+        clientSecret: '51a51e7e8981763706796db78efe2fc930a1f05d',
+        // id: window.location.pathname,
+        id:'{{page.title}}',
+        repo: 'student9128.github.io',
+        owner: 'student9128',
+        admin: 'student9128'
+    })
+    gitalk.render('gitalk-container')
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、申请Key"><span class="toc-text">一、申请Key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、在Android-Studio中集成"><span class="toc-text">二、在Android Studio中集成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、实现效果"><span class="toc-text">三、实现效果</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-arrow-up fa-2x"></i>
+</a>
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2016-2018 Kevin
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Theme by <a href="http://student9128.top/" title="点击查看">Kevin</a> based on <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+
+              <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              第<span id="busuanzi_value_site_uv"></span>位小伙伴你好,
+              <span id="busuanzi_container_site_pv">
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

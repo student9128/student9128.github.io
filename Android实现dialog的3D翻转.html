@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="文藝学生">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="baidu-site-verification" content="nUsa1wf8KW" />
+    <link rel="dns-prefetch" href="https://student9128.github.io">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <link rel="stylesheet" href="https://sf-static.b0.upaiyun.com/v-576b52d9/3rd/highlightjs/styles/solarized_light.css">
+    <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+    <script >hljs.initHighlightingOnLoad();</script>
+
+    
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>Android实现dialog的3D翻转 | 文藝学生</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+	<div class="hide">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan class='cnzz_stat_icon_1263868967 hide' %3E%3Cscript%20src%3D%22https%3A%2F%2Fs95.cnzz.com%2Fz_stat.php%3Fweb_id%3D1272564536%22%3E%3C%2Fscript%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1263868967%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</div>
+
+
+
+
+
+
+    
+</head>
+
+
+
+<body>
+        <!-- <a href="https://github.com/student9128" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a> -->   
+    <a href="https://github.com/student9128"target="_blank" title='fork me on github' class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff;stroke:powderblue; stroke-width: 0px; color:#89BF64; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="https://student9128.github.io">文藝学生</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fas fa-home"></i>&nbsp;首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Android/"><i class="fab fa-android"></i>&nbsp;Android</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/Java/"><i class="fab fa-java"></i>&nbsp;Java</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/ReactNative/"><i class="fab fa-react"></i>&nbsp;React Native</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fab fa-html5"></i>&nbsp;前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fas fa-book"></i>&nbsp;归档</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fas fa-user-circle"></i>&nbsp;关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Android实现dialog的3D翻转">
+            
+	            Android实现dialog的3D翻转
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/Android">
+            Android
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
+                
+                    <a href="/tags/移动开发" title='移动开发'>
+                        移动开发
+                    </a>
+                
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/08/17</span>
+        </span>
+        <span id="busuanzi_container_page_pv">
+            <i class="fa fa-eye"></i>
+            <span id="busuanzi_value_page_pv"></span>
+          </span>
+    
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p>本文实现了Android中dialog的3D翻转效果。这里通过一个简单的应用场景记录下。</p>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="/../images/20170817/20170817135448637.gif"></p>
+<blockquote>
+<p>起初自己的思路是Activity进行界面跳转实现旋转效果，网上看了很多，写下来发现效果不对。之后又看到Google上面的Card Flid Animation效果是这样的。</p>
+</blockquote>
+<p><img src="/../images/20170817/20170817140719317.gif"></p>
+<p>看着确实不错，然而拿下来demo放慢翻转速度后发现，不是我想要的。但是跟我看到的一个app里面的效果一样<br>然后想改成dialog试试效果，发现更是不行了。</p>
+<blockquote>
+<p>Card Flid Animation效果如下：<br>这个是通过Activity来切换Fragment实现的，可以看到区别是翻转时候貌似会变大，其实没用，只是翻转后的视觉问题。</p>
+</blockquote>
+<p><img src="/../images/20170817/20170817135608519.gif" width="300"></p>
+<blockquote>
+<p>听说openGl比较麻烦，并且没有用过。然后就搜了下Rotate3DAnimaitons。<br>搜到了这篇文章<br><a href="http://blog.csdn.net/growing_tree/article/details/50428148" target="_blank" rel="noopener">http://blog.csdn.net/growing_tree/article/details/50428148</a><br>所以这篇文章里的实现方法不是我的原创，是参考人家的。在这里感谢这位大神。<br>不过他这个是activity里的，我就想要一个dialog效果，因为电脑上TIM的打开红包这个3D效果看着不错，其实大同小异，就拿过来改成Dialog。<br>对于Rotate3DAnimaitons这篇文章已经很详细了，有需要的可以参考下。</p>
+</blockquote>
+<h4 id="这里也贴下Rotate3dAnimation-的代码"><a href="#这里也贴下Rotate3dAnimation-的代码" class="headerlink" title="这里也贴下Rotate3dAnimation 的代码"></a>这里也贴下Rotate3dAnimation 的代码</h4><blockquote>
+<p>简单加了两行注释</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * An animation that rotates the view on the Y axis between two specified angles.</span></span><br><span class="line"><span class="comment"> * This animation also adds a translation on the Z axis (depth) to improve the effect.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Rotate3dAnimation</span> <span class="keyword">extends</span> <span class="title">Animation</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">float</span> mFromDegrees;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">float</span> mToDegrees;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">float</span> mCenterX;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">float</span> mCenterY;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">float</span> mDepthZ;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">boolean</span> mReverse;</span><br><span class="line">    <span class="keyword">private</span> Camera mCamera;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Creates a new 3D rotation on the Y axis. The rotation is defined by its</span></span><br><span class="line"><span class="comment">     * start angle and its end angle. Both angles are in degrees. The rotation</span></span><br><span class="line"><span class="comment">     * is performed around a center point on the 2D space, definied by a pair</span></span><br><span class="line"><span class="comment">     * of X and Y coordinates, called centerX and centerY. When the animation</span></span><br><span class="line"><span class="comment">     * starts, a translation on the Z axis (depth) is performed. The length</span></span><br><span class="line"><span class="comment">     * of the translation can be specified, as well as whether the translation</span></span><br><span class="line"><span class="comment">     * should be reversed in time.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> fromDegrees the start angle of the 3D rotation //起始角度</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> toDegrees the end angle of the 3D rotation //结束角度</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> centerX the X center of the 3D rotation //x中轴线</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> centerY the Y center of the 3D rotation //y中轴线</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> reverse true if the translation should be reversed, false otherwise//是否反转</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Rotate3dAnimation</span><span class="params">(<span class="keyword">float</span> fromDegrees, <span class="keyword">float</span> toDegrees,</span></span></span><br><span class="line"><span class="function"><span class="params">            <span class="keyword">float</span> centerX, <span class="keyword">float</span> centerY, <span class="keyword">float</span> depthZ, <span class="keyword">boolean</span> reverse)</span> </span>&#123;</span><br><span class="line">        mFromDegrees = fromDegrees;</span><br><span class="line">        mToDegrees = toDegrees;</span><br><span class="line">        mCenterX = centerX;</span><br><span class="line">        mCenterY = centerY;</span><br><span class="line">        mDepthZ = depthZ;<span class="comment">//Z轴移动的距离，这个来影响视觉效果，可以解决flip animation那个给人看似放大的效果</span></span><br><span class="line">        mReverse = reverse;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initialize</span><span class="params">(<span class="keyword">int</span> width, <span class="keyword">int</span> height, <span class="keyword">int</span> parentWidth, <span class="keyword">int</span> parentHeight)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.initialize(width, height, parentWidth, parentHeight);</span><br><span class="line">        mCamera = <span class="keyword">new</span> Camera();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">applyTransformation</span><span class="params">(<span class="keyword">float</span> interpolatedTime, Transformation t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">float</span> fromDegrees = mFromDegrees;</span><br><span class="line">        <span class="keyword">float</span> degrees = fromDegrees + ((mToDegrees - fromDegrees) * interpolatedTime);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">float</span> centerX = mCenterX;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">float</span> centerY = mCenterY;</span><br><span class="line">        <span class="keyword">final</span> Camera camera = mCamera;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">final</span> Matrix matrix = t.getMatrix();</span><br><span class="line"></span><br><span class="line">        Log.i(<span class="string">"interpolatedTime"</span>, interpolatedTime+<span class="string">""</span>);</span><br><span class="line">        camera.save();</span><br><span class="line">        <span class="keyword">if</span> (mReverse) &#123;</span><br><span class="line">            camera.translate(<span class="number">0.0f</span>, <span class="number">0.0f</span>, mDepthZ * interpolatedTime);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            camera.translate(<span class="number">0.0f</span>, <span class="number">0.0f</span>, mDepthZ * (<span class="number">1.0f</span> - interpolatedTime));</span><br><span class="line">        &#125;</span><br><span class="line">        camera.rotateY(degrees);</span><br><span class="line">        camera.getMatrix(matrix);</span><br><span class="line">        camera.restore();</span><br><span class="line"></span><br><span class="line">        matrix.preTranslate(-centerX, -centerY);</span><br><span class="line">        matrix.postTranslate(centerX, centerY);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="dialog实现3D翻转代码，"><a href="#dialog实现3D翻转代码，" class="headerlink" title="dialog实现3D翻转代码，"></a>dialog实现3D翻转代码，</h4><blockquote>
+<p>说明：动画部分的代码是拿的搜的的那篇文章的</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyDialog</span> <span class="keyword">extends</span> <span class="title">Dialog</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@BindView</span>(R.id.et_user_name)</span><br><span class="line">    EditText etUserName;</span><br><span class="line">    <span class="meta">@BindView</span>(R.id.et_password)</span><br><span class="line">    EditText etPassword;</span><br><span class="line">    <span class="meta">@BindView</span>(R.id.cb_auto_login)</span><br><span class="line">    CheckBox cbAutoLogin;</span><br><span class="line">    <span class="meta">@BindView</span>(R.id.tv_forget_pwd)</span><br><span class="line">    TextView tvForgetPwd;</span><br><span class="line">    <span class="meta">@BindView</span>(R.id.ll_content)</span><br><span class="line">    LinearLayout llContent;</span><br><span class="line">    <span class="meta">@BindView</span>(R.id.et_email)</span><br><span class="line">    EditText etEmail;</span><br><span class="line">    <span class="meta">@BindView</span>(R.id.btn_back)</span><br><span class="line">    Button btnBack;</span><br><span class="line">    <span class="meta">@BindView</span>(R.id.container)</span><br><span class="line">    RelativeLayout container;</span><br><span class="line">    <span class="keyword">private</span> Context context;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@BindView</span>(R.id.ll_register)</span><br><span class="line">    LinearLayout llRegister;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//接口回调传递参数</span></span><br><span class="line">    <span class="keyword">private</span> OnClickListenerInterface mListener;</span><br><span class="line">    <span class="keyword">private</span> View view;</span><br><span class="line"><span class="comment">//</span></span><br><span class="line">    <span class="keyword">private</span> String strContent;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> centerX;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> centerY;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> depthZ = <span class="number">700</span>;<span class="comment">//修改此处可以改变距离来达到你满意的效果</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> duration = <span class="number">300</span>;<span class="comment">//动画时间</span></span><br><span class="line">    <span class="keyword">private</span> Rotate3dAnimation openAnimation;</span><br><span class="line">    <span class="keyword">private</span> Rotate3dAnimation closeAnimation;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> isOpen = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">OnClickListenerInterface</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 确认,</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">doConfirm</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 取消</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line"><span class="comment">//        public void doCancel();</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyDialog</span><span class="params">(Context context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(context);</span><br><span class="line">        <span class="keyword">this</span>.context = context;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyDialog</span><span class="params">(Context context, String content)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(context);</span><br><span class="line">        <span class="keyword">this</span>.context = context;</span><br><span class="line">        <span class="keyword">this</span>.strContent = content;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        <span class="comment">//去掉系统的黑色矩形边框</span></span><br><span class="line">        getWindow().setBackgroundDrawableResource(android.R.color.transparent);</span><br><span class="line">        requestWindowFeature(Window.FEATURE_NO_TITLE);</span><br><span class="line"></span><br><span class="line">        init();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        LayoutInflater inflater = LayoutInflater.from(context);</span><br><span class="line">        view = inflater.inflate(R.layout.dialog_my, <span class="keyword">null</span>);</span><br><span class="line">        setContentView(view);</span><br><span class="line">        ButterKnife.bind(<span class="keyword">this</span>);</span><br><span class="line">        etPassword.setTypeface(Typeface.DEFAULT);</span><br><span class="line">        etPassword.setTransformationMethod(<span class="keyword">new</span> PasswordTransformationMethod());</span><br><span class="line">        tvForgetPwd.setOnClickListener(<span class="keyword">new</span> OnWidgetClickListener());</span><br><span class="line">        btnBack.setOnClickListener(<span class="keyword">new</span> OnWidgetClickListener());</span><br><span class="line">        Window dialogWindow = getWindow();</span><br><span class="line">        WindowManager.LayoutParams lp = dialogWindow.getAttributes();</span><br><span class="line">        DisplayMetrics d = context.getResources().getDisplayMetrics(); <span class="comment">// 获取屏幕宽、高用</span></span><br><span class="line">        lp.width = (<span class="keyword">int</span>) (d.widthPixels * <span class="number">0.8</span>); <span class="comment">// 宽度设置为屏幕的0.8</span></span><br><span class="line">        lp.height = (<span class="keyword">int</span>) (d.heightPixels * <span class="number">0.6</span>); <span class="comment">// 高度设置为屏幕的0.6</span></span><br><span class="line">        dialogWindow.setAttributes(lp);</span><br><span class="line">        setCanceledOnTouchOutside(<span class="keyword">false</span>);</span><br><span class="line">        setCancelable(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setClicklistener</span><span class="params">(OnClickListenerInterface clickListenerInterface)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.mListener = clickListenerInterface;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">OnWidgetClickListener</span> <span class="keyword">implements</span> <span class="title">View</span>.<span class="title">OnClickListener</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> id = v.getId();</span><br><span class="line">            <span class="keyword">switch</span> (id) &#123;</span><br><span class="line">                <span class="keyword">case</span> R.id.tv_forget_pwd:</span><br><span class="line">                    startAnimation();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> R.id.btn_back:</span><br><span class="line">                    startAnimation();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">startAnimation</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//接口回调传递参数</span></span><br><span class="line">        centerX = container.getWidth() / <span class="number">2</span>;</span><br><span class="line">        centerY = container.getHeight() / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (openAnimation == <span class="keyword">null</span>) &#123;</span><br><span class="line">            initOpenAnim();</span><br><span class="line">            initCloseAnim();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//用作判断当前点击事件发生时动画是否正在执行</span></span><br><span class="line">        <span class="keyword">if</span> (openAnimation.hasStarted() &amp;&amp; !openAnimation.hasEnded()) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (closeAnimation.hasStarted() &amp;&amp; !closeAnimation.hasEnded()) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//判断动画执行</span></span><br><span class="line">        <span class="keyword">if</span> (isOpen) &#123;</span><br><span class="line"></span><br><span class="line">            container.startAnimation(openAnimation);</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">            container.startAnimation(closeAnimation);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        isOpen = !isOpen;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *注意旋转角度</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">initOpenAnim</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//从0到90度，顺时针旋转视图，此时reverse参数为true，达到90度时动画结束时视图变得不可见，</span></span><br><span class="line">        openAnimation = <span class="keyword">new</span> Rotate3dAnimation(<span class="number">0</span>, <span class="number">90</span>, centerX, centerY, depthZ, <span class="keyword">true</span>);</span><br><span class="line">        openAnimation.setDuration(duration);</span><br><span class="line">        openAnimation.setFillAfter(<span class="keyword">true</span>);</span><br><span class="line">        openAnimation.setInterpolator(<span class="keyword">new</span> AccelerateInterpolator());</span><br><span class="line">        openAnimation.setAnimationListener(<span class="keyword">new</span> Animation.AnimationListener() &#123;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationStart</span><span class="params">(Animation animation)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationRepeat</span><span class="params">(Animation animation)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationEnd</span><span class="params">(Animation animation)</span> </span>&#123;</span><br><span class="line">                llRegister.setVisibility(View.GONE);</span><br><span class="line">                llContent.setVisibility(View.VISIBLE);</span><br><span class="line">                <span class="comment">//从270到360度，顺时针旋转视图，此时reverse参数为false，达到360度动画结束时视图变得可见</span></span><br><span class="line">                Rotate3dAnimation rotateAnimation = <span class="keyword">new</span> Rotate3dAnimation(<span class="number">270</span>, <span class="number">360</span>, centerX, centerY, depthZ, <span class="keyword">false</span>);</span><br><span class="line">                rotateAnimation.setDuration(duration);</span><br><span class="line">                rotateAnimation.setFillAfter(<span class="keyword">true</span>);</span><br><span class="line">                rotateAnimation.setInterpolator(<span class="keyword">new</span> DecelerateInterpolator());</span><br><span class="line">                container.startAnimation(rotateAnimation);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">   </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">initCloseAnim</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        closeAnimation = <span class="keyword">new</span> Rotate3dAnimation(<span class="number">360</span>, <span class="number">270</span>, centerX, centerY, depthZ, <span class="keyword">true</span>);</span><br><span class="line">        closeAnimation.setDuration(duration);</span><br><span class="line">        closeAnimation.setFillAfter(<span class="keyword">true</span>);</span><br><span class="line">        closeAnimation.setInterpolator(<span class="keyword">new</span> AccelerateInterpolator());</span><br><span class="line">        closeAnimation.setAnimationListener(<span class="keyword">new</span> Animation.AnimationListener() &#123;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationStart</span><span class="params">(Animation animation)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationRepeat</span><span class="params">(Animation animation)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAnimationEnd</span><span class="params">(Animation animation)</span> </span>&#123;</span><br><span class="line">                llRegister.setVisibility(View.VISIBLE);</span><br><span class="line">                llContent.setVisibility(View.GONE);</span><br><span class="line">                Rotate3dAnimation rotateAnimation = <span class="keyword">new</span> Rotate3dAnimation(<span class="number">90</span>, <span class="number">0</span>, centerX, centerY, depthZ, <span class="keyword">false</span>);</span><br><span class="line">                rotateAnimation.setDuration(duration);</span><br><span class="line">                rotateAnimation.setFillAfter(<span class="keyword">true</span>);</span><br><span class="line">                rotateAnimation.setInterpolator(<span class="keyword">new</span> DecelerateInterpolator());</span><br><span class="line">                container.startAnimation(rotateAnimation);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>关于Flip效果的实现可以参考文章<a href="http://blog.csdn.net/student9128/article/details/77330824" target="_blank" rel="noopener">Card Flip Animations的实现</a>，</p>
+<p>源码中也有Flip效果的实现</p>
+</blockquote>
+<h3 id="Demo下载"><a href="#Demo下载" class="headerlink" title="Demo下载"></a><a href="http://download.csdn.net/download/student9128/9938049" target="_blank" rel="noopener">Demo下载</a></h3><blockquote>
+<p>说明：上传的Demo全部为免积分，现在CSDN设置最低收了一积分，没办法了。没有积分的可以在github上下载</p>
+</blockquote>
+<h3 id="githHub下载"><a href="#githHub下载" class="headerlink" title="githHub下载"></a><a href="https://github.com/student9128/DialogFlipTest" target="_blank" rel="noopener">githHub下载</a></h3>
+    </div>
+
+    <div class="post-footer">
+        <div>
+            
+                转载声明：本博客主要用于学习记录，欢迎共同学习交流。转载请注明出处！
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+ 
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/Card-Flip-Animations的实现.html" class="pre-post btn btn-default" title='Card Flip Animations的实现'>
+            <i class="fa fa-arrow-left"></i>&nbsp;<span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Card Flip Animations的实现</span>
+        </a>
+    
+    
+        <a href="/验证-i和i-的区别.html" class="next-post btn btn-default" title='验证++i和i++的区别'>
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">验证++i和i++的区别</span>&nbsp;<i class="fa fa-arrow-right"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+<!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+<link rel="stylesheet" href="/css/gitalk.css">
+<div id="gitalk-container"></div>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '47e54c90da50ceb3772b',
+        clientSecret: '51a51e7e8981763706796db78efe2fc930a1f05d',
+        // id: window.location.pathname,
+        id:'{{page.title}}',
+        repo: 'student9128.github.io',
+        owner: 'student9128',
+        admin: 'student9128'
+    })
+    gitalk.render('gitalk-container')
+</script>	
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#效果图"><span class="toc-text">效果图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#这里也贴下Rotate3dAnimation-的代码"><span class="toc-text">这里也贴下Rotate3dAnimation 的代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dialog实现3D翻转代码，"><span class="toc-text">dialog实现3D翻转代码，</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Demo下载"><span class="toc-text">Demo下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#githHub下载"><span class="toc-text">githHub下载</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-arrow-up fa-2x"></i>
+</a>
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2016-2018 Kevin
+                </span> |
+                <!-- <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | -->
+                <span>
+                    Theme by <a href="http://student9128.top/" title="点击查看">Kevin</a> based on <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+
+              <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+              第<span id="busuanzi_value_site_uv"></span>位小伙伴你好,
+              <span id="busuanzi_container_site_pv">
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
