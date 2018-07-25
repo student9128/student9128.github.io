@@ -644,7 +644,25 @@ pre {
 .post-content .post-title .post-pick{
   /* display: inline-block; */
   background: #f4f4f4;
-  color: #aa96da;
+  color: #7a4579;
+  font-size: 0.9em;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  text-align: center;
+  /* height: 32px; */
+  /* line-height: 32px; */
+  margin-right: 10px;
+  padding: 5px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 3em;
+
+}
+.post-content .post-title .post-study{
+  /* display: inline-block; */
+  background: #f4f4f4;
+  color: #df8931;
   font-size: 0.9em;
   -webkit-border-radius: 20px;
   border-radius: 20px;
