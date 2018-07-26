@@ -1,3 +1,5 @@
+https://student9128.github.io/Java重学习笔记2nd.html
+https://student9128.github.io/Java重学习笔记1st.html
 https://student9128.github.io/JAVA标识符命名规则.html
 https://student9128.github.io/FontAwesome在Android中的使用.html
 https://student9128.github.io/Android-Studio-3-1-2添加Module的问题.html
@@ -96,5 +98,3 @@ https://student9128.github.io/自定义吐司Toast.html
 https://student9128.github.io/Genymotion模拟器在Eclipse上的安装.html
 https://student9128.github.io/Genymotion模拟器在Android-Studio上的安装.html
 https://student9128.github.io/win10去掉删除确认对话框.html
-https://student9128.github.io/AndroidStudio导入第三方库.html
-https://student9128.github.io/Dialog样式的Activity.html

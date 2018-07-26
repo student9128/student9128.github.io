@@ -35,7 +35,7 @@
     <!--Title-->
 
 
-<title>Android Studio连接github | 文藝学生</title>
+<title>Java重学习笔记2nd | 文藝学生</title>
 
 
     <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
@@ -149,9 +149,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Android Studio连接github">
+        <h1 id="Java重学习笔记2nd">
             
-	            Android Studio连接github
+	            Java重学习笔记2nd
             
         </h1>
         <div class="post-meta">
@@ -159,8 +159,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/Android">
-            Android
+        <a href="/categories/Java">
+            Java
         </a>
     </span>
     
@@ -170,16 +170,8 @@
         <span class="tags-meta">
             
                 
-                    <a href="/tags/Android" title='Android'>
-                        Android
-                    </a>
-                
-                    <a href="/tags/AndroidStudio" title='AndroidStudio'>
-                        AndroidStudio
-                    </a>
-                
-                    <a href="/tags/移动开发" title='移动开发'>
-                        移动开发
+                    <a href="/tags/Java" title='Java'>
+                        Java
                     </a>
                 
             
@@ -191,7 +183,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2016/11/09</span>
+            <span class="date-meta">2018/07/26</span>
         </span>
         <span id="busuanzi_container_page_pv">
             <i class="fa fa-eye"></i>
@@ -205,24 +197,46 @@
     </div>
     
     <div class="post-body post-content">
-        <p>GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。<br>Android Studio在Android开发中也已经成为主流了。</p>
-<p><hr><br><strong>下面记录下Android Studio如何连接github。</strong></p>
-<h3 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h3><p>首先要电脑已经安装Git了，通过Git来连接github。</p>
+        <p>Java作为一种面向对象的语言，支持一下概念：</p>
+<ol>
+<li>多态</li>
+<li>继承</li>
+<li>封装</li>
+<li>抽象</li>
+<li>类</li>
+<li>对象</li>
+<li>实例</li>
+<li>方法</li>
+<li>重载</li>
+</ol>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>一个类可以包含以下类型变量：</p>
+<ul>
+<li>局部变量：在方法、构造方法或者语句块中定义的变量被称为局部变量。变量声明和初始化都是在方法中，方法结束后，变量就会自动销毁。</li>
+<li>成员变量：成员变量是定义在类中，方法体之外的变量。这种变量在创建对象的时候实例化。成员变量可以被类中方法、构造方法和特定类的语句块访问。</li>
+<li>类变量：类变量也声明在类中，方法体之外，但必须声明为static类型。</li>
+</ul>
+<h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><p>每个类都有构造方法。如果没有显式地为类定义构造方法，Java编译器将会为该类提供一个默认构造方法。<br>在创建一个对象的时候，至少要调用一个构造方法。构造方法的名称必须与类同名，一个类可以有多个构造方法。<br>下面是一个构造方法示例：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Puppy</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Puppy</span><span class="params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Puppy</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">        <span class="comment">// 这个构造器仅有一个参数：name</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h2><p>对象是根据类创建的。在Java中，使用关键字new来创建一个新的对象。创建对象需要以下三步：</p>
+<ol>
+<li>声明：声明一个对象，包括对象名称和对象类型。</li>
+<li>实例化：使用关键字new来创建一个对象。</li>
+<li>初始化：使用new创建对象时，会调用构造方法初始化对象。<br>下面是一个创建对象的例子：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Puppy</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Puppy</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">      <span class="comment">//这个构造器仅有一个参数：name</span></span><br><span class="line">      System.out.println(<span class="string">"小狗的名字是 : "</span> + name ); </span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">      <span class="comment">// 下面的语句将创建一个Puppy对象</span></span><br><span class="line">      Puppy myPuppy = <span class="keyword">new</span> Puppy( <span class="string">"tommy"</span> );</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <blockquote>
-<p>至于Git连接的github的方法。我在<b><a href="http://student9128.top/2016/11/09/Git%E8%BF%9E%E6%8E%A5github/" title="点击查看此篇文章" target="_blank">《Git连接github》</a></b>已经记录了。不会的可以参考下看看。</p>
+<p>访问成员变量和成员方法</p>
 </blockquote>
-<h3 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h3><p>在Android Studio的Setting里面分别设置git和github。如下图所示：</p>
-<p><img src="/../images/20161109/20161109144856134.png"></p>
-<p><img src="/../images/20161109/20161109144925571.png"></p>
-<blockquote>
-<p>注意：别忘记点Apply</p>
-</blockquote>
-<p>想看看是否连接上了，可以点击Test按钮看看。</p>
-<h3 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h3><p>如果你Test的结果是已经连接成功了。下面就可以发布代码了。啥都不说了，直接看图，简单明了。如下图所示：</p>
-<p><img src="/../images/20161109/20161109145323159.png"></p>
-<p><img src="/../images/20161109/20161109145405573.png"></p>
-<p><img src="/../images/20161109/20161109145439183.png"><br>点击完OK，就可以去github上看看了。好了，代码已经上传成功。是不是很简单~</p>
-<p><em>去上传代码去咯~~~(^o^)/~</em></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Puppy</span></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> puppyAge;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Puppy</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">      <span class="comment">// 这个构造器仅有一个参数：name</span></span><br><span class="line">      System.out.println(<span class="string">"小狗的名字是 : "</span> + name ); </span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">( <span class="keyword">int</span> age )</span></span>&#123;</span><br><span class="line">       puppyAge = age;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">( )</span></span>&#123;</span><br><span class="line">       System.out.println(<span class="string">"小狗的年龄为 : "</span> + puppyAge ); </span><br><span class="line">       <span class="keyword">return</span> puppyAge;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>&#123;</span><br><span class="line">      <span class="comment">/* 创建对象 */</span></span><br><span class="line">      Puppy myPuppy = <span class="keyword">new</span> Puppy( <span class="string">"tommy"</span> );</span><br><span class="line">      <span class="comment">/* 通过方法来设定age */</span></span><br><span class="line">      myPuppy.setAge( <span class="number">2</span> );</span><br><span class="line">      <span class="comment">/* 调用另一个方法获取age */</span></span><br><span class="line">      myPuppy.getAge( );</span><br><span class="line">      <span class="comment">/*你也可以像下面这样访问成员变量 */</span></span><br><span class="line">      System.out.println(<span class="string">"变量值 : "</span> + myPuppy.puppyAge ); </span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="源文件声明规则"><a href="#源文件声明规则" class="headerlink" title="源文件声明规则"></a>源文件声明规则</h2><p>在本节的最后部分，我们将学习源文件的声明规则。当在一个源文件中定义多个类，并且还有import语句和package语句时，要特别注意这些规则。</p>
+<ul>
+<li>一个源文件中只能有一个public类</li>
+<li>一个源文件可以有多个非public类</li>
+<li>源文件的名称应该和public类的类名保持一致。例如：源文件中public类的类名是Employee，那么源文件应该命名为Employee.java。</li>
+<li>如果一个类定义在某个包中，那么package语句应该在源文件的首行。</li>
+<li>如果源文件包含import语句，那么应该放在package语句和类定义之间。如果没有package语句，那么import语句应该在源文件中最前面。</li>
+<li>import语句和package语句对源文件中定义的所有类都有效。在同一源文件中，不能给不同的类不同的包声明。</li>
+</ul>
+<p><strong>内容来源：<a href="http://www.runoob.com" target="_blank" rel="noopener">www.runoob.com</a></strong></p>
 
     </div>
 
@@ -241,15 +255,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/解决Chrome浏览器Flash-Player过期的问题.html" class="pre-post btn btn-default" title='解决Chrome浏览器Flash Player过期的问题'>
-            <i class="fa fa-arrow-left"></i>&nbsp;<span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">解决Chrome浏览器Flash Player过期的问题</span>
-        </a>
     
-    
-        <a href="/Git连接github.html" class="next-post btn btn-default" title='Git连接github'>
+        <a href="/Java重学习笔记1st.html" class="next-post btn btn-default" title='Java重学习笔记1st'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Git连接github</span>&nbsp;<i class="fa fa-arrow-right"></i>
+            <span class="hidden-xs">Java重学习笔记1st</span>&nbsp;<i class="fa fa-arrow-right"></i>
         </a>
     
 </div>
@@ -285,7 +294,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步："><span class="toc-text">第一步：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步："><span class="toc-text">第二步：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步："><span class="toc-text">第三步：</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#类"><span class="toc-text">类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构造方法"><span class="toc-text">构造方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建对象"><span class="toc-text">创建对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源文件声明规则"><span class="toc-text">源文件声明规则</span></a></li></ol>
         
     </div>
 </aside>

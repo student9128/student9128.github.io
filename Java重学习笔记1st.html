@@ -35,7 +35,7 @@
     <!--Title-->
 
 
-<title>Android Studio连接github | 文藝学生</title>
+<title>Java重学习笔记1st | 文藝学生</title>
 
 
     <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
@@ -149,9 +149,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Android Studio连接github">
+        <h1 id="Java重学习笔记1st">
             
-	            Android Studio连接github
+	            Java重学习笔记1st
             
         </h1>
         <div class="post-meta">
@@ -159,8 +159,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/Android">
-            Android
+        <a href="/categories/Java">
+            Java
         </a>
     </span>
     
@@ -170,16 +170,8 @@
         <span class="tags-meta">
             
                 
-                    <a href="/tags/Android" title='Android'>
-                        Android
-                    </a>
-                
-                    <a href="/tags/AndroidStudio" title='AndroidStudio'>
-                        AndroidStudio
-                    </a>
-                
-                    <a href="/tags/移动开发" title='移动开发'>
-                        移动开发
+                    <a href="/tags/Java" title='Java'>
+                        Java
                     </a>
                 
             
@@ -191,7 +183,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2016/11/09</span>
+            <span class="date-meta">2018/07/26</span>
         </span>
         <span id="busuanzi_container_page_pv">
             <i class="fa fa-eye"></i>
@@ -205,24 +197,307 @@
     </div>
     
     <div class="post-body post-content">
-        <p>GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。<br>Android Studio在Android开发中也已经成为主流了。</p>
-<p><hr><br><strong>下面记录下Android Studio如何连接github。</strong></p>
-<h3 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h3><p>首先要电脑已经安装Git了，通过Git来连接github。</p>
-<blockquote>
-<p>至于Git连接的github的方法。我在<b><a href="http://student9128.top/2016/11/09/Git%E8%BF%9E%E6%8E%A5github/" title="点击查看此篇文章" target="_blank">《Git连接github》</a></b>已经记录了。不会的可以参考下看看。</p>
+        <blockquote>
+<p>一个Java程序可以认为是一系列对象的集合，而这些对象通过调用彼此的方法来协同工作。</p>
 </blockquote>
-<h3 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h3><p>在Android Studio的Setting里面分别设置git和github。如下图所示：</p>
-<p><img src="/../images/20161109/20161109144856134.png"></p>
-<p><img src="/../images/20161109/20161109144925571.png"></p>
+<ul>
+<li>对象：对象是类的一个实例，有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。</li>
+<li>类：类是一个模板，它描述一类对象的行为和状态。</li>
+<li>方法：方法就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。</li>
+<li>实例变量：每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定。</li>
+</ul>
 <blockquote>
-<p>注意：别忘记点Apply</p>
+<p>编写Java程序时，应注意以下几点：</p>
 </blockquote>
-<p>想看看是否连接上了，可以点击Test按钮看看。</p>
-<h3 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h3><p>如果你Test的结果是已经连接成功了。下面就可以发布代码了。啥都不说了，直接看图，简单明了。如下图所示：</p>
-<p><img src="/../images/20161109/20161109145323159.png"></p>
-<p><img src="/../images/20161109/20161109145405573.png"></p>
-<p><img src="/../images/20161109/20161109145439183.png"><br>点击完OK，就可以去github上看看了。好了，代码已经上传成功。是不是很简单~</p>
-<p><em>去上传代码去咯~~~(^o^)/~</em></p>
+<ul>
+<li>大小写敏感：Java是大小写敏感的，这就意味着标识符Hello与hello是不同的。</li>
+<li>类名：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 MyFirstJavaClass 。</li>
+<li>方法名：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。</li>
+<li>源文件名：源文件名必须和类名相同。当保存文件的时候，你应该使用类名作为文件名保存（切记Java是大小写敏感的），文件名的后缀为.java。（如果文件名和类名不相同则会导致编译错误）。</li>
+<li>主方法入口：所有的Java 程序由public static void main(String []args)方法开始执行。</li>
+</ul>
+<blockquote>
+<p>像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。主要有两类修饰符：</p>
+</blockquote>
+<ul>
+<li>访问控制修饰符 : default, public , protected, private</li>
+<li>非访问控制修饰符 : final, abstract, strictfp</li>
+</ul>
+<blockquote>
+<p>数组是储存在堆上的对象，可以保存多个同类型变量</p>
+</blockquote>
+<blockquote>
+<p>java空行：空白行，或者有注释的行，Java编译器都会忽略掉。</p>
+</blockquote>
+<blockquote>
+<p><em>继承</em><br>    在Java中，一个类可以由其他类派生。如果你要创建一个类，而且已经存在一个类具有你所需要的属性或方法，那么你可以将新创建的类继承该类。<br>    利用继承的方法，可以重用已存在类的方法和属性，而不用重写这些代码。被继承的类称为超类（super class），派生类称为子类（subclass）。</p>
+</blockquote>
+<blockquote>
+<p><em>接口</em><br>    在Java中，接口可理解为对象间相互通信的协议。接口在继承中扮演着很重要的角色。<br>    接口只定义派生要用到的方法，但是方法的具体实现完全取决于派生类。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类别</th>
+<th style="text-align:left">关键字</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">访问控制</td>
+<td style="text-align:left">private</td>
+<td style="text-align:left">私有的</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">protected</td>
+<td style="text-align:left">受保护的</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">public</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:center">类、方法和变量修饰符</td>
+<td style="text-align:left">abstract</td>
+<td style="text-align:left">声明抽象</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">class</td>
+<td style="text-align:left">类</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">extends</td>
+<td style="text-align:left">扩允，继承</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">final</td>
+<td style="text-align:left">最终值，不可变的</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">implements</td>
+<td style="text-align:left">实现（接口）</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">interface</td>
+<td style="text-align:left">接口</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">native</td>
+<td style="text-align:left">本地，原生方法（非java实现）</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">new</td>
+<td style="text-align:left">新，创建</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">static</td>
+<td style="text-align:left">静态</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">strictfp</td>
+<td style="text-align:left">严格，精准</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">synchronized</td>
+<td style="text-align:left">线程，同步</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">transient</td>
+<td style="text-align:left">短暂</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">volatile</td>
+<td style="text-align:left">易失</td>
+</tr>
+<tr>
+<td style="text-align:center">程序控制语句</td>
+<td style="text-align:left">break</td>
+<td style="text-align:left">跳出循环</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">case</td>
+<td style="text-align:left">定义一个值以供switch选择</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">continue</td>
+<td style="text-align:left">继续</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">default</td>
+<td style="text-align:left">默认</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">do</td>
+<td style="text-align:left">运行</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">else</td>
+<td style="text-align:left">否则</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">for</td>
+<td style="text-align:left">循环</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">if</td>
+<td style="text-align:left">如果</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">instanceof</td>
+<td style="text-align:left">实例</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">return</td>
+<td style="text-align:left">返回</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">switch</td>
+<td style="text-align:left">根据值选择</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">while</td>
+<td style="text-align:left">选择</td>
+</tr>
+<tr>
+<td style="text-align:center">错误处理</td>
+<td style="text-align:left">assert</td>
+<td style="text-align:left">断言表达式是否为真</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">catch</td>
+<td style="text-align:left">捕捉异常</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">finally</td>
+<td style="text-align:left">有没有异常都执行</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">throw</td>
+<td style="text-align:left">抛出一个异常对象</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">throws</td>
+<td style="text-align:left">声明一个异常可能被抛出</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">try</td>
+<td style="text-align:left">捕捉异常</td>
+</tr>
+<tr>
+<td style="text-align:center">包相关</td>
+<td style="text-align:left">import</td>
+<td style="text-align:left">引入</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">package</td>
+<td style="text-align:left">包</td>
+</tr>
+<tr>
+<td style="text-align:center">基本类型</td>
+<td style="text-align:left">boolean</td>
+<td style="text-align:left">布尔型</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">字节型</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">char</td>
+<td style="text-align:left">字符型</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">double</td>
+<td style="text-align:left">双精度浮点型</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">float</td>
+<td style="text-align:left">单精度浮点型</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">int</td>
+<td style="text-align:left">整型</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">long</td>
+<td style="text-align:left">长整型</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">short</td>
+<td style="text-align:left">短整型</td>
+</tr>
+<tr>
+<td style="text-align:center">变量引用</td>
+<td style="text-align:left">super</td>
+<td style="text-align:left">父类，超类</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">this</td>
+<td style="text-align:left">本类</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">void</td>
+<td style="text-align:left">无返回值</td>
+</tr>
+<tr>
+<td style="text-align:center">保留关键字</td>
+<td style="text-align:left">goto</td>
+<td style="text-align:left">是关键字，但不能使用</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">const</td>
+<td style="text-align:left">是关键字，但不能使用</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:left">null</td>
+<td style="text-align:left">空</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">表格中的“-”表示和上面的类别是一样的。</span><br></pre></td></tr></table></figure>
+<p><strong>内容来源：<a href="http://www.runoob.com" target="_blank" rel="noopener">www.runoob.com</a></strong></p>
 
     </div>
 
@@ -241,15 +516,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/解决Chrome浏览器Flash-Player过期的问题.html" class="pre-post btn btn-default" title='解决Chrome浏览器Flash Player过期的问题'>
+        <a href="/Java重学习笔记2nd.html" class="pre-post btn btn-default" title='Java重学习笔记2nd'>
             <i class="fa fa-arrow-left"></i>&nbsp;<span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">解决Chrome浏览器Flash Player过期的问题</span>
+            <span class="hidden-xs">Java重学习笔记2nd</span>
         </a>
     
     
-        <a href="/Git连接github.html" class="next-post btn btn-default" title='Git连接github'>
+        <a href="/JAVA标识符命名规则.html" class="next-post btn btn-default" title='JAVA标识符命名规则'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Git连接github</span>&nbsp;<i class="fa fa-arrow-right"></i>
+            <span class="hidden-xs">JAVA标识符命名规则</span>&nbsp;<i class="fa fa-arrow-right"></i>
         </a>
     
 </div>
@@ -285,7 +560,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一步："><span class="toc-text">第一步：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二步："><span class="toc-text">第二步：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三步："><span class="toc-text">第三步：</span></a></li></ol>
+            <p>暂无目录</p>
         
     </div>
 </aside>
