@@ -312,16 +312,16 @@ pre {
 .main-navigation .navbar-collapse {
   /* border-top: 1px solid #ebebeb; */
   /* border-top: 1px solid #fff; */
-  color: #fff;
+  color: #1989ac;
 }
 .main-navigation .navbar-brand {
   max-width: 90%;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  padding: 19px 0 0 0;
+  padding: 10 0 0 0;
   font-size: 14px;
-  color: #fff;
+  color: #1989ac;
   display: none;
 }
 .main-navigation .navbar-header{
