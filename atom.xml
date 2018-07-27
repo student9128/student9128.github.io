@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://student9128.github.io/"/>
-  <updated>2018-07-26T08:24:05.784Z</updated>
+  <updated>2018-07-27T06:45:23.957Z</updated>
   <id>https://student9128.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java重学习笔记3rd</title>
+    <link href="https://student9128.github.io/Java%E9%87%8D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03rd.html"/>
+    <id>https://student9128.github.io/Java重学习笔记3rd.html</id>
+    <published>2018-07-27T05:48:43.000Z</published>
+    <updated>2018-07-27T06:45:23.957Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Java数据类型：基本数据类型和引用数据类型&lt;/p&gt;
+&lt;h3 id=&quot;基本数据类型&quot;&gt;&lt;a href=&quot;#基本数据类型&quot; class=&quot;headerlink&quot; title=&quot;基本数据类型&quot;&gt;&lt;/a&gt;基本数据类型&lt;/h3&gt;&lt;p&gt;Java语言有8大基本数据类型，包含6中数字类型
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="https://student9128.github.io/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="https://student9128.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java重学习笔记2nd</title>
     <link href="https://student9128.github.io/Java%E9%87%8D%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02nd.html"/>
     <id>https://student9128.github.io/Java重学习笔记2nd.html</id>
     <published>2018-07-26T07:58:23.000Z</published>
-    <updated>2018-07-26T08:24:05.784Z</updated>
+    <updated>2018-07-27T02:24:50.156Z</updated>
     
     <summary type="html">
     
@@ -207,7 +231,7 @@
     <link href="https://student9128.github.io/react-native-vector-icons%E7%9A%84%E4%BD%BF%E7%94%A8.html"/>
     <id>https://student9128.github.io/react-native-vector-icons的使用.html</id>
     <published>2018-05-21T06:07:51.000Z</published>
-    <updated>2018-07-24T05:43:54.572Z</updated>
+    <updated>2018-07-27T05:08:41.261Z</updated>
     
     <summary type="html">
     
@@ -494,34 +518,6 @@
       
       
         &lt;p&gt;greenDao是一个开源的数据库解决方案，至于其优势劣势不啰嗦，关键是能用，好用就行。&lt;br&gt;这里简单记录下其配置方法&lt;br&gt;greenDao的github地址&lt;em&gt;&lt;a href=&quot;https://github.com/greenrobot/greenDAO&quot; tar
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="https://student9128.github.io/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="https://student9128.github.io/tags/Android/"/>
-    
-      <category term="移动开发" scheme="https://student9128.github.io/tags/%E7%A7%BB%E5%8A%A8%E5%BC%80%E5%8F%91/"/>
-    
-      <category term="greenDao" scheme="https://student9128.github.io/tags/greenDao/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQLitedatabase之GreenDao进行CRUD</title>
-    <link href="https://student9128.github.io/SQLitedatabase%E4%B9%8BGreenDao%E8%BF%9B%E8%A1%8CCRUD.html"/>
-    <id>https://student9128.github.io/SQLitedatabase之GreenDao进行CRUD.html</id>
-    <published>2018-01-26T08:52:05.000Z</published>
-    <updated>2018-07-24T06:37:39.731Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Android开发中使用Sqlite进行数据库开发，但是发现通过自己写SQL语句进行CRUD操作的时候有时候会出各种bug,比如用like语句的时候，偶然发生差不出来的问题。&lt;br&gt;现在数据库操作第三方也很多，这里记录写GreenDao吧.&lt;/p&gt;
-&lt;p&gt;&lt;div&gt;&lt;br&gt;
       
     
     </summary>
