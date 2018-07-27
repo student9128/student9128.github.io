@@ -679,7 +679,23 @@ pre {
   overflow: hidden;
   text-overflow: ellipsis;
   width: 3em;
-
+}
+.post-content .post-title .post-note{
+  /* display: inline-block; */
+  background: #f4f4f4;
+  color: #b145ad;
+  font-size: 0.9em;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  text-align: center;
+  /* height: 32px; */
+  /* line-height: 32px; */
+  margin-right: 10px;
+  padding: 5px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 3em;
 }
 .post-content h1 {
   font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", "SimSun", sans-serif;
