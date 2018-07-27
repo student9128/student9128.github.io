@@ -421,9 +421,10 @@ pre {
   line-height: 56px;
   font-size: 2em;
   cursor: pointer;
+  color: #1989ac;
 }
 .main-navigation .navbar-header i:hover {
-  color: #fff;
+  color: #1989ac;
 }
 
 @-webkit-keyframes move {
