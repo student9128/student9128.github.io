@@ -1,3 +1,5 @@
+https://student9128.github.io/Kotlin-Notes.html
+https://student9128.github.io/Fragment交互及动画.html
 https://student9128.github.io/Java重学习笔记3rd.html
 https://student9128.github.io/Java重学习笔记2nd.html
 https://student9128.github.io/Java重学习笔记1st.html
@@ -96,5 +98,3 @@ https://student9128.github.io/信鸽推送-10005错误.html
 https://student9128.github.io/信鸽推送注册失败的一般情况.html
 https://student9128.github.io/信鸽推送的集成.html
 https://student9128.github.io/自定义吐司Toast.html
-https://student9128.github.io/Genymotion模拟器在Eclipse上的安装.html
-https://student9128.github.io/Genymotion模拟器在Android-Studio上的安装.html

@@ -3,6 +3,45 @@
 
 
     
+  <url>
+    <loc>https://student9128.github.io/Kotlin-Notes.html</loc>
+    <lastmod>2018-11-13T09:06:09.911Z</lastmod>
+    <data>
+        <display>
+        <title>Kotlin Notes</title>
+        <pubTime>2018-11-13T09:03:51.000Z</pubTime>
+        
+        <tag>Kotlin</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://student9128.github.io/Fragment%E4%BA%A4%E4%BA%92%E5%8F%8A%E5%8A%A8%E7%94%BB.html</loc>
+    <lastmod>2018-08-30T12:15:02.344Z</lastmod>
+    <data>
+        <display>
+        <title>Fragment交互及动画</title>
+        <pubTime>2018-08-30T12:13:42.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>Fragment</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
     
@@ -274,9 +313,9 @@
         <title>解决Sources for 'Android API 26 Platform' not found</title>
         <pubTime>2017-09-14T05:30:27.000Z</pubTime>
         
-        <tag>issue</tag>
-         
         <tag>Android</tag>
+         
+        <tag>issue</tag>
          
          
            
@@ -1578,9 +1617,9 @@
         <title>Error:SSL peer shut down incorrectly的解决方案</title>
         <pubTime>2016-12-22T15:28:31.000Z</pubTime>
         
-        <tag>issue</tag>
-         
         <tag>Android</tag>
+         
+        <tag>issue</tag>
          
          
            
@@ -1600,9 +1639,9 @@
         <title>Error:Execution failed for task ':app:transformClassesWithDexForDebug'.解决方案</title>
         <pubTime>2016-11-25T01:50:46.000Z</pubTime>
         
-        <tag>issue</tag>
-         
         <tag>Android</tag>
+         
+        <tag>issue</tag>
          
          
            
@@ -1642,9 +1681,9 @@
         <title>Error:Execution failed for task ':app:compileDebugJavaWithJavac'.解决方案</title>
         <pubTime>2016-10-21T17:40:58.000Z</pubTime>
         
-        <tag>issue</tag>
-         
         <tag>Android</tag>
+         
+        <tag>issue</tag>
          
          
            
@@ -2143,11 +2182,11 @@
         <title>Android Studio连接github</title>
         <pubTime>2016-11-09T06:57:43.000Z</pubTime>
         
-        <tag>AndroidStudio</tag>
-         
         <tag>Android</tag>
          
         <tag>移动开发</tag>
+         
+        <tag>AndroidStudio</tag>
          
          
            
@@ -2167,9 +2206,9 @@
         <title>Android Studio中的字体设置</title>
         <pubTime>2017-06-29T07:26:40.000Z</pubTime>
         
-        <tag>AndroidStudio</tag>
-         
         <tag>Android</tag>
+         
+        <tag>AndroidStudio</tag>
          
          
            
@@ -2211,9 +2250,9 @@
         <title>Android Studio 3.0去掉方法参数提示</title>
         <pubTime>2017-09-30T05:08:00.000Z</pubTime>
         
-        <tag>AndroidStudio</tag>
-         
         <tag>Android</tag>
+         
+        <tag>AndroidStudio</tag>
          
          
            
