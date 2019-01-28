@@ -35,7 +35,7 @@
     <!--Title-->
 
 
-<title>Kotlin Notes | 文藝学生</title>
+<title>Glide的  java.lang.RuntimeException: Expected instanceof GlideModule, but found:X.GlideModule@2e4554f | 文藝学生</title>
 
 
     <link rel="alternate" href="/atom.xml" title="文藝学生" type="application/atom+xml">
@@ -150,9 +150,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Kotlin Notes">
+        <h1 id="Glide的  java.lang.RuntimeException: Expected instanceof GlideModule, but found:X.GlideModule@2e4554f">
             
-	            Kotlin Notes
+	            Glide的  java.lang.RuntimeException: Expected instanceof GlideModule, but found:X.GlideModule@2e4554f
             
         </h1>
         <div class="post-meta">
@@ -160,8 +160,8 @@
     
     <span class="categories-meta fa-wrap">
         <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/ ">
-             
+        <a href="/categories/Kotlin">
+            Kotlin
         </a>
     </span>
     
@@ -170,6 +170,10 @@
         <i class="fa fa-tags"></i>
         <span class="tags-meta">
             
+                
+                    <a href="/tags/Android" title='Android'>
+                        Android
+                    </a>
                 
                     <a href="/tags/Kotlin" title='Kotlin'>
                         Kotlin
@@ -184,7 +188,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2018/11/13</span>
+            <span class="date-meta">2019/01/28</span>
         </span>
         <span id="busuanzi_container_page_pv">
             <i class="fa fa-eye"></i>
@@ -198,7 +202,12 @@
     </div>
     
     <div class="post-body post-content">
-        <p>Kotlin中!!表示当前对象不为空时候调用，?表示对象是否可以为空</p>
+        <h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><p>在添加过混淆规则后，App打包的时候，发现报错了<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java.lang.RuntimeException: Expected <span class="keyword">instanceof</span> GlideModule, but found: com.kevin.play.view.GlideModule@<span class="number">2e4554f</span></span><br><span class="line">at com.bumptech.glide.<span class="keyword">module</span>.ManifestParser.parseModule(ManifestParser.java:<span class="number">87</span>)</span><br><span class="line">at com.bumptech.glide.<span class="keyword">module</span>.ManifestParser.parse(ManifestParser.java:<span class="number">47</span>)</span><br></pre></td></tr></table></figure></p>
+<p>  这意思是ManifestParser解析出问题了，可以看到<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * Returns &#123;<span class="doctag">@code</span> true&#125; if Glide should check the AndroidManifest for &#123;<span class="doctag">@link</span> GlideModule&#125;s.</span></span><br><span class="line"><span class="comment">  *</span></span><br><span class="line"><span class="comment">  * &lt;p&gt;Implementations should return &#123;<span class="doctag">@code</span> false&#125; after they and their dependencies have migrated</span></span><br><span class="line"><span class="comment">  * to Glide's annotation processor.</span></span><br><span class="line"><span class="comment">  *</span></span><br><span class="line"><span class="comment">  * &lt;p&gt;Returns &#123;<span class="doctag">@code</span> true&#125; by default.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isManifestParsingEnabled</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>依赖中使用了Glide的 annotation processor.需要在他的实现类里返回false<br>所以解决方案是在你自己写的实现AppGlideModule那个类中添加如下方法即可：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isManifestParsingEnabled</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="问题二："><a href="#问题二：" class="headerlink" title="问题二："></a>问题二：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unresolved reference GlideApp</span><br></pre></td></tr></table></figure>
+<p>解决完问题一，发现又报了问题二<br>原来是需要在Glide的Moudle处进行make project.<br>需要在使用Glide的地方使用GlideApp<br>make project后，发现有了GlideApp但是依然报这个错误，经过搜索发现，是<strong>kotlin不兼容GlideApp，就改为了Java,</strong></p>
 
     </div>
 
@@ -217,15 +226,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/Glide的-java-lang-RuntimeException-Expected-instanceof-GlideModule-but-found-X-GlideModule-2e4554f.html" class="pre-post btn btn-default" title='Glide的  java.lang.RuntimeException: Expected instanceof GlideModule, but found:X.GlideModule@2e4554f'>
-            <i class="fa fa-arrow-left"></i>&nbsp;<span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">Glide的  java.lang.RuntimeException: Expected instanceof GlideModule, but found:X.GlideModule@2e4554f</span>
-        </a>
     
-    
-        <a href="/Fragment交互及动画.html" class="next-post btn btn-default" title='Fragment交互及动画'>
+        <a href="/Kotlin-Notes.html" class="next-post btn btn-default" title='Kotlin Notes'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Fragment交互及动画</span>&nbsp;<i class="fa fa-arrow-right"></i>
+            <span class="hidden-xs">Kotlin Notes</span>&nbsp;<i class="fa fa-arrow-right"></i>
         </a>
     
 </div>
@@ -262,7 +266,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题一"><span class="toc-text">问题一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题二："><span class="toc-text">问题二：</span></a></li></ol>
         
     </div>
 </aside>
