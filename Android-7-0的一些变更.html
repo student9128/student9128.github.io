@@ -2,7 +2,7 @@
 <html lang=zh>
 <head>
   <meta charset="utf-8">
-  <meta name=referrer content=never>
+  
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
@@ -38,15 +38,13 @@
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
   
-  <!-- font-awesome CSS -->
-  <!-- <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="/css/style.css">
   
-    
-    
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-    
-
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css">
+  
+  
+  
 </head>
 
 
@@ -98,8 +96,7 @@
       </button>
     </div>
     <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-      <ul class="nav navbar-nav main-nav">
-        
+      <ul class="nav navbar-nav main-nav menu-highlight">
         
         
         <li class="menu-item menu-item-home">
@@ -112,7 +109,6 @@
         </li>
         
         
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives">
             
@@ -121,7 +117,6 @@
             <span class="menu-title">归档</span>
           </a>
         </li>
-        
         
         
         <li class="menu-item menu-item-tags">
@@ -134,7 +129,6 @@
         </li>
         
         
-        
         <li class="menu-item menu-item-repository">
           <a href="/repository">
             
@@ -145,7 +139,6 @@
         </li>
         
         
-        
         <li class="menu-item menu-item-links">
           <a href="/links">
             
@@ -154,7 +147,6 @@
             <span class="menu-title">友链</span>
           </a>
         </li>
-        
         
         
         <li class="menu-item menu-item-about">
@@ -382,7 +374,7 @@
 
       </div>
     </div>
-    <div class="article-entry markdown-body" itemprop="articleBody">
+    <div class="article-entry marked-body" itemprop="articleBody">
       
         <p>现在Nougat是Android最新版本的系统，但是目前的用户量还很少，在对Nougat的了解方面也很少。今天无意中看到官网中Android 7.0的一些行为变更，为方便查看，特将部分变更记录在此。</p>
 <h3 id="后台优化方面"><a href="#后台优化方面" class="headerlink" title="后台优化方面"></a><strong>后台优化方面</strong></h3><p>Android 7.0 移除了三项隐式广播，以帮助优化内存使用和电量消耗。此项变更很有必要，因为隐式广播会在后台频繁启动已注册侦听这些广播的应用。删除这些广播可以显著提升设备性能和用户体验。</p>
@@ -444,10 +436,7 @@
     
   <section id="comments">
   	
-       
 
-
-    
     
   </section>
 
@@ -563,17 +552,14 @@
         </span>
     </div>
 </footer>
-  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script>
 window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
 <script src="/js/plugin.min.js"></script>
 <script src="/js/application.js"></script>
-  
-    
-    
-    
-        <script>
+
+    <script>
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
@@ -590,19 +576,21 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 })(window);
 </script>
 <script src="/js/insight.js"></script>
-    
-    
-    
-        
+
+
+
+
+
+   
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
+
+
+   
     
-    
-        
-    
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js"></script>
 <script>
 var gitment = new Gitment({
   // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
@@ -619,10 +607,11 @@ var gitment = new Gitment({
 gitment.render('comments')
 </script>
 
-    
 
-    
-    
+
+
+
+
 
 
 

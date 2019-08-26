@@ -2,7 +2,7 @@
 <html lang=zh>
 <head>
   <meta charset="utf-8">
-  <meta name=referrer content=never>
+  
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
   <meta name="renderer" content="webkit">
@@ -44,15 +44,13 @@
   
     <link rel="icon" href="/favicon.png" type="image/x-icon">
   
-  <!-- font-awesome CSS -->
-  <!-- <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="/css/style.css">
   
-    
-    
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-    
-
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css">
+  
+  
+  
 </head>
 
 
@@ -104,8 +102,7 @@
       </button>
     </div>
     <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
-      <ul class="nav navbar-nav main-nav">
-        
+      <ul class="nav navbar-nav main-nav menu-highlight">
         
         
         <li class="menu-item menu-item-home">
@@ -118,7 +115,6 @@
         </li>
         
         
-        
         <li class="menu-item menu-item-archives">
           <a href="/archives">
             
@@ -127,7 +123,6 @@
             <span class="menu-title">归档</span>
           </a>
         </li>
-        
         
         
         <li class="menu-item menu-item-tags">
@@ -140,7 +135,6 @@
         </li>
         
         
-        
         <li class="menu-item menu-item-repository">
           <a href="/repository">
             
@@ -151,7 +145,6 @@
         </li>
         
         
-        
         <li class="menu-item menu-item-links">
           <a href="/links">
             
@@ -160,7 +153,6 @@
             <span class="menu-title">友链</span>
           </a>
         </li>
-        
         
         
         <li class="menu-item menu-item-about">
@@ -388,7 +380,7 @@
 
       </div>
     </div>
-    <div class="article-entry markdown-body" itemprop="articleBody">
+    <div class="article-entry marked-body" itemprop="articleBody">
       
         <p>TextInputLayout &amp; TextInputEditText是Material Design里面的控件，相比EditText而言里面添加了动画和一些新特性，个人感觉体验更好些。非常深的研究并没有，这里记录下最常用的一些用法。</p>
 <h3 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a><strong>效果图：</strong></h3><p><img src="/../images/20170105/20170105123747676.gif" width="300/"></p>
@@ -451,10 +443,7 @@
     
   <section id="comments">
   	
-       
 
-
-    
     
   </section>
 
@@ -570,17 +559,14 @@
         </span>
     </div>
 </footer>
-  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script>
 window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
 <script src="/js/plugin.min.js"></script>
 <script src="/js/application.js"></script>
-  
-    
-    
-    
-        <script>
+
+    <script>
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
@@ -597,19 +583,21 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 })(window);
 </script>
 <script src="/js/insight.js"></script>
-    
-    
-    
-        
+
+
+
+
+
+   
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
+
+
+   
     
-    
-        
-    
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js"></script>
 <script>
 var gitment = new Gitment({
   // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
@@ -626,10 +614,11 @@ var gitment = new Gitment({
 gitment.render('comments')
 </script>
 
-    
 
-    
-    
+
+
+
+
 
 
 
