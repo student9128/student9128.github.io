@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://student9128.github.io/Android%E5%AE%9E%E7%8E%B0dialog%E7%9A%843D%E7%BF%BB%E8%BD%AC.html</loc>
+    <lastmod>2019-08-26T15:01:47.334Z</lastmod>
+    <data>
+        <display>
+        <title>Android实现dialog的3D翻转</title>
+        <pubTime>2017-08-17T06:24:40.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+        <tag>移动开发</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://student9128.github.io/Glide%E7%9A%84-java-lang-RuntimeException-Expected-instanceof-GlideModule-but-found-X-GlideModule-2e4554f.html</loc>
     <lastmod>2019-01-28T07:37:22.994Z</lastmod>
     <data>
@@ -2069,28 +2091,6 @@
         <display>
         <title>Android常用的简单LogUtil</title>
         <pubTime>2017-03-31T12:38:16.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-        <tag>移动开发</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="https://student9128.github.io/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://student9128.github.io/Android%E5%AE%9E%E7%8E%B0dialog%E7%9A%843D%E7%BF%BB%E8%BD%AC.html</loc>
-    <lastmod>2018-07-24T06:33:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android实现dialog的3D翻转</title>
-        <pubTime>2017-08-17T06:24:40.000Z</pubTime>
         
         <tag>Android</tag>
          
